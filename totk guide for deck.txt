@@ -1,0 +1,18 @@
+TOTK emulation tutorial to get around 30fps:
+- requirements: keys and firmware 16.0.3 from your switch, totk and update 1.2.0 roms, emudeck and mods patches (optional: powertools if you have an oc deck or you are on os 3.4.X)
+
+- Step 1: go into desktop mode, install yuzu with emudeck (if you want yuzu ea use this https://discord.com/channels/865611969661632521/894761622999040001/1109909824126329023 )
+
+- Step 2: move the keys and firmware inside `/Emulation/bios/yuzu/`
+
+- Step 3: move the roms into emudeck inside `/Emulation/roms/switch/`and install the update
+
+- Step 4: open yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, switch to the advanced tab and switch `ASTC recompression` to `BC3` , enable `Enable asynchronous presentation` and `Force maximum clocks`, everything else is stock
+
+- Step 5: download the zip file attached to this message and extract the content into the mods directory, with yuzu right click on the game and select `open mod data location`
+
+- Step 6: go back into gaming mode and make sure you set in the quick access menu :button_aux_1::button_aux_2: the gpu clock at 1200 and lock the fps limiter to 30, with some decks decreasing the tdp to 11/13 watts helps with battery life (with powertools disable smt only when you are using yuzu on os 3.4.X)
+
+- Step 7: enjoy your totk experience on deck too :]
+
+> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from totk in the remove section of yuzu when you right click on the title.
