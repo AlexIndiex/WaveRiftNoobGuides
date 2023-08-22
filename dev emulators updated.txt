@@ -1,0 +1,12 @@
+Script to install and update `Dolphin Developer`, `Cemu`, `Yuzu EA`, `Citra Canary` and `mgbaDev` from their github repository on Steam Deck:
+* Go to desktop mode;
+* Download the files attached to this message;
+* Create a folder into `/home/deck/Documents/` named `tools`;
+* Drop in this folder the `updater.sh` file;
+* Move the `.desktop` file into your desktop window;
+* Open Konsole terminal and type `chmod +x /home/deck/Documents/tools/updater.sh` to give the sh file permission to execute on deck;
+* Now open the `.desktop` file, a spinning icon gonna show up in the taskbar, wait a couple of seconds, its gonna download the latest build in `/home/deck/Applications/` of `Dolphin Developer`, `Cemu`, `Yuzu EA` and `Citra Canary`, you gonna receive some pop-ups of what it got updated;
+* Now go to `/home/deck/Applications/` and link in your desktop window `yuzuEA` and `DolphinDev`, then go to `/home/deck/Applications/canary/` and link in your desktop window `citra-qt`;
+* Add the `.desktop` and the new appimages to Steam and enjoy the latest updates of `Dolphin Developer`, `Cemu`, `Yuzu EA` , `Citra Canary` and `mgbaDev`;
+> NOTE: **ONLY** `Cemu`, `Yuzu EA` and `mgbaDev`appimages work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Citra Canary` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**;
+> NOTE 2: once in a while clean the `Citra Canary` 7z files, leave only the latest downloaded.
