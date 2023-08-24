@@ -10,8 +10,8 @@ download_notify() {
                 case $1 in
 
                         DolphinDev)
-                                curl -L -o /home/deck/Applications/DolphinDev.AppImage -z /home/deck/Applications/DolphinDev.AppImage "${urls[0]}"
-                                chmod +x /home/deck/Applications/DolphinDev.AppImage
+                                curl -L -o ~/Applications/DolphinDev.AppImage -z ~/Applications/DolphinDev.AppImage https://github.com/qurious-pixel/dolphin/releases/download/continuous/Dolphin_Emulator-x86_64.AppImage
+                                chmod +x ~/Applications/DolphinDev.AppImage
                                 ;;
                         Cemu)
                                 curl -L -o /home/deck/Applications/Cemu.AppImage -z /home/deck/Applications/Cemu.AppImage "${urls[0]}"
@@ -46,8 +46,6 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 
 #DolphinDev
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/qurious-pixel/dolphin/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
 download_notify DolphinDev
 
 #Cemu
