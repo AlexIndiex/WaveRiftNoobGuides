@@ -2,8 +2,12 @@
 
 A collection of guides, that go from recommended hardware to emulation.
 
+> [!IMPORTANT]
+> Friendly reminder of 17 U.S.C. 1201f, this section makes any copyright material's backup and emulator legal.
 
-# # Hardware recomendations
+
+
+## Hardware recomendations
 
 
 - Accessory you could need:
@@ -45,7 +49,7 @@ A collection of guides, that go from recommended hardware to emulation.
 
 
 
-# # OLD EmuDeck Setup Guide
+## OLD EmuDeck Setup Guide
 
 
 - Files and programs you need:
@@ -67,7 +71,6 @@ A collection of guides, that go from recommended hardware to emulation.
 	- [EmuDeck's Discord server](<https://discord.gg/b9F7GpXtFP>) for any other help
 	- [DeckyLoader](<https://github.com/SteamDeckHomebrew/decky-loader>) for PowerTools (it can be installed with EmuDeck)
 
-
 Now lets get started with the installation process:
 - Initial EmuDeck installation:
 	- In DesktopMode, download [EmuDeck.desktop](<https://www.emudeck.com/#download>) and move it to your desktop window
@@ -76,13 +79,11 @@ Now lets get started with the installation process:
 	- Select where you want to install your emulation folder, (the emulators you want if you chose custom installation on the starting screen), (the emulators you want to get updated if you chose custom installation on the starting screen), the aspect ratio for your emulators (i would recommend using the original aspect ratio of each system so you wont encounter graphical glitches), the EmulationStation's theme, whatever you want homebrew games or not, now click the finish button and let EmuDeck install everything you chosen
 	- After the installation its done, click done, now dont bother with the add games section, its gonna prompt again the installation process for the device where you have your files and its gonna ask you to move your files in the correct folders, which you can do on your own without redoing everything again, so skip it, now close EmuDeck
 
-
 Its time to move your files: 
 - [DISCLAIMER] In this section i will tell you where to move your files with an external drive since its the fastest way to do it, if want to do it in any other way, please refer to the embed links in [Synchthing](<https://www.youtube.com/watch?v=nzix6-uKTA0>), [Warpinator](<https://www.youtube.com/watch?v=sHdQT6kI6Q8>) and [Winpinator](<https://github.com/swiszczoo/winpinator>):
  	- Open Dolphin, the file explorer, not the emulator, and navigate to your drive where you installed EmuDeck, you gonna find a folder named Emulation, right click on it and open it in a new tab, while you are in it open a new tab for both bios and roms folders, now return to the first tab and open the drive where you have the files you want to move, now you should have 4 tabs, the drive of your files, the emulation folder, bios folder and roms folder, you can close the emulation folder if you dont have any kind of save file or texture pack to move
    	- You can start moving your bios files from your drive to the bios folder, the only files that need a deeper location is your Nintendo Switch's keys and firmware files, that you can move in both Yuzu and Ryujinx folder (Ryujinx needs the firmware installed instead), (for any other emulator please refer to the [EmuDeckWiki](<https://emudeck.github.io/>))
 	- You can start moving your roms from your drive to the roms folder, inside of it you going to find out that each system has a folder for its roms, you can read a text file inside each of them to know what roms' format each emulator supports, i would recommend creating an update folder for modern systems (like 3DS, WiiU, Switch, PS3, Xbox360, Xbox) that support update roms for your games in /Emulation/roms/ (please pay attention to folder like WiiU, you gonna find another rom folder inside of it, you need to move your roms there instead of just /Emulation/roms/wiiu/)
-
 
 You can now open again EmuDeck and start installing extra programs you might need to get everything working in the best way:
 - [DISCLAIMER] Please install [DeckyLoader](<https://github.com/SteamDeckHomebrew/decky-loader>) to use PowerTools and DeckyControls
@@ -98,7 +99,7 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 
 
-# # 45fps BOTW on Cemu
+## 45fps BOTW on Cemu
 
 
 - Step 1: Install emudeck and cemu with it, the appimage is advised due to be compatible in gaming mode
@@ -119,8 +120,7 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 
 
-# # 30fps TOTK on YuzuEA
-
+## 30fps TOTK on YuzuEA
 
 
 - requirements: keys and firmware 16.0.3 from your switch, totk and update 1.2.0 roms, emudeck and mods patches (optional: powertools if you have an oc deck or you are on os 3.4.X)
@@ -139,12 +139,12 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 - Step 7: enjoy your totk experience on deck too :]
 
+> [!TIP]
 > NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from totk in the remove section of yuzu when you right click on the title.
 
 
 
-# # BETA Emulators autoinstall script
-
+## BETA Emulators autoinstall script
 
 
 The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx` and `RMG` from their github repository on Steam Deck:
@@ -162,19 +162,8 @@ The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Pa
 - Add the `.sh` file and the new appimages to Steam and enjoy the latest updates;
 
 (Panda3DS is Alber_x86_64.Appimage)
+
+> [!TIP]
 > NOTE: **ONLY** `Cemu`, `mgbaDev` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**;
 
 > NOTE 2: once in a while clean the `Linux-Qt` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
