@@ -7,7 +7,7 @@ A collection of guides, that go from recommended hardware to emulation.
 
 
 
-## Hardware recomendations
+## Hardware recommendations
 
 
 - Accessory you could need:
