@@ -1,7 +1,7 @@
 TOTK emulation tutorial to get around 30fps:
 - requirements: keys and firmware 16.0.3 from your switch, totk and update 1.2.0 roms, emudeck and mods patches (optional: powertools if you have an oc deck or you are on os 3.4.X)
 
-- Step 1: go into desktop mode, install yuzu with emudeck (if you want yuzu ea use this https://discord.com/channels/865611969661632521/894761622999040001/1109909824126329023 )
+- Step 1: go into desktop mode, install yuzu with emudeck (if you want yuzu ea use the ninty foldder)
 
 - Step 2: move the keys and firmware inside `/Emulation/bios/yuzu/`
 
