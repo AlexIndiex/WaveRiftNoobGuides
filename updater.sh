@@ -3,35 +3,52 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd /home/deck/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "yuzuEA" ]] && [[ $1 != "mgbaDev" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "MelonDS" ]] && [[ $1 != "MgbaDev" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
                 case $1 in
 
-                        DolphinDev)
-                                curl -L -o ~/Applications/DolphinDev.AppImage -z ~/Applications/DolphinDev.AppImage https://github.com/qurious-pixel/dolphin/releases/download/continuous/Dolphin_Emulator-x86_64.AppImage
-                                chmod +x ~/Applications/DolphinDev.AppImage
+                        Ryujinx)
+                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
+                                tar xf "$(basename "${urls[0]}")"
+                                chmod +x ~/Applications/publish/Ryujinx
+                                chmod +x ~/Applications/publish/Ryujinx.sh
+                                chmod +x ~/Applications/publish/Ryujinx.SDL2.Common.dll.config
+                                chmod +x ~/Applications/publish/mime/Ryujinx.xml
                                 ;;
+
                         Cemu)
                                 curl -L -o /home/deck/Applications/Cemu.AppImage -z /home/deck/Applications/Cemu.AppImage "${urls[0]}"
                                 chmod +x /home/deck/Applications/Cemu.AppImage
                                 ;;
-                        yuzuEA)
-                                curl -L -o /home/deck/Applications/yuzuEA.AppImage -z /home/deck/Applications/yuzuEA.AppImage "${urls[0]}"
-                                chmod +x /home/deck/Applications/yuzuEA.AppImage
-                                ;;
-                        mgbaDev)
-                                curl -L -o /home/deck/Applications/mgbaDev.AppImage -z /home/deck/Applications/mgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
-                                chmod +x /home/deck/Applications/mgbaDev.AppImage
-                                ;;
-                        citracanary)
+
+                        Panda3DS)
                                 curl -L -o ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 7z x "$(basename "${urls[0]}")" -y
-                                chmod +x ~/Applications/canary/citra.AppImage
-                                chmod +x ~/Applications/canary/citra-qt.AppImage
-                                chmod +x ~/Applications/canary/citra-room.AppImage
+                                chmod +x ~/Applications/Alber-x86_64.AppImage
                                 ;;
+
+                        DolphinDev)
+                                curl -L -o /home/deck/Applications/DolphinDev.AppImage -z /home/deck/Applications/DolphinDev.AppImage "${urls[0]}"
+                                chmod +x /home/deck/Applications/DolphinDev.AppImage
+                                ;;
+
+                        RMG)
+                                curl -L -o /home/deck/Applications/RMG.AppImage -z /home/deck/Applications/RMG.AppImage "${urls[0]}"
+                                chmod +x /home/deck/Applications/RMG.AppImage
+                                ;;
+
+                        MelonDS)
+                                curl -L -o /home/deck/Applications/MelonDS.AppImage -z /home/deck/Applications/MelonDS.AppImage "${urls[0]}"
+                                chmod +x /home/deck/Applications/MelonDS.AppImage
+                                ;;
+
+                        MgbaDev)
+                                curl -L -o /home/deck/Applications/MgbaDev.AppImage -z /home/deck/Applications/MgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
+                                chmod +x /home/deck/Applications/MgbaDev.AppImage
+                                ;;
+
                         *)
                                 curl -s -L -o /home/deck/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 chmod +x /home/deck/Applications/"$(basename "${urls[0]}")"
@@ -44,9 +61,11 @@ download_notify() {
 notify "Flatpak updating"
 flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 
-#DolphinDev
+#Ryujinx
 #------------
-download_notify DolphinDev
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryujinx/release-channel-master/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
+download_notify Ryujinx
 
 #Cemu
 #------------
@@ -54,18 +73,30 @@ mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_
         jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
 download_notify Cemu
 
-#yuzuEA
+#Panda3DS
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/pineappleEA/pineapple-src/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-download_notify yuzuEA
-
-#citracanary
-#------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/citra-emu/citra-canary/releases | \
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/wheremyfoodat/Panda3DS/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-download_notify citracanary
+download_notify Panda3DS
 
-#mgbaDev
+#DolphinDev
 #------------
-download_notify mgbaDev
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/qurious-pixel/dolphin/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+download_notify DolphinDev
+
+#RMG
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Rosalie241/RMG/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+download_notify RMG
+
+#MelonDS
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
+download_notify MelonDS
+
+#MgbaDev
+#------------
+download_notify MgbaDev
