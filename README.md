@@ -16,12 +16,12 @@ A collection of guides, that go from recommended hardware to emulation.
 	- travel bag (self explanatory)
 
 - Extra hardware you could need:
-	- microsd (samsung, sandisk, teamgroup)
+	- micro-sd (samsung, sandisk, teamgroup)
 	- 2230 nvme ssd for storage upgrade (corsair, sabrent, westerdigital)
 	- dock, usb-c hub or adaptor (official or any other 3rd party products that isnt borderline scammy)
 	- mice and keyboard (logitech and akko)
 	- monitor (whatever you already have, 1080p60hz recommended for deck only)
-	- 45w to 65w powerbank (20000mah capacity highly suggested) 
+	- 45w to 65w power-bank (20000mah capacity highly suggested) 
 	- external storage (in case something happens with the microsd, sharge disk recommended or a normal sata to usb enclosure)
 	- earbuds (moondrop brand highly suggested)
 	- headphones (your choice)
@@ -108,7 +108,7 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 - Step 3: Open Cemu, select `File>Install game title, update or dlc` and select the update and/or dlc file in the previous said path, the update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA) (vXXX)`and dlc `The Legend of Zelda Breath of the Wild (DLC)`
 
-- Step 4: In Cemu topbar select `Options>Graphics Packs`, in this windows click on `download latest community graphic packs`, if cemu find a new version install it and wait to be installed, then open again the Graphic Packs
+- Step 4: In Cemu top-bar select `Options>Graphics Packs`, in this windows click on `download latest community graphic packs`, if cemu find a new version install it and wait to be installed, then open again the Graphic Packs
 
 - Step 5: In the graphics pack windows select `The Legend of Zelda Breath of the Wild` and open all the drop down menus expect the cheats if you dont need them
 
