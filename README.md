@@ -49,7 +49,7 @@ A collection of guides, that goes from recommended peripheral hardware to emulat
 
 
 
-## OLD EmuDeck Setup Guide
+## OLD EmuDeck Setup Guide (prior citrus death)
 
 
 - Files and programs you need:
