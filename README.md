@@ -166,3 +166,6 @@ The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Pa
 
 > [!TIP]
 > NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
+
+[BACKUP](<https://drive.google.com/file/d/1UDI39fpYPtqUysXhRAsoV4cFw6PHX6CV/view?usp=sharing>) 
+
