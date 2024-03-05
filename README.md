@@ -149,20 +149,18 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx` and `RMG` from their github repository on Steam Deck:
 
-- Go to desktop mode;
+* Go to desktop mode;
   
-- Download the file attached to this message;
+* Download the file attached to this message;
   
-- Open Konsole terminal and type `chmod +x /home/deck/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
+* Open Konsole terminal and type `chmod +x /home/deck/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
   
-- Now open the `.sh` file, its gonna download the latest builds in `/home/deck/Applications/`, you gonna receive some pop-ups of what it got updated;
+* Now open the `.sh` file, its gonna download the latest builds in `/home/deck/Applications/`, you gonna receive some pop-ups of what it got updated;
   
-- Now go to `/home/deck/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `/home/deck/Applications/publish/`);
+* Now go to `/home/deck/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `/home/deck/Applications/publish/`);
   
-- Add the `.sh` file and the new appimages to Steam and enjoy the latest updates;
-
-(Panda3DS is Alber_x86_64.Appimage)
-
-> [!TIP]
+* Add the `.sh` file and the new appimages to Steam and enjoy the latest updates;
+  
+> [!IMPORTANT]
 > NOTE: **ONLY** `Cemu`, `mgbaDev` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**;
-> NOTE 2: once in a while clean the `Linux-Qt` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
+	> NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
