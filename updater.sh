@@ -10,7 +10,7 @@ download_notify() {
                 case $1 in
 
                         Ryujinx)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
+                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z "${urls[0]}"
                                 tar xf "$(basename "${urls[0]}")"
                                 chmod +x ~/Applications/publish/Ryujinx
                                 chmod +x ~/Applications/publish/Ryujinx.sh
@@ -24,9 +24,10 @@ download_notify() {
                                 ;;
 
                         Panda3DS)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
-                                7z x "$(basename "${urls[0]}")" -y
-                                chmod +x ~/Applications/Alber-x86_64.AppImage
+                                curl -L -o ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -z ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
+                                7z x "$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -y
+				mv ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
+                                chmod +x ~/Applications/Panda3DS.AppImage
                                 ;;
 
                         DolphinDev)
@@ -75,8 +76,6 @@ download_notify Cemu
 
 #Panda3DS
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/wheremyfoodat/Panda3DS/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify Panda3DS
 
 #DolphinDev
