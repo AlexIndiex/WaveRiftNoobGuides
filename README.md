@@ -102,11 +102,17 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 BTW, dont update EmuDeck, or you will lose Yuzu's entries for SteamRomManger if you try to parse newer games,
 
-but if you did, the way SteamRomManger parsed yuzu is:
+but if you did, the way SteamRomManger parsed Yuzu is:
 
 - For Windows: ```"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'D:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck``` in target;
 
 - For Linux: ```"/home/deck/Emulation/tools/launchers/yuzu.sh"``` in target, and```vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"``` in launch options;
+
+meanwhile for Citra is:
+
+- For Windows: ```/k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& ${{}D:\Emulation\tools\launchers\citra.ps1 '${filePath}'${\}}" && exit " && exit --emudeck``` in target;
+
+- For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/alex/Emulation/roms/n3ds/Animal Crossing New Leaf Welcome amiibo (CTR-P-EAAP) (E).cxi"``` in target;
 
 These values go into the properties when creating a new entry for a Non-Steam game/app.
 
