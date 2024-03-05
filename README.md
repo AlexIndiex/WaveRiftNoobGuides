@@ -3,7 +3,7 @@
 A collection of guides, that goes from recommended peripheral hardware to emulation.
 
 > [!IMPORTANT]
-> Friendly reminder of 17 U.S.C. 1201 F and G, these sections makes any copyright material's backup for personal use and emulators legal.
+> Friendly reminder of 17 U.S.C. 1201 F and G, these sections makes any copyright material's backup for personal use and emulators LEGAL.
 
 
 
