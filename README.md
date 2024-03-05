@@ -23,7 +23,7 @@ A collection of guides, that goes from recommended peripheral hardware to emulat
 	- [monitor](<https://youtu.be/Z8rJxJo3cfI>) (LG, Alienware, Gigabyte);
 	- keyboard (Keychron, Akko/Epomaker, Wooting);
 	- mouse (Logitech, Pulsar, Endgame Gear);
-	- IEM (Moondrop, Tangzu, 7hz, Truthear);
+	- IEMs (Moondrop, Tangzu, 7hz, Truthear);
 	- Headphone (Sennheiser, AKG, Shure);
 	- portable DAC/AMP (Qudelix, Fiio, Moondrop);
 	- cables/hubs (Ugreen, Anker, StarTech);
