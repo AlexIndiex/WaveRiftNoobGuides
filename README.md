@@ -169,3 +169,12 @@ The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Pa
 
 [BACKUP](<https://drive.google.com/file/d/1UDI39fpYPtqUysXhRAsoV4cFw6PHX6CV/view?usp=sharing>) 
 
+https://github.com/Ryujinx/release-channel-master/releases
+https://panda3ds.com/download.html
+https://github.com/Rosalie241/RMG
+https://dolphin-emu.org/download/
+https://github.com/qurious-pixel/dolphin/releases
+https://melonds.kuribo64.net/downloads.php
+https://cemu.info/#download
+https://github.com/cemu-project/cemu_graphic_packs/releases/
+https://mgba.io/downloads.html
