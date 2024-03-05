@@ -1,6 +1,6 @@
 # DeckNoobGuides
 
-A collection of guides, that go from recommended hardware to emulation.
+A collection of guides, that goes from recommended peripheral hardware to emulation.
 
 > [!IMPORTANT]
 > Friendly reminder of 17 U.S.C. 1201f, this section makes any copyright material's backup for personal use and emulators legal.
