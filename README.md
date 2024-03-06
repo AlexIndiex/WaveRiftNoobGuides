@@ -156,7 +156,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Step 5: Download the zip file attached to this message and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
 
-- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png) ![:button_aux_2:](assets/images/1054855180253929542.png) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life (with PowerTools disable SMT only when you are using Yuzu on OS 3.4.X).
+- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png)![:button_aux_2:](assets/images/1054855180253929542.png) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life (with PowerTools disable SMT only when you are using Yuzu on OS 3.4.X).
 
 - Step 7: Enjoy your TOTK experience on Deck too :]
 
