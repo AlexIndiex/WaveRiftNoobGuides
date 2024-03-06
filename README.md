@@ -114,8 +114,9 @@ You can now open again EmuDeck and start installing extra programs you might nee
 > - For Windows: ```"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck``` in target;
 > 
 > - For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"``` in target for Citra flatpak; ```"your citra-qt.appimage path here"``` in target, and```vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"``` in launch options for Citra Appimage(similar to yuzu SRM for linux);
-> > [!IMPORTANT]
-> > These values go into the properties when creating a new entry for a Non-Steam game/app.
+
+> [!IMPORTANT]
+> These values go into the properties when creating a new entry for a Non-Steam game/app.
 
 
 ## 45fps BOTW on Cemu for SteamDeck:
