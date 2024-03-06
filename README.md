@@ -207,3 +207,7 @@ All the links below are a reference to make the backup of the link above.
 - https://github.com/cemu-project/cemu_graphic_packs/releases/ .
 - https://mgba.io/downloads.html .
 - https://gitlab.com/suyu-emu/suyu .
+- https://github.com/RyzenDew/Lime-3DS-Emulator .
+- https://github.com/RyzenDew/Lime-NX .
+
+
