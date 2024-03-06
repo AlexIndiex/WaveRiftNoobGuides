@@ -7,7 +7,7 @@ A collection of guides, that goes from recommended peripheral hardware to emulat
 
 
 
-## Hardware recommendations:
+## Accessories and Hardware recommendations for SteamDeck:
 
 
 - Accessories you could need:
@@ -117,7 +117,7 @@ meanwhile for Citra is:
 These values go into the properties when creating a new entry for a Non-Steam game/app.
 
 
-## 45fps BOTW on Cemu:
+## 45fps BOTW on Cemu for SteamDeck:
 
 
 - Step 1: Install emudeck and cemu with it, the appimage is advised due to be compatible in gaming mode
@@ -138,7 +138,7 @@ These values go into the properties when creating a new entry for a Non-Steam ga
 
 
 
-## 30fps TOTK on YuzuEA:
+## 30fps TOTK on YuzuEA for SteamDeck:
 
 
 - requirements: keys and firmware 16.0.3 from your switch, totk and update 1.2.0 roms, emudeck and mods patches (optional: powertools if you have an oc deck or you are on os 3.4.X)
@@ -162,7 +162,7 @@ These values go into the properties when creating a new entry for a Non-Steam ga
 
 
 
-## BETA Emulators autoinstall script:
+## BETA Emulators autoinstall script for SteamDeck:
 
 
 The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx` and `RMG` from their github repository on Steam Deck:
@@ -180,10 +180,13 @@ The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Pa
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates;
   
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**;
+> NOTE: **ONLY** `Cemu`, `mgbaDev` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 > [!TIP]
 > NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
+
+> [!TIP]
+>  NOTE 3: you can edit the script and make it work under any other linux distro by just changing the paths `/home/deck` with your current user `/home/[user]`.
 
 ## [BACKUP](<https://drive.google.com/file/d/1UDI39fpYPtqUysXhRAsoV4cFw6PHX6CV/view?usp=sharing>):
 
