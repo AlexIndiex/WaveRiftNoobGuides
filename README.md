@@ -209,5 +209,7 @@ All the links below are a reference to make the backup of the link above.
 - https://gitlab.com/suyu-emu/suyu .
 - https://github.com/RyzenDew/Lime-3DS-Emulator .
 - https://github.com/RyzenDew/Lime-NX .
-
+- https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
+- https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
+- https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
 
