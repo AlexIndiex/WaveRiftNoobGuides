@@ -104,15 +104,15 @@ BTW, dont update EmuDeck, or you will lose citrus' entries for SteamRomManger if
 
 but if you did, the way SteamRomManger parsed Yuzu is:
 
-- For Windows: ```"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'D:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck``` in target;
+- For Windows: ```"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck``` in target;
 
 - For Linux: ```"/home/deck/Emulation/tools/launchers/yuzu.sh"``` in target, and```vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"``` in launch options;
 
 meanwhile for Citra is:
 
-- For Windows: ```/k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& ${{}D:\Emulation\tools\launchers\citra.ps1 '${filePath}'${\}}" && exit " && exit --emudeck``` in target;
+- For Windows: ```"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck``` in target;
 
-- For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/alex/Emulation/roms/n3ds/Animal Crossing New Leaf Welcome amiibo (CTR-P-EAAP) (E).cxi"``` in target;
+- For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"``` in target for Citra flatpak; ```"your citra-qt.appimage path here"``` in target, and```vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"``` in launch options for Citra Appimage(similar to yuzu SRM for linux);
 
 These values go into the properties when creating a new entry for a Non-Steam game/app.
 
