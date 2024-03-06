@@ -99,7 +99,7 @@ You can now open again EmuDeck and start installing extra programs you might nee
 		- https://emudeck.github.io/emudeck-application/steamos/emudeck-application-101/#steamdeckgyrodsu ;
 		- https://github.com/kmicki/SteamDeckGyroDSU/issues/45#issuecomment-1518530487 ;
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks .
-
+> [!NOTE]
 BTW, dont update EmuDeck, or you will lose citrus' entries for SteamRomManger if you try to parse newer games,
 
 but if you did, the way SteamRomManger parsed Yuzu is:
