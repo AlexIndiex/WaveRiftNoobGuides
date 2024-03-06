@@ -99,7 +99,9 @@ You can now open again EmuDeck and start installing extra programs you might nee
 		- https://emudeck.github.io/emudeck-application/steamos/emudeck-application-101/#steamdeckgyrodsu ;
 		- https://github.com/kmicki/SteamDeckGyroDSU/issues/45#issuecomment-1518530487 ;
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks .
+
 > [!NOTE]
+
 BTW, dont update EmuDeck, or you will lose citrus' entries for SteamRomManger if you try to parse newer games,
 
 but if you did, the way SteamRomManger parsed Yuzu is:
@@ -114,6 +116,7 @@ meanwhile for Citra is:
 
 - For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"``` in target for Citra flatpak; ```"your citra-qt.appimage path here"``` in target, and```vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"``` in launch options for Citra Appimage(similar to yuzu SRM for linux);
 
+> [!IMPORTANT]
 These values go into the properties when creating a new entry for a Non-Steam game/app.
 
 
