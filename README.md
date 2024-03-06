@@ -101,23 +101,22 @@ You can now open again EmuDeck and start installing extra programs you might nee
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks .
 
 > [!NOTE]
-
-BTW, dont update EmuDeck, or you will lose citrus' entries for SteamRomManger if you try to parse newer games,
-
-but if you did, the way SteamRomManger parsed Yuzu is:
-
-- For Windows: ```"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck``` in target;
-
-- For Linux: ```"/home/deck/Emulation/tools/launchers/yuzu.sh"``` in target, and```vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"``` in launch options;
-
-meanwhile for Citra is:
-
-- For Windows: ```"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck``` in target;
-
-- For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"``` in target for Citra flatpak; ```"your citra-qt.appimage path here"``` in target, and```vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"``` in launch options for Citra Appimage(similar to yuzu SRM for linux);
+> BTW, dont update EmuDeck, or you will lose citrus' entries for SteamRomManger if you try to parse newer games,
+> 
+> but if you did, the way SteamRomManger parsed Yuzu is:
+> 
+> - For Windows: ```"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck``` in target;
+> 
+> - For Linux: ```"/home/deck/Emulation/tools/launchers/yuzu.sh"``` in target, and```vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"``` in launch options;
+> 
+> meanwhile for Citra is:
+> 
+> - For Windows: ```"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck``` in target;
+> 
+> - For Linux: ```"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"``` in target for Citra flatpak; ```"your citra-qt.appimage path here"``` in target, and```vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"``` in launch options for Citra Appimage(similar to yuzu SRM for linux);
 
 > [!IMPORTANT]
-These values go into the properties when creating a new entry for a Non-Steam game/app.
+> These values go into the properties when creating a new entry for a Non-Steam game/app.
 
 
 ## 45fps BOTW on Cemu for SteamDeck:
@@ -185,7 +184,7 @@ The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Pa
 > [!IMPORTANT]
 > NOTE: **ONLY** `Cemu`, `mgbaDev` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
 
-> [!TIP]
+> [!NOTE]
 > NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
 
 > [!TIP]
