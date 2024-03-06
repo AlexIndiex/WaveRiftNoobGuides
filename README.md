@@ -119,6 +119,7 @@ You can now open again EmuDeck and start installing extra programs you might nee
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
 
 
+
 ## 45fps BOTW on Cemu for SteamDeck:
 
 
@@ -145,7 +146,7 @@ You can now open again EmuDeck and start installing extra programs you might nee
 
 - requirements: keys and firmware 16.0.3 from your switch, totk and update 1.2.0 roms, emudeck and mods patches (optional: powertools if you have an oc deck or you are on os 3.4.X)
 
-- Step 1: go into desktop mode, install yuzu with emudeck (if you want yuzu ea use the ninty foldder)
+- Step 1: go into desktop mode, install yuzu with emudeck (if you want yuzu ea use the citrus folders)
 
 - Step 2: move the keys and firmware inside `/Emulation/bios/yuzu/`
 
@@ -167,11 +168,11 @@ You can now open again EmuDeck and start installing extra programs you might nee
 ## BETA Emulators autoinstall script for SteamDeck:
 
 
-The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx` and `RMG` from their github repository on Steam Deck:
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx` and `RMG` from their github repository on Steam Deck:
 
 * Go to desktop mode;
   
-* Download the file attached to this message;
+* Download the `update.sh` file;
   
 * Open Konsole terminal and type `chmod +x /home/deck/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
   
@@ -190,7 +191,12 @@ The `update.sh` script is to install and update `Dolphin Developer`, `Cemu`, `Pa
 > [!TIP]
 >  NOTE 3: you can edit the script and make it work under any other linux distro by just changing the paths `/home/deck` with your current user `/home/[user]`.
 
+
+
 ## [BACKUP](<https://drive.google.com/file/d/1UDI39fpYPtqUysXhRAsoV4cFw6PHX6CV/view?usp=sharing>):
+
+
+All the links belove are a reference to make the backup of the link above.
 
 - https://github.com/Ryujinx/release-channel-master/releases ;
 - https://panda3ds.com/download.html ;
