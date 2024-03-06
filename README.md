@@ -84,9 +84,7 @@ Now let's get started with the installation process:
 
 It's time to move your files: 
 - [DISCLAIMER] In this section, I will tell you where to move your files with an external drive since it's the fastest way to do it. If you want to do it in any other way, please refer to the embedded links in [Syncthing](https://www.youtube.com/watch?v=nzix6-uKTA0), [Warpinator](https://www.youtube.com/watch?v=sHdQT6kI6Q8), and [Winpinator](https://github.com/swiszczoo/winpinator):
- 	- Open Dolphin, the file explorer (not the emulator), and navigate to your drive where you installed EmuDeck. You're gonna find a folder named Emulation. Right-click on it and open it in a new tab. While you are in it, open a new tab for both BIOS and ROMs folders. Now return to the first tab and open the drive where you have the files you want to move. Now you should have 4
-
- tabs: the drive of your files, the emulation folder, BIOS folder, and ROMs folder. You can close the emulation folder if you don't have any kind of save file or texture pack to move.
+ 	- Open Dolphin, the file explorer (not the emulator), and navigate to your drive where you installed EmuDeck. You're gonna find a folder named Emulation. Right-click on it and open it in a new tab. While you are in it, open a new tab for both BIOS and ROMs folders. Now return to the first tab and open the drive where you have the files you want to move. Now you should have 4 tabs: the drive of your files, the emulation folder, BIOS folder, and ROMs folder. You can close the emulation folder if you don't have any kind of save file or texture pack to move.
    	- You can start moving your BIOS files from your drive to the BIOS folder. The only files that need a deeper location are your Nintendo Switch's keys and firmware files, which you can move to both Yuzu and Ryujinx folders (Ryujinx needs the firmware installed instead). (For any other emulator, please refer to the [EmuDeckWiki](https://emudeck.github.io/)).
 	- You can start moving your ROMs from your drive to the ROMs folder. Inside of it, you're going to find out that each system has a folder for its ROMs. You can read a text file inside each of them to know what ROMs' format each emulator supports. I would recommend creating an update folder for modern systems (like 3DS, WiiU, Switch, PS3, Xbox360, Xbox) that support update ROMs for your games in /Emulation/ROMs/ (please pay attention to folders like WiiU; you're gonna find another ROM folder inside of it, and you need to move your ROMs there instead of just /Emulation/ROMs/WiiU/).
 
@@ -129,9 +127,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Step 2: Put your ROMs into the EmuDeck folder inside `/Emulation/ROMs/WiiU/ROMs`. You need the base game and the latest update.
 
-- Step 3: Open Cemu, select `File>Install game title, update or DLC` and select the update and/or DLC file in the previously said path. The update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA)
-
- (vXXX)` and DLC `The Legend of Zelda Breath of the Wild (DLC)`.
+- Step 3: Open Cemu, select `File>Install game title, update or DLC` and select the update and/or DLC file in the previously said path. The update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA) (vXXX)` and DLC `The Legend of Zelda Breath of the Wild (DLC)`.
 
 - Step 4: In Cemu top-bar select `Options>Graphics Packs`. In this window, click on `download latest community graphic packs`. If Cemu finds a new version, install it and wait for it to be installed. Then open the Graphic Packs again.
 
