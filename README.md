@@ -197,15 +197,8 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
 
 All the links below are a reference to make the backup of the link above.
 
-- https://github.com/Ryujinx/release-channel-master/releases .
-- https://panda3ds.com/download.html .
-- https://github.com/Rosalie241/RMG .
-- https://dolphin-emu.org/download/ .
 - https://github.com/qurious-pixel/dolphin/releases .
-- https://melonds.kuribo64.net/downloads.php .
-- https://cemu.info/#download .
 - https://github.com/cemu-project/cemu_graphic_packs/releases/ .
-- https://mgba.io/downloads.html .
 - https://gitlab.com/suyu-emu/suyu .
 - https://github.com/RyzenDew/Lime-3DS-Emulator .
 - https://github.com/RyzenDew/Lime-NX .
