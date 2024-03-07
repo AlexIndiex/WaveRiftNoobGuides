@@ -1,6 +1,6 @@
 # DeckNoobGuides
 
-A collection of guides that range from recommended peripheral hardware to emulation.
+A collection of guides that range from recommended peripheral hardware to emulation and more...
 
 > [!IMPORTANT]
 > Friendly reminder of 17 U.S.C. 1201 F and G. These sections make any copyright material's backup for personal use, emulators, and backups of deceased programs LEGAL. Furthermore, backups and redistribution of open-source programs under MIT and GPL2/3 are also LEGAL.
