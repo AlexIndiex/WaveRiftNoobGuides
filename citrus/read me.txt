@@ -1,1 +1,0 @@
-inside this archive you will find: the emulators, the flatpaks, the middleware scripts, the emulators forks.
