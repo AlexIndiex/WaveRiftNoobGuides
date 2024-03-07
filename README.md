@@ -192,7 +192,7 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
 >  NOTE 3: you can edit the script and make it work under any other Linux distro by just changing the paths `/home/deck` with your current user `/home/[user]`.
   
 
-## [BACKUP](https://drive.google.com/file/d/1UDI39fpYPtqUysXhRAsoV4cFw6PHX6CV/view?usp=sharing):
+## [BACKUP](https://drive.google.com/file/d/1eSd9jOI7Ia4Ywl9cZDvULyXvN-3av0qm/view?usp=sharing):
 
 
 All the links below are a reference to make the backup of the link above.
