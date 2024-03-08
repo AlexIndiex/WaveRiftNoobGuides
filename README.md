@@ -200,11 +200,12 @@ All the links below are a reference to make the backup of the link above.
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases/ .
 - https://gitlab.com/suyu-emu/suyu .
-- https://github.com/RyzenDew/Lime-3DS-Emulator .
-- https://github.com/RyzenDew/Lime-NX .
+- https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
+- https://github.com/RyzenDew/Lime-NX/releases .
+- https://github.com/PabloMK7/citra/releases .
 - https://suyu.dev/ .
-- https://github.com/emuPlace/Sudachi .
-- https://github.com/sudachi-emu/sudachi .
+- https://github.com/emuPlace/Sudachi/releases .
+- https://github.com/sudachi-emu/sudachi/releases .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
