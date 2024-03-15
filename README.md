@@ -108,7 +108,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > 
 > - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for Citra flatpak; `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for Citra Appimage(similar to yuzu SRM for Linux);
 >
-> If you need the middleware files used for SteamRomManager, you can find them in the Citrus folder.
+> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder.
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
@@ -149,7 +149,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Step 4: Open Suyu/Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, switch to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, everything else is stock.
 
-- Step 5: Download the zip file `TOTK-30fps-1.2.0.zip` and extract the content into the mods directory. With Suyu/Yuzu right-click on the game and select `open mod data location`.
+- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Suyu/Yuzu right-click on the game and select `open mod data location`.
 
 - Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
 
