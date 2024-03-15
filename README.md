@@ -165,10 +165,13 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 
-## BETA Emulators autoinstall script for SteamDeck:
+## BETA Emulators autoinstall script:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx`, and `RMG` from their GitHub repository on Steam Deck:
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx`, `RMG`, and `Suyu` from their respective repository.
+You gonna need Emudeck installed, because the script relies on a folder in your user directory, which is `/home/~/Applications/`, or you can make/create it on your own.
+
+To use the script, follow these steps:
 
 * Go to desktop mode;
   
@@ -176,9 +179,9 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
   
 * Open Konsole terminal and type `chmod +x /home/deck/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
   
-* Now open the `.sh` file, it's gonna download the latest builds in `/home/deck/Applications/`, you're gonna receive some pop-ups of what it got updated;
+* Now open the `.sh` file, it's going to download the latest builds in `/home/~/Applications/` and notify you with pop-ups of what it got updated;
   
-* Now go to `/home/deck/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `/home/deck/Applications/publish/`);
+* Now go to `/home/~/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `/home/deck/Applications/publish/`);
   
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates;
   
@@ -186,11 +189,8 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
 > NOTE: **ONLY** `Cemu`, `mgbaDev`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 > [!NOTE]
-> NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/deck/Applications/`, leave only the latest downloaded.
+> NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/~/Applications/`, leave only the latest downloaded.
 
-> [!TIP]
->  NOTE 3: you can edit the script and make it work under any other Linux distro by just changing the paths `/home/deck` with your current user `/home/[user]`.
-  
 
 
 ## [BACKUP](https://drive.google.com/file/d/1Eu-WXyptx20aEviQcxuuJP0MMSeLBJV6/view?usp=sharing):
