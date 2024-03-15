@@ -2,9 +2,6 @@
 
 A collection of guides that range from recommended peripheral hardware to emulation and more...
 
-> [!IMPORTANT]
-> Friendly reminder of 17 U.S.C. 1201 F and G. These sections make any copyright material's backup for personal use, emulators, and backups of deceased programs LEGAL. Furthermore, backups and redistribution of open-source programs under MIT and GPL2/3 are also LEGAL.
-
 
 
 ## Accessories and Hardware Recommendations for SteamDeck:
@@ -31,11 +28,11 @@ A collection of guides that range from recommended peripheral hardware to emulat
 
 - Extra programs you could like to have:
 	- ProtonUp-QT (useful for compatibility layers other than Valve's Proton).
-	- DeckyLoader (for plugin in gaming mode).
+	- DeckyLoader (for plugins in gaming mode).
 	- EmuDeck (wrapper to install everything you need for emulation).
 	- Discord/Vencord (self-explanatory).
-	- Google Chrome (self-explanatory).
-	- Lutris (to install non-Steam games from other sources).
+	- Vivaldi (better alternative to Chrome).
+	- Lutris (to install non-Steam games from other launchers or sources).
 	- Heroic Launcher (to install EpicGames and GOG Galaxy games).
 	- Prism Launcher (to install Minecraft Java).
 	- LibreOffice (Microsoft Office alternative).
@@ -68,10 +65,7 @@ A collection of guides that range from recommended peripheral hardware to emulat
 	- External drive (either for moving files or using it for EmuDeck).
 	- [Syncthing](https://www.youtube.com/watch?v=nzix6-uKTA0) (if you care for syncing files between different PCs).
 	- [Warpinator](https://www.youtube.com/watch?v=sHdQT6kI6Q8) and [Winpinator](https://github.com/swiszczoo/winpinator) (if you don't have an external drive to move your files).
-	- Mods and Cheats (you either rely on communities or other sites).
-	- [EmuDeckWiki](https://emudeck.github.io/) for any other kind of help or reference.
-	- [Compatibility list](https://brantje.github.io/emudeck-compatibility-list/) from EmuDeck's users.
-	- [EmuDeck's Discord server](https://discord.gg/b9F7GpXtFP) for any other help.
+	- Mods and Cheats (you either rely on communities or dedicated sites).
 	- [DeckyLoader](https://github.com/SteamDeckHomebrew/decky-loader) for PowerTools (it can be installed with EmuDeck).
 
 Now let's get started with the installation process:
@@ -80,7 +74,6 @@ Now let's get started with the installation process:
 	- Double click it. It will start installing EmuDeck (and only EmuDeck). You'll notice the previous file being replaced with a new one with the EmuDeck logo. Once it finishes, it's going to open the program for you.
 	- Select either quick or custom installation. The difference between the two is the ability to choose what emulators you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
 	- Select where you want to install your emulation folder (Which contains the aformentioned emulators based on the selection you made), the aspect ratio for your emulators (I would recommend using the original aspect ratio of each system so you won't encounter graphical glitches), the EmulationStation's theme and whether you want homebrew games or not. Now click the finish button and let EmuDeck install everything you chose.
-	- After the installation is done, click done. Don't bother with the add games section. It's going to prompt that again in the installation process for the device where you have your files, and it will ask you to move your files to the correct folders, which you can do on your own without redoing everything again. So, skip it, and now close EmuDeck.
 
 It's time to move your files: 
 - [DISCLAIMER] In this section, I will tell you where to move your files with an external drive since it's the fastest way to do it. If you want to do it in any other way, please refer to the embedded links in [Syncthing](https://www.youtube.com/watch?v=nzix6-uKTA0), [Warpinator](https://www.youtube.com/watch?v=sHdQT6kI6Q8), and [Winpinator](https://github.com/swiszczoo/winpinator):
@@ -89,13 +82,13 @@ It's time to move your files:
 	- You can start moving your ROMs from your drive to the ROMs folder. Inside of it, you're going to find out that each system has a folder for its ROMs. You can read a text file inside each of them to know what ROMs' format each emulator supports. I would recommend creating an update folder for modern systems (like 3DS, WiiU, Switch, PS3, Xbox360, Xbox) that support update ROMs for your games in /Emulation/ROMs/ (please pay attention to folders like WiiU; you're gonna find another ROM folder inside of it, and you need to move your ROMs there instead of just /Emulation/ROMs/WiiU/).
 
 You can now open EmuDeck again and start installing extra programs you might need to get everything working in the best way:
-- [DISCLAIMER] Please install [DeckyLoader](https://github.com/SteamDeckHomebrew/decky-loader) to use PowerTools and DeckyControls.
-	- Let's start by checking your BIOS files. Select the BIOS checker section and make sure the box for the emulators you need a BIOS for is green. If it's not, make sure it isn't corrupted or damaged by redumping it again.
+- [DISCLAIMER] Please install [DeckyLoader](https://github.com/SteamDeckHomebrew/decky-loader) to have access to EmuDeck specific plugins.
+	- Let's start by checking your BIOS files. Select the BIOS checker section and make sure the box for the emulators you need a BIOS for is green. If it's not, make sure to redumping it.
 	- If you want to use the gyro controls for emulators that need it or support it, open the gyroscope section. You're gonna need a sudo password. If you have not set a password, this page will prompt you to create one. Insert it and click install. Once the terminal closes, you can go back to the main page.
 	- Next, you're gonna need PowerTools for emulators like Yuzu and Dolphin-emu, mainly to disable SMT, the multi-thread process of Deck's APU, since in SteamOS 3.4 it's bugged. Go to the PowerTools section and install it the same way as the gyroscope section (same process for DeckyControls, a plugin to quickly check each emulator's controls and hotkeys).
 	- For better WiiU emulation, I would recommend installing Cemu native, known as Cemu appimage. You can get it in manage emulators > Cemu > install Cemu appimage.
-	- Add your emulators and ROMs to Steam with SteamRomManager so you will be able to play them in GamingMode. There is a shortcut on the initial page of EmuDeck. Click it. It's going to prompt that it's closing Steam for you. If your controls don't work after clicking yes, please use a mouse to navigate your Deck for this process. Wait for SteamRomManager to boot. Once it opens, go to settings > theme > change it from EmuDeck to classic for easier navigation. You can either leave everything on or turn off the toggle parsers' toggle and turn on only the toggles for the systems you want to add to Steam. Once you're done choosing, click preview > parse. Wait for the programs to retrieve the URLs for the artworks. Once it's done, click save to Steam. Now click on the log tab and wait for SteamRomManager to finish saving everything to Steam. Once it's done, close it, and open Steam.
-	- You can now either go back to GamingMode, installing your ROMs updates for your emulators, or fixing Dolphin-emu and Yuzu gyro controls. For this last point, please refer to the following links:
+	- Add your emulators and ROMs to Steam with SteamRomManager so you will be able to play them in GamingMode. There is a shortcut on the initial page of EmuDeck. Click it. It's going to prompt that it's closing Steam for you. If your controls don't work after clicking yes, please use a mouse to navigate your Deck for this process. Wait for SteamRomManager to boot. Once it opens, go to settings > theme > change it from EmuDeck to classic for easier navigation. You can either leave everything on or turn off the toggle parsers' toggle and turn on only the toggles for the systems you want to add to Steam. Once you're done choosing, click preview > parse. Wait for the program to retrieve the URLs for the artworks. Once it's done, click save to Steam. Now click on the log tab and wait for SteamRomManager to finish saving everything to Steam. Once it's done, close it, and open Steam.
+	- You can now either go back to GamingMode, installing your ROMs updates for your emulators, or fixing Dolphin-emu and Suyu/Yuzu gyro controls. For this last point, please refer to the following links:
 		- https://emudeck.github.io/emudeck-application/steamos/emudeck-application-101/#steamdeckgyrodsu;
 		- https://github.com/kmicki/SteamDeckGyroDSU/issues/45#issuecomment-1518530487;
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks.
@@ -114,6 +107,8 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
 > - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for Citra flatpak; `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for Citra Appimage(similar to yuzu SRM for Linux);
+>
+> If you need the middleware files used for SteamRomManager, you can find them in the Citrus folder.
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
@@ -141,53 +136,52 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 
-## 30fps TOTK on YuzuEA for SteamDeck:
+## 30fps TOTK on YuzuEA/Suyu for SteamDeck:
 
 
-- Requirements: keys and firmware 16.0.3 from your switch, TOTK and update 1.2.0 ROMs, EmuDeck, and mods patches (optional: PowerTools if you have an OC deck or you are on OS 3.4.X).
+- Requirements: keys and firmware 16.0.3 from your switch, TOTK and update 1.2.0 ROMs, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install Yuzu with EmuDeck (if you want Yuzu EA, use the Citrus folders).
+- Step 1: Go into desktop mode, install Suyu with EmuDeck (if you want Yuzu EA, use the Citrus folders).
 
-- Step 2: Move the keys and firmware inside `/Emulation/bios/yuzu/`.
+- Step 2: Move the keys and firmware inside `~/Emulation/bios/suyu/` or `~/Emulation/bios/yuzu/` if you prefer it.
 
-- Step 3: Move the ROMs into EmuDeck inside `/Emulation/ROMs/switch/` and install the update.
+- Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
 
-- Step 4: Open Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, switch to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, everything else is stock.
+- Step 4: Open Suyu/Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, switch to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, everything else is stock.
 
-- Step 5: Download the zip file attached to this message and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
+- Step 5: Download the zip file `TOTK-30fps-1.2.0.zip` and extract the content into the mods directory. With Suyu/Yuzu right-click on the game and select `open mod data location`.
 
-- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life (with PowerTools disable SMT only when you are using Yuzu on OS 3.4.X).
+- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
 
-- Step 7: Enjoy your TOTK experience on Deck too :]
+- Step 7: Enjoy your TOTK experience on Deck :]
 
 > [!TIP]
-> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
+> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Suyu/Yuzu when you right-click on the title.
 
 
 
 ## BETA Emulators autoinstall script:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx`, `RMG`, and `Suyu` from their respective repository.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx`, `RMG`, and `Suyu` from their respective repositories.
 
 You need Emudeck installed, because the script relies on a folder in your user directory, which is `/home/~/Applications/`, or you can make/create it on your own.
 
 To use the script, follow these steps:
 
-* Go to desktop mode;
-  
 * Download the `update.sh` file;
   
-* Open Konsole terminal and type `chmod +x /home/deck/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
+* Open Konsole terminal and type `chmod +x /home/~/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
   
 * Now open the `.sh` file, it's going to download the latest builds in `/home/~/Applications/` and notify you with pop-ups of what it got updated;
   
 * Now go to `/home/~/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `/home/deck/Applications/publish/`);
   
-* Add the `.sh` file and the new appimages to Steam and enjoy the latest updates;
+* Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
+
   
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 > [!NOTE]
 > NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/~/Applications/`, leave only the latest downloaded.
@@ -197,7 +191,7 @@ To use the script, follow these steps:
 ## [BACKUP](https://drive.google.com/file/d/1Eu-WXyptx20aEviQcxuuJP0MMSeLBJV6/view?usp=sharing):
 
 
-All the links below are a reference to make the backup of the link above.
+All the links below are the references to make the backup of the link above.
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases/ .
@@ -211,4 +205,3 @@ All the links below are a reference to make the backup of the link above.
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
-
