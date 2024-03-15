@@ -2,8 +2,8 @@
 
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
-        cd /home/deck/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "MelonDS" ]] && [[ $1 != "MgbaDev" ]]; then
+        cd ~/Applications || exit
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "MelonDS" ]] && [[ $1 != "MgbaDev" ]] && [[ $1 != "Suyu" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -19,8 +19,8 @@ download_notify() {
                                 ;;
 
                         Cemu)
-                                curl -L -o /home/deck/Applications/Cemu.AppImage -z /home/deck/Applications/Cemu.AppImage "${urls[0]}"
-                                chmod +x /home/deck/Applications/Cemu.AppImage
+                                curl -L -o ~/Applications/Cemu.AppImage -z ~/Applications/Cemu.AppImage "${urls[0]}"
+                                chmod +x ~/Applications/Cemu.AppImage
                                 ;;
 
                         Panda3DS)
@@ -31,28 +31,33 @@ download_notify() {
                                 ;;
 
                         DolphinDev)
-                                curl -L -o /home/deck/Applications/DolphinDev.AppImage -z /home/deck/Applications/DolphinDev.AppImage "${urls[0]}"
-                                chmod +x /home/deck/Applications/DolphinDev.AppImage
+                                curl -L -o ~/Applications/DolphinDev.AppImage -z ~/Applications/DolphinDev.AppImage "${urls[0]}"
+                                chmod +x ~/Applications/DolphinDev.AppImage
                                 ;;
 
                         RMG)
-                                curl -L -o /home/deck/Applications/RMG.AppImage -z /home/deck/Applications/RMG.AppImage "${urls[0]}"
-                                chmod +x /home/deck/Applications/RMG.AppImage
+                                curl -L -o ~/Applications/RMG.AppImage -z ~/Applications/RMG.AppImage "${urls[0]}"
+                                chmod +x ~/Applications/RMG.AppImage
                                 ;;
 
                         MelonDS)
-                                curl -L -o /home/deck/Applications/MelonDS.AppImage -z /home/deck/Applications/MelonDS.AppImage "${urls[0]}"
-                                chmod +x /home/deck/Applications/MelonDS.AppImage
+                                curl -L -o ~/Applications/MelonDS.AppImage -z ~/Applications/MelonDS.AppImage "${urls[0]}"
+                                chmod +x ~/Applications/MelonDS.AppImage
                                 ;;
 
                         MgbaDev)
-                                curl -L -o /home/deck/Applications/MgbaDev.AppImage -z /home/deck/Applications/MgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
-                                chmod +x /home/deck/Applications/MgbaDev.AppImage
+                                curl -L -o ~/Applications/MgbaDev.AppImage -z ~/Applications/MgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
+                                chmod +x ~/Applications/MgbaDev.AppImage
+                                ;;
+				
+                        Suyu)
+                                curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
+                                chmod +x ~/Applications/suyu.AppImage
                                 ;;
 
                         *)
-                                curl -s -L -o /home/deck/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
-                                chmod +x /home/deck/Applications/"$(basename "${urls[0]}")"
+                                curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
+                                chmod +x ~/Applications/"$(basename "${urls[0]}")"
                                 ;;
                 esac
         fi;}
@@ -99,3 +104,9 @@ download_notify MelonDS
 #MgbaDev
 #------------
 download_notify MgbaDev
+
+#Suyu
+#------------
+mapfile -t urls < <(curl -s -H "https://gitlab.com/api/v4/projects" -G -d 'per_page=1' https://gitlab.com/api/v4/projects/suyu-emu%2Fsuyu/releases | \
+        jq -r '.[].assets.sources[] | select(.url | test("Appimage")) | .url')
+download_notify Suyu
