@@ -169,7 +169,8 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx`, `RMG`, and `Suyu` from their respective repository.
-You gonna need Emudeck installed, because the script relies on a folder in your user directory, which is `/home/~/Applications/`, or you can make/create it on your own.
+
+You need Emudeck installed, because the script relies on a folder in your user directory, which is `/home/~/Applications/`, or you can make/create it on your own.
 
 To use the script, follow these steps:
 
