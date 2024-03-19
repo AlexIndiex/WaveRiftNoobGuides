@@ -154,6 +154,9 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
 
 - Step 7: Enjoy your TOTK experience on Deck :]
+  
+> [!NOTE]
+> NOTE: the mods present in this repository are quite old, please use [TOTK-Optimizer](https://github.com/hoverbike1/TOTK-Mods-collection/releases) to update them with a new pack.
 
 > [!TIP]
 > NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Suyu/Yuzu when you right-click on the title.
