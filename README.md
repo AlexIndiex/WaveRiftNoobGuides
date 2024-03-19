@@ -163,7 +163,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 ## BETA Emulators autoinstall script:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `Ryujinx`, `RMG`, and `Suyu` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, and `Suyu` from their respective repositories.
 
 You need Emudeck installed, because the script relies on a folder in your user directory, which is `/home/~/Applications/`, or you can make/create it on your own.
 
@@ -181,10 +181,10 @@ To use the script, follow these steps:
 
   
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 > [!NOTE]
-> NOTE 2: once in a while clean the `Linux` 7z files and `Ryujinx` tar.gz files from `/home/~/Applications/`, leave only the latest downloaded.
+> NOTE 2: once in a while clean the `linux` 7z files and `Ryujinx` tar.gz files from `/home/~/Applications/`, leave only the latest downloaded.
 
 
 
