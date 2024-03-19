@@ -139,9 +139,9 @@ You can now open EmuDeck again and start installing extra programs you might nee
 ## 30fps TOTK on YuzuEA/Suyu for SteamDeck:
 
 
-- Requirements: keys and firmware 16.0.3 from your switch, TOTK and update 1.2.0 ROMs, EmuDeck, and mods.
+- Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install Suyu with EmuDeck (if you want Yuzu EA, use the Citrus folders).
+- Step 1: Go into desktop mode, install Suyu with EmuDeck (if you want Yuzu EA, use the Citrus folder from this repository).
 
 - Step 2: Move the keys and firmware inside `~/Emulation/bios/suyu/` or `~/Emulation/bios/yuzu/` if you prefer it.
 
