@@ -8,7 +8,7 @@ download_notify() {
         else
                 notify "Updating: $1"
                 case $1 in
-
+                        
                         Ryujinx)
                                 curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 tar xf "$(basename "${urls[0]}")"
@@ -17,45 +17,45 @@ download_notify() {
                                 chmod +x ~/Applications/publish/Ryujinx.SDL2.Common.dll.config
                                 chmod +x ~/Applications/publish/mime/Ryujinx.xml
                                 ;;
-
+                        
                         Cemu)
                                 curl -L -o ~/Applications/Cemu.AppImage -z ~/Applications/Cemu.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/Cemu.AppImage
                                 ;;
-
+                        
                         Panda3DS)
                                 curl -L -o ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -z ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
                                 7z x "$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -y
                                 mv ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
                                 chmod +x ~/Applications/Panda3DS.AppImage
                                 ;;
-
+                        
                         DolphinDev)
                                 curl -L -o ~/Applications/DolphinDev.AppImage -z ~/Applications/DolphinDev.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/DolphinDev.AppImage
                                 ;;
-
+                        
                         RMG)
                                 curl -L -o ~/Applications/RMG.AppImage -z ~/Applications/RMG.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/RMG.AppImage
                                 ;;
-
+                        
                         MelonDS)
                                 curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 7z x "$(basename "${urls[0]}")" -y
                                 chmod +x ~/Applications/melonDS
                                 ;;
-
+                        
                         MgbaDev)
                                 curl -L -o ~/Applications/MgbaDev.AppImage -z ~/Applications/MgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
                                 chmod +x ~/Applications/MgbaDev.AppImage
                                 ;;
-
+                        
                         Suyu)
                                 curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/suyu.AppImage
                                 ;;
-
+                        
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 chmod +x ~/Applications/"$(basename "${urls[0]}")"
