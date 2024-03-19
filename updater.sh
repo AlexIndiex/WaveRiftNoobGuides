@@ -26,7 +26,7 @@ download_notify() {
                         Panda3DS)
                                 curl -L -o ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -z ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
                                 7z x "$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -y
-				mv ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
+                                mv ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
                                 chmod +x ~/Applications/Panda3DS.AppImage
                                 ;;
 
@@ -50,7 +50,7 @@ download_notify() {
                                 curl -L -o ~/Applications/MgbaDev.AppImage -z ~/Applications/MgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
                                 chmod +x ~/Applications/MgbaDev.AppImage
                                 ;;
-				
+
                         Suyu)
                                 curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/suyu.AppImage
