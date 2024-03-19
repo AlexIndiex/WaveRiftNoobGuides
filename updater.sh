@@ -43,7 +43,7 @@ download_notify() {
                         MelonDS)
                                 curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 7z x "$(basename "${urls[0]}")" -y
-                                chmod +x ~/Applications/melonDs
+                                chmod +x ~/Applications/melonDS
                                 ;;
 
                         MgbaDev)
