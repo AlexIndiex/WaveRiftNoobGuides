@@ -111,5 +111,5 @@ download_notify MgbaDev
 #Suyu
 #------------
 mapfile -t urls < <(curl -s -H "https://gitlab.com/api/v4/projects" -G -d 'per_page=1' https://gitlab.com/api/v4/projects/suyu-emu%2Fsuyu/releases | \
-        jq -r '.[].assets.links[] | select(.url | test("AppImage")) | .url) | sub("blob"; "raw")'
+        jq -r '.[].assets.links[] | select(.url | test("AppImage")) | .url | sub("blob"; "raw")')
 download_notify Suyu
