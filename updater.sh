@@ -10,7 +10,7 @@ download_notify() {
                 case $1 in
                         
                         Ryujinx)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
+                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 tar xf "$(basename "${urls[0]}")"
                                 chmod +x ~/Applications/publish/Ryujinx
                                 chmod +x ~/Applications/publish/Ryujinx.sh
