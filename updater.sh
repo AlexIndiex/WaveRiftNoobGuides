@@ -3,7 +3,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "MelonDS" ]] && [[ $1 != "MgbaDev" ]] && [[ $1 != "Suyu" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "MelonDS" ]] && [[ $1 != "MgbaDev" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -51,10 +51,10 @@ download_notify() {
                                 chmod +x ~/Applications/MgbaDev.AppImage
                                 ;;
                         
-                        Suyu)
-                                curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
-                                chmod +x ~/Applications/suyu.AppImage
-                                ;;
+                        #Suyu)
+                        #        curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
+                        #        chmod +x ~/Applications/suyu.AppImage
+                        #        ;;
                         
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
@@ -108,6 +108,6 @@ download_notify MgbaDev
 
 #Suyu
 #------------
-mapfile -t urls < <(curl -s -H "https://gitlab.com/api/v4/projects" -G -d 'per_page=1' https://gitlab.com/api/v4/projects/suyu-emu%2Fsuyu/releases | \
-        jq -r '.[].assets.links[] | select(.url | test("AppImage")) | .url')
-download_notify Suyu
+#mapfile -t urls < <(curl -s -H "https://gitlab.com/api/v4/projects" -G -d 'per_page=1' https://gitlab.com/api/v4/projects/suyu-emu%2Fsuyu/releases | \
+#        jq -r '.[].assets.links[] | select(.url | test("AppImage")) | .url')
+#download_notify Suyu
