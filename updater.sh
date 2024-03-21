@@ -52,7 +52,7 @@ download_notify() {
                                 ;;
                         
                         suyu)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
+                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 mv ~/Applications/suyu-mainline--.AppImage ~/Applications/suyu.AppImage
                                 chmod +x ~/Applications/suyu.AppImage
                                 ;;
