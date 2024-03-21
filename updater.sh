@@ -3,7 +3,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "MelonDS" ]] && [[ $1 != "MgbaDev" ]] && [[ $1 != "Suyu" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "suyu" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -24,8 +24,8 @@ download_notify() {
                                 ;;
                         
                         Panda3DS)
-                                curl -L -o ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -z ~/Applications/"$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
-                                7z x "$(basename https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip)" -y
+                                curl -L -o ~/Applications/Panda3DS.zip -z ~/Applications/Panda3DS.zip https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
+                                7z x Panda3DS.zip -y
                                 mv ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
                                 chmod +x ~/Applications/Panda3DS.AppImage
                                 ;;
@@ -40,18 +40,18 @@ download_notify() {
                                 chmod +x ~/Applications/RMG.AppImage
                                 ;;
                         
-                        MelonDS)
+                        melonDS)
                                 curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 7z x "$(basename "${urls[0]}")" -y
                                 chmod +x ~/Applications/melonDS
                                 ;;
                         
-                        MgbaDev)
-                                curl -L -o ~/Applications/MgbaDev.AppImage -z ~/Applications/MgbaDev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
-                                chmod +x ~/Applications/MgbaDev.AppImage
+                        mGBAdev)
+                                curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
+                                chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
                         
-                        Suyu)
+                        suyu)
                                 curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z /home/deck/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 mv ~/Applications/suyu-mainline--.AppImage ~/Applications/suyu.AppImage
                                 chmod +x ~/Applications/suyu.AppImage
@@ -101,14 +101,14 @@ download_notify RMG
 #------------
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
-download_notify MelonDS
+download_notify melonDS
 
 #MgbaDev
 #------------
-download_notify MgbaDev
+download_notify mGBAdev
 
 #Suyu
 #------------
 mapfile -t urls < <(curl -s -H "https://gitlab.com/api/v4/projects" -G -d 'per_page=1' https://gitlab.com/api/v4/projects/suyu-emu%2Fsuyu/releases | \
         jq -r '.[].assets.links[] | select(.direct_asset_url | test("AppImage")).direct_asset_url | sub("blob"; "raw")')
-download_notify Suyu
+download_notify suyu
