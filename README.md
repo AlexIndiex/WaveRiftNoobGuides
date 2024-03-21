@@ -54,17 +54,17 @@ A collection of guides that range from recommended peripheral hardware to emulat
 
 The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, and `Suyu` from their respective repositories.
 
-You need Emudeck installed, because the script relies on a folder in your user directory, which is `/home/~/Applications/`, or you can make/create it on your own.
+You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
 
 To use the script, follow these steps:
 
 * Download the `update.sh` file;
   
-* Open Konsole terminal and type `chmod +x /home/~/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
+* Open Konsole terminal and type `chmod +x $HOME/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
   
-* Now open the `.sh` file, it's going to download the latest builds in `/home/~/Applications/` and notify you with pop-ups of what it got updated;
+* Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
   
-* Now go to `/home/~/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `/home/deck/Applications/publish/`);
+* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `$HOME/Applications/publish/`);
   
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
 
@@ -73,7 +73,7 @@ To use the script, follow these steps:
 > NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 > [!NOTE]
-> NOTE 2: once in a while clean the `linux` 7z files and `Ryujinx` tar.gz files from `/home/~/Applications/`, leave only the latest downloaded.
+> NOTE 2: once in a while clean the `linux` 7z files and `Ryujinx` tar.gz files from `$HOME/Applications/`, leave only the latest downloaded.
 
 
 
