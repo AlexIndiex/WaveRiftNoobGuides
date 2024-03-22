@@ -109,6 +109,6 @@ download_notify mGBAdev
 
 #Suyu
 #------------
-mapfile -t urls < <(curl -s -H "https://gitlab.com/api/v4/projects" -G -d 'per_page=1' https://gitlab.com/api/v4/projects/suyu-emu%2Fsuyu/releases | \
-        jq -r '.[].assets.links[] | select(.direct_asset_url | test("AppImage")).direct_asset_url | sub("blob"; "raw")')
+mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify suyu
