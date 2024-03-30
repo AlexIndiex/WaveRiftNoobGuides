@@ -59,9 +59,9 @@ download_notify() {
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.7z -z ~/Applications/Lime3DS.7z "${urls[0]}"
                                 7z x Lime3DS.7z -y
-                                chmod +x ~/Applications/head/citra.AppImage
-                                chmod +x ~/Applications/head/citra-qt.AppImage
-                                chmod +x ~/Applications/head/citra-room.AppImage
+                                chmod +x ~/Applications/head/lime.AppImage
+                                chmod +x ~/Applications/head/lime-qt.AppImage
+                                chmod +x ~/Applications/head/lime-room.AppImage
                                 ;;
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
