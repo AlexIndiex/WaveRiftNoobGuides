@@ -3,15 +3,15 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "suyu" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "suyu" ]] && [[ $1 != "Lime3DS" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
                 case $1 in
                         
                         Ryujinx)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
-                                tar xf "$(basename "${urls[0]}")"
+                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}"
+                                tar xf Ryujinx.tar.gz
                                 chmod +x ~/Applications/publish/Ryujinx
                                 chmod +x ~/Applications/publish/Ryujinx.sh
                                 chmod +x ~/Applications/publish/Ryujinx.SDL2.Common.dll.config
@@ -41,8 +41,8 @@ download_notify() {
                                 ;;
                         
                         melonDS)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
-                                7z x "$(basename "${urls[0]}")" -y
+                                curl -L -o ~/Applications/melonDS.zip -z ~/Applications/melonDS.zip "${urls[0]}"
+                                7z x melonDS.zip -y
                                 chmod +x ~/Applications/melonDS
                                 ;;
                         
@@ -52,11 +52,17 @@ download_notify() {
                                 ;;
                         
                         suyu)
-                                curl -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
-                                mv ~/Applications/"$(basename "${urls[0]}")" ~/Applications/suyu.AppImage
+                                curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/suyu.AppImage
                                 ;;
                         
+                        Lime3DS)
+                                curl -L -o ~/Applications/Lime3DS.7z -z ~/Applications/Lime3DS.7z "${urls[0]}"
+                                7z x Lime3DS.7z -y
+                                chmod +x ~/Applications/head/citra.AppImage
+                                chmod +x ~/Applications/head/citra-qt.AppImage
+                                chmod +x ~/Applications/head/citra-room.AppImage
+                                ;;
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 chmod +x ~/Applications/"$(basename "${urls[0]}")"
@@ -97,18 +103,24 @@ mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_
         jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
 download_notify RMG
 
-#MelonDS
+#melonDS
 #------------
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
 download_notify melonDS
 
-#MgbaDev
+#mGBAdev
 #------------
 download_notify mGBAdev
 
-#Suyu
+#suyu
 #------------
 mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify suyu
+
+#Lime3DS
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lime3DS/Lime3DS/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+download_notify Lime3DS
