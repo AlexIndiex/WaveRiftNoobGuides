@@ -52,7 +52,7 @@ A collection of guides that range from recommended peripheral hardware to emulat
 ## BETA Emulators autoinstall script:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, and `Suyu` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS` and `Suyu` from their respective repositories.
 
 You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
 
@@ -64,16 +64,13 @@ To use the script, follow these steps:
   
 * Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
   
-* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx, just link `Ryujinx.sh` from `$HOME/Applications/publish/`);
+* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS` link `Lime3DS.AppImage` from `$HOME/Applications/head/`);
   
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
 
   
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, so **CHANGE ANYTHING AT YOUR OWN RISK**.
-
-> [!NOTE]
-> NOTE 2: once in a while clean the `linux` 7z files and `Ryujinx` tar.gz files from `$HOME/Applications/`, leave only the latest downloaded.
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, `Lime3DS`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 
 
