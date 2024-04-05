@@ -172,7 +172,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
 
-- Step 4: Open Suyu/Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, switch to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, everything else is stock.
+- Step 4: Open Suyu/Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
 
 - Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Suyu/Yuzu right-click on the game and select `open mod data location`.
 
