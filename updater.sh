@@ -46,6 +46,12 @@ download_notify() {
                                 chmod +x ~/Applications/melonDS
                                 ;;
                         
+                        SkyEmu)
+                                curl -L -o ~/Applications/SkyEmu.zip -z ~/Applications/SkyEmu.zip "${urls[0]}"
+                                7z x SkyEmu.zip -y
+                                chmod +x ~/Applications/SkyEmu
+                                ;;
+                        
                         mGBAdev)
                                 curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
                                 chmod +x ~/Applications/mGBAdev.AppImage
@@ -58,11 +64,28 @@ download_notify() {
                         
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.7z -z ~/Applications/Lime3DS.7z "${urls[0]}"
-                                7z x Lime3DS.7z -y
-                                chmod +x ~/Applications/head/lime.AppImage
-                                chmod +x ~/Applications/head/lime-qt.AppImage
-                                chmod +x ~/Applications/head/lime-room.AppImage
+                                7z x Lime3DS.7z -o* -y
+                                chmod +x ~/Applications/Lime3DS/head/lime.AppImage
+                                chmod +x ~/Applications/Lime3DS/head/lime-qt.AppImage
+                                chmod +x ~/Applications/Lime3DS/head/lime-room.AppImage
                                 ;;
+                         
+                        citraPMK7)
+                                curl -L - ~/Applications/citraPMK7.7z ~/Applications/citraPMK7.7z "${urls[0]}"
+                                7z x citraPMK7.7z -o* -y
+                                chmod +x ~/Applications/citraPMK7/head/citra.AppImage
+                                chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage
+                                chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
+                                ;;
+                        
+                        Lemonade)
+                                curl -L - ~/Applications/Lemonade.7z -z ~/Applications/Lemonade.7z "${urls[0]}" | bsdtar -xvf- *7z
+                                7z x Lemonade.7z -o* -y
+                                chmod +x ~/Applications/Lemonade/head/lemonade.AppImage
+                                chmod +x ~/Applications/Lemonade/head/lemonade-qt.AppImage
+                                chmod +x ~/Applications/Lemonade/head/lemonade-room.AppImage
+                                ;;
+                        
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 chmod +x ~/Applications/"$(basename "${urls[0]}")"
@@ -109,6 +132,12 @@ mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_
         jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
 download_notify melonDS
 
+#SkyEmu
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/skylersaleh/SkyEmu/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("Linux")) | .browser_download_url')
+download_notify SkyEmu
+
 #mGBAdev
 #------------
 download_notify mGBAdev
@@ -124,3 +153,16 @@ download_notify suyu
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lime3DS/Lime3DS/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify Lime3DS
+
+#citraPMK7
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+download_notify citraPMK7
+curl -L -s -o - "$(basename "${urls[0]}")" | bsdtar -xvf- *7z 
+
+#Lemonade
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lemonade-emu/Lemonade/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+download_notify Lemonade
