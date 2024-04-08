@@ -71,7 +71,7 @@ download_notify() {
                                 ;;
                          
                         citraPMK7)
-                                curl -L - ~/Applications/citraPMK7.7z ~/Applications/citraPMK7.7z "${urls[0]}"
+                                curl -L -o ~/Applications/citraPMK7.7z -z ~/Applications/citraPMK7.7z "${urls[0]}"
                                 7z x citraPMK7.7z -o* -y
                                 chmod +x ~/Applications/citraPMK7/head/citra.AppImage
                                 chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage
@@ -79,8 +79,8 @@ download_notify() {
                                 ;;
                         
                         Lemonade)
-                                curl -L - ~/Applications/Lemonade.7z -z ~/Applications/Lemonade.7z "${urls[0]}" | bsdtar -xvf- *7z
-                                7z x Lemonade.7z -o* -y
+                                curl -L -s -o - "${urls[0]}" | bsdtar -xvf- *7z
+                                7z x lemonade*7z -o* -y
                                 chmod +x ~/Applications/Lemonade/head/lemonade.AppImage
                                 chmod +x ~/Applications/Lemonade/head/lemonade-qt.AppImage
                                 chmod +x ~/Applications/Lemonade/head/lemonade-room.AppImage
