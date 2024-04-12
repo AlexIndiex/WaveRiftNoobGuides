@@ -87,7 +87,7 @@ download_notify() {
                         
                         Lemonade)
                                 curl -L -s -o - "${urls[0]}" | unzip -d ~/Applications/Lemonade - *7z
-                                7z x lemonade*7z -o* -y
+                                7z x Lemonade*7z -o* -y
                                 chmod +x ~/Applications/Lemonade/head/lemonade.AppImage
                                 chmod +x ~/Applications/Lemonade/head/lemonade-qt.AppImage
                                 chmod +x ~/Applications/Lemonade/head/lemonade-room.AppImage
