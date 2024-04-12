@@ -3,7 +3,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "suyu" ]] && [[ $1 != "Lime3DS" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "suyu" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK7" ]] && [[ $1 != "Lemonade" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -60,6 +60,13 @@ download_notify() {
                         suyu)
                                 curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/suyu.AppImage
+                                ;;
+                                                
+                        Sudachi)
+                                curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}"
+                                7z x Sudachi.7z -o* -y
+                                chmod +x ~/Applications/Sudachi/sudachi
+                                chmod +x ~/Applications/Sudachi/sudachi-cmd
                                 ;;
                         
                         Lime3DS)
@@ -147,6 +154,12 @@ download_notify mGBAdev
 mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify suyu
+
+#Sudachi
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/sudachi-emu/sudachi/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("linux")) | .browser_download_url')
+download_notify Sudachi
 
 #Lime3DS
 #------------
