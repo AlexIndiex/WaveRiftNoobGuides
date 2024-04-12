@@ -52,7 +52,7 @@ A collection of guides that range from recommended peripheral hardware to emulat
 ## BETA Emulators autoinstall script:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS` and `Suyu` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Suyu`, `Sudachi`, `SkyEmu`, `Lemonade`, `citrapmk7` from their respective repositories.
 
 You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
 
