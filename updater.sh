@@ -72,9 +72,9 @@ download_notify() {
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.7z -z ~/Applications/Lime3DS.7z "${urls[0]}"
                                 7z x Lime3DS.7z -o* -y
-                                chmod +x ~/Applications/Lime3DS/head/lime.AppImage
-                                chmod +x ~/Applications/Lime3DS/head/lime-qt.AppImage
-                                chmod +x ~/Applications/Lime3DS/head/lime-room.AppImage
+                                chmod +x ~/Applications/Lime3DS/*/lime.AppImage
+                                chmod +x ~/Applications/Lime3DS/*/lime-qt.AppImage
+                                chmod +x ~/Applications/Lime3DS/*/lime-room.AppImage
                                 ;;
                          
                         citraPMK7)
@@ -86,7 +86,7 @@ download_notify() {
                                 ;;
                         
                         Lemonade)
-                                curl -L -s -o - "${urls[0]}" | bsdtar -xvf- *7z
+                                curl -L -s -o - "${urls[0]}" | unzip -d ~/Applications/Lemonade - *7z
                                 7z x lemonade*7z -o* -y
                                 chmod +x ~/Applications/Lemonade/head/lemonade.AppImage
                                 chmod +x ~/Applications/Lemonade/head/lemonade-qt.AppImage
