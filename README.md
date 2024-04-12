@@ -52,7 +52,7 @@ A collection of guides that range from recommended peripheral hardware to emulat
 ## BETA Emulators autoinstall script:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Suyu`, `Sudachi`, `SkyEmu`, `Lemonade`, `citrapmk7` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Suyu`, `Sudachi`, `SkyEmu`, `Lemonade` and `citrapmk7` from their respective repositories.
 
 You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
 
@@ -161,20 +161,20 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 
-## 30fps TOTK on YuzuEA/Suyu for SteamDeck:
+## 30fps TOTK on YuzuEA for SteamDeck:
 
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install Suyu with EmuDeck (if you want Yuzu EA, use the Citrus folder from this repository).
+- Step 1: Go into desktop mode, install Yuzu with EmuDeck (or use an alternative, like Sudachi or Suyu).
 
-- Step 2: Move the keys and firmware inside `~/Emulation/bios/suyu/` or `~/Emulation/bios/yuzu/` if you prefer it.
+- Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
 
 - Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
 
-- Step 4: Open Suyu/Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
+- Step 4: Open Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
 
-- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Suyu/Yuzu right-click on the game and select `open mod data location`.
+- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
 
 - Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
 
@@ -184,7 +184,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > NOTE: the mods present in this repository are quite old, please use [TOTK-Optimizer](https://github.com/hoverbike1/TOTK-Mods-collection/releases) to update them with a new pack.
 
 > [!TIP]
-> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Suyu/Yuzu when you right-click on the title.
+> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
 
 
 
