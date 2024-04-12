@@ -60,17 +60,17 @@ To use the script, follow these steps:
 
 * Download the `update.sh` file;
   
-* Open Konsole terminal and type `chmod +x $HOME/Downloads/updater.sh` to give the `.sh` file permission to execute on deck;
+* Open Konsole terminal and type `chmod +x $HOME/Downloads/updater.sh` to give the `.sh` file permission to execute;
   
 * Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
   
-* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS` link `lime.AppImage` from `$HOME/Applications/head/`);
+* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS`, `Lemonade` and `citrapmk7` link `.AppImage` from `$HOME/Applications/*/head/`);
   
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
 
   
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, `Lime3DS`, and `Ryujinx` work with `EmuDeck` and `SteamRomManager`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, `Lime3DS`, `Lemonade`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 
 
