@@ -154,7 +154,7 @@ download_notify mGBAdev
 #suyu
 #------------
 mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
 download_notify suyu
 
 #Sudachi
