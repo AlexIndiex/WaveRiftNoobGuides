@@ -135,7 +135,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > 
 > - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for Citra flatpak; `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for Citra Appimage(similar to yuzu SRM for Linux);
 >
-> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder.
+> If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup).
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
@@ -168,7 +168,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install Yuzu with EmuDeck (or use an alternative, like Sudachi or Suyu).
+- Step 1: Go into desktop mode, install [Yuzu](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup) with EmuDeck (or use an alternative, like Sudachi or Suyu).
 
 - Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
 
@@ -235,16 +235,5 @@ All the links below are the references to make the backup of the link above.
 - List of decomp projects:
 	- https://www.resetera.com/threads/decompilation-projects-ot-free-next-gen-update-for-your-favorite-classics-jak-ii-pc-port-out-in-beta.682687/
 	- https://www.retroreversing.com/source-code/decompiled-retail-console-games
-
-
-
-
-
-
-
-
-
-
-
 
 
