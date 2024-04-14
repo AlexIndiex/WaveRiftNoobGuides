@@ -1,6 +1,7 @@
 # DeckNoobGuides
 
-A collection of guides that range from recommended peripheral hardware to emulation and more...
+A collection of guides that range from recommended peripheral hardware, to emulation and more...
+[Quick mega backup link](/README.md#backup)
 
 
 
