@@ -210,9 +210,9 @@ All the links below are the references to make the backup of the link above.
 ## Miscellaneous content:
 
 
-- made [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) working with a [bottles](https://usebottles.com/) environment,  here is the [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing those .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it worked just fine, and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
+- Made [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) working on Linux with a [bottles](https://usebottles.com/) environment,  here is the [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing those .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it worked just fine, and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
 
-- romhack'[s](https://cdromance.org/) places:
+- RomHack[s](https://cdromance.org/)' places:
 	- https://gamebanana.com/
 	- https://www.romhacking.net/
 	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
