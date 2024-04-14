@@ -1,7 +1,8 @@
 # DeckNoobGuides
 
 A collection of guides that range from recommended peripheral hardware, to emulation and more...
-[Quick mega backup link](/readme-ov-file#backup)
+
+[Quick backup link](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup)
 
 
 
