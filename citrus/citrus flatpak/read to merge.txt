@@ -1,1 +1,0 @@
-copy and merge the flatpak folder in ~/. local/share/
