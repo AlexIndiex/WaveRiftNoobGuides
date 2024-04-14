@@ -2,7 +2,7 @@
 
 A collection of guides that range from recommended peripheral hardware, to emulation and more...
 
-[Quick backup link](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup)
+[Quick emulators backup link](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup)
 
 
 
