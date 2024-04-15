@@ -80,7 +80,6 @@ download_notify() {
                                 chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
                                 ;;
                         
-                        #        chmod +x ~/Applications/Lemonade/head/lemonade-room.AppImage
                         #        ;;
                         
                         *)
