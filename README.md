@@ -31,51 +31,6 @@ To use the script, follow these steps:
 
 
 
-## Accessories and Hardware Recommendations for SteamDeck:
-
-
-- Accessories you could need:
-	- Screen protector (self-explanatory).
-	- Cover or skin (self-explanatory).
-	- Travel bag (self-explanatory).
-
-- Extra hardware you could need:
-	- MicroSD (Samsung, SanDisk, Team-Group).
-	- 2230 NVMe SSD for storage upgrade (Corsair, Sabrent, Western Digital).
-	- 45w to 65w PD power bank (20000mAh capacity highly suggested).
-	- External storage in case something happens with the microSD (ShargeDisk or a normal SATA to USB enclosure).
-	- [Monitor](https://youtu.be/Z8rJxJo3cfI) (LG, Alienware, Gigabyte).
-	- Keyboard (Keychron, Akko/Epomaker, Wooting).
-	- Mouse (Logitech, Pulsar, Endgame Gear).
-	- IEMs (Moondrop, Tangzu, 7hz, Truthear).
-	- Headphones (Sennheiser, AKG, Shure).
-	- Portable DAC/AMP (Qudelix, Fiio, Moondrop).
-	- Cables/hubs (Ugreen, Anker, StarTech).
-	- Controllers (Flydigi, Gamesir, 8bitdo).
-
-- Extra programs you could like to have:
-	- ProtonUp-QT (useful for compatibility layers other than Valve's Proton).
-	- DeckyLoader (for plugins in gaming mode).
-	- EmuDeck (wrapper to install everything you need for emulation).
-	- Discord/Vencord (self-explanatory).
-	- Vivaldi (better alternative to Chrome).
-	- Lutris (to install non-Steam games from other launchers or sources).
-	- Heroic Launcher (to install EpicGames and GOG Galaxy games).
-	- Prism Launcher (to install Minecraft Java).
-	- LibreOffice (Microsoft Office alternative).
-	- OnlyOffice (Microsoft Office alternative).
-	- VLC media player (media player for audio and video files).
-	- OBS (recording and streaming program).
-	- KdenLive (Adobe Premiere alternative).
-	- Krita (Adobe Photoshop alternative).
-	- Gimp (Adobe Photoshop alternative).
-	- Bottles (similar to Lutris but only for simple exe programs that don't need many dependencies).
-	- Flatseal (Flatpak's permissions manager).
-	- ProtonTricks (side loader for dependencies needed for certain games).
-	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
-
-
-
 ## 45fps BOTW on Cemu for SteamDeck:
 
 
@@ -121,6 +76,51 @@ To use the script, follow these steps:
 
 > [!TIP]
 > NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
+
+
+
+## Accessories and Hardware Recommendations for SteamDeck:
+
+
+- Accessories you could need:
+	- Screen protector (self-explanatory).
+	- Cover or skin (self-explanatory).
+	- Travel bag (self-explanatory).
+
+- Extra hardware you could need:
+	- MicroSD (Samsung, SanDisk, Team-Group).
+	- 2230 NVMe SSD for storage upgrade (Corsair, Sabrent, Western Digital).
+	- 45w to 65w PD power bank (20000mAh capacity highly suggested).
+	- External storage in case something happens with the microSD (ShargeDisk or a normal SATA to USB enclosure).
+	- [Monitor](https://youtu.be/Z8rJxJo3cfI) (LG, Alienware, Gigabyte).
+	- Keyboard (Keychron, Akko/Epomaker, Wooting).
+	- Mouse (Logitech, Pulsar, Endgame Gear).
+	- IEMs (Moondrop, Tangzu, 7hz, Truthear).
+	- Headphones (Sennheiser, AKG, Shure).
+	- Portable DAC/AMP (Qudelix, Fiio, Moondrop).
+	- Cables/hubs (Ugreen, Anker, StarTech).
+	- Controllers (Flydigi, Gamesir, 8bitdo).
+
+- Extra programs you could like to have:
+	- ProtonUp-QT (useful for compatibility layers other than Valve's Proton).
+	- DeckyLoader (for plugins in gaming mode).
+	- EmuDeck (wrapper to install everything you need for emulation).
+	- Discord/Vencord (self-explanatory).
+	- Vivaldi (better alternative to Chrome).
+	- Lutris (to install non-Steam games from other launchers or sources).
+	- Heroic Launcher (to install EpicGames and GOG Galaxy games).
+	- Prism Launcher (to install Minecraft Java).
+	- LibreOffice (Microsoft Office alternative).
+	- OnlyOffice (Microsoft Office alternative).
+	- VLC media player (media player for audio and video files).
+	- OBS (recording and streaming program).
+	- KdenLive (Adobe Premiere alternative).
+	- Krita (Adobe Photoshop alternative).
+	- Gimp (Adobe Photoshop alternative).
+	- Bottles (similar to Lutris but only for simple exe programs that don't need many dependencies).
+	- Flatseal (Flatpak's permissions manager).
+	- ProtonTricks (side loader for dependencies needed for certain games).
+	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
 
 
 
