@@ -241,7 +241,7 @@ All the links below are the references to make the backup of the link above.
 	- https://www.retrostic.com/
 	- https://romhacking.com/
 
-- [P](https://drive.google.com/file/d/1PFAPJ2GvrFQgTeyj4JSIs5Rt1k61iva1/view?usp=drive_link)[c](https://drive.google.com/file/d/1OxfAYmpPu_pxWy4fvql7tnyxB6Ymb2Ez/view?usp=drive_link) ports:
+- [P](https://drive.google.com/file/d/1NkLw-vIulJfUGWQ7QshgdXA1VzByM22J/view?usp=drive_link)[c](https://drive.google.com/file/d/1mN67vlLIwQqoMuX_2eu_IXqpr7lyAadn/view?usp=drive_link) ports:
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
  	- https://www.shipofharkinian.com/
