@@ -215,6 +215,7 @@ All the links below are the references to make the backup of the link above.
 - https://panda3ds.com/download.html .
 - https://mgba.io/downloads.html .
 - https://dolphin-emu.org/download/ .
+- https://www.pj64-emu.com/nightly-builds .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
