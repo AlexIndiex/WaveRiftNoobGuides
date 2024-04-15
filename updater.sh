@@ -56,7 +56,7 @@ download_notify() {
                                 curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
                                 chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
-                                                
+                        
                         Sudachi)
                                 curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}"
                                 7z x Sudachi.7z -o* -y
@@ -136,12 +136,6 @@ download_notify SkyEmu
 #------------
 download_notify mGBAdev
 
-#suyu
-#------------
-#mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
-#        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-#download_notify suyu
-
 #Sudachi
 #------------
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/sudachi-emu/sudachi/releases | \
@@ -159,6 +153,12 @@ download_notify Lime3DS
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify citraPMK7
+
+#suyu
+#------------
+#mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
+#        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+#download_notify suyu
 
 #Lemonade
 #------------
