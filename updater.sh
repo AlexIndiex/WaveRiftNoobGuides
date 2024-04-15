@@ -80,7 +80,6 @@ download_notify() {
                                 chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
                                 ;;
                         
-                        #        7z x Lemonade.zip lemonade*7z -y
                         #        mv ~/Applications/lemonade*7z ~/Applications/Lemonade.7z
                         #        7z x Lemonade.7z -o* -y
                         #        chmod +x ~/Applications/Lemonade/head/lemonade.AppImage
