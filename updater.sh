@@ -60,7 +60,7 @@ download_notify() {
                         #suyu)
                         #        curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
                         #        chmod +x ~/Applications/suyu.AppImage
-                                ;;
+                        #        ;;
                                                 
                         Sudachi)
                                 curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}"
