@@ -6,6 +6,31 @@ A collection of guides that range from recommended peripheral hardware, to emula
 
 
 
+## BETA Emulators autoinstall script for Linux users:
+
+
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Suyu`, `Sudachi`, `SkyEmu`, `Lemonade` and `citrapmk7` from their respective repositories.
+
+You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
+
+To use the script, follow these steps:
+
+* Download the `update.sh` file;
+  
+* Open Konsole terminal and type `chmod +x $HOME/Downloads/updater.sh` to give the `.sh` file permission to execute;
+  
+* Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
+  
+* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS`, `Lemonade` and `citrapmk7` link `.AppImage` from `$HOME/Applications/*/head/`);
+  
+* Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
+
+  
+> [!IMPORTANT]
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, `Lime3DS`, `Lemonade`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+
+
+
 ## Accessories and Hardware Recommendations for SteamDeck:
 
 
@@ -48,31 +73,6 @@ A collection of guides that range from recommended peripheral hardware, to emula
 	- Flatseal (Flatpak's permissions manager).
 	- ProtonTricks (side loader for dependencies needed for certain games).
 	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
-
-
-
-## BETA Emulators autoinstall script for Linux users:
-
-
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Suyu`, `Sudachi`, `SkyEmu`, `Lemonade` and `citrapmk7` from their respective repositories.
-
-You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
-
-To use the script, follow these steps:
-
-* Download the `update.sh` file;
-  
-* Open Konsole terminal and type `chmod +x $HOME/Downloads/updater.sh` to give the `.sh` file permission to execute;
-  
-* Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
-  
-* Now go to `$HOME/Applications/` and link in your desktop the emulators (for Ryujinx link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS`, `Lemonade` and `citrapmk7` link `.AppImage` from `$HOME/Applications/*/head/`);
-  
-* Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
-
-  
-> [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Suyu`, `Lime3DS`, `Lemonade`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 
 
