@@ -80,8 +80,6 @@ download_notify() {
                                 chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
                                 ;;
                         
-                        #        ;;
-                        
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
                                 chmod +x ~/Applications/"$(basename "${urls[0]}")"
