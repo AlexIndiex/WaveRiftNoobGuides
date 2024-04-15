@@ -205,6 +205,7 @@ All the links below are the references to make the backup of the link above.
 - https://github.com/Hydr8gon/NooDS/releases .
 - https://github.com/TASEmulators/BizHawk/releases .
 - https://github.com/TASEmulators/desmume/releases .
+- https://github.com/strato-emu/strato/releases .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
