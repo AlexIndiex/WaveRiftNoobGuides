@@ -76,6 +76,54 @@ To use the script, follow these steps:
 
 
 
+## 45fps BOTW on Cemu for SteamDeck:
+
+
+- Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
+
+- Step 2: Put your ROMs into the EmuDeck folder inside `/Emulation/ROMs/WiiU/ROMs`. You need the base game and the latest update.
+
+- Step 3: Open Cemu, select `File>Install game title, update or DLC` and select the update and/or DLC file in the previously said path. The update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA) (vXXX)` and DLC `The Legend of Zelda Breath of the Wild (DLC)`.
+
+- Step 4: In Cemu top-bar select `Options>Graphics Packs`. In this window, click on `download latest community graphic packs`. If Cemu finds a new version, install it and wait for it to be installed. Then open the Graphic Packs again.
+
+- Step 5: In the graphics pack window, select `The Legend of Zelda Breath of the Wild` and open all the drop-down menus except the cheats if you don't need them.
+
+- Step 6: In `Mods`, enable `extended memory`. Then in `fps++`, click on it and select `mode>advanced settings`. Set the `frame rate limit` to 40fps, `cutscene fps limit` to `limit all cutscenes to 30fps`, `static mode` to `disabled`, `frame average` to `6 frames averaged`, `fence type` to `performance fence`. Now enable `fps++`.
+
+- Step 7: In `Workarounds`, enable `grass swaying`. Then in `Enhancements`, click on it and set `reflection range` to `disabled`. Then `anisotropic filtering` to `medium`. Now enable `Enhancements`. Now in `Graphics` set the `anti-aliasing` to `none`, `shadows` to `low`, `shadow draw distance` to `medium` or `low`, your choice here. Now enable `Graphics`.
+
+- Step 8: Restart Cemu and enjoy Botw :]
+
+
+
+## 30fps TOTK on YuzuEA for SteamDeck:
+
+
+- Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
+
+- Step 1: Go into desktop mode, install [Yuzu](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup) with EmuDeck (or use an alternative, like Sudachi or Suyu).
+
+- Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
+
+- Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
+
+- Step 4: Open Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
+
+- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
+
+- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
+
+- Step 7: Enjoy your TOTK experience on Deck :]
+  
+> [!NOTE]
+> NOTE: the mods present in this repository are quite old, please use [TOTK-Optimizer](https://github.com/hoverbike1/TOTK-Mods-collection/releases) to update them with a new pack.
+
+> [!TIP]
+> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
+
+
+
 ## OLD EmuDeck Setup Guide (prior Citrus death):
 
 
@@ -139,54 +187,6 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
-
-
-
-## 45fps BOTW on Cemu for SteamDeck:
-
-
-- Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
-
-- Step 2: Put your ROMs into the EmuDeck folder inside `/Emulation/ROMs/WiiU/ROMs`. You need the base game and the latest update.
-
-- Step 3: Open Cemu, select `File>Install game title, update or DLC` and select the update and/or DLC file in the previously said path. The update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA) (vXXX)` and DLC `The Legend of Zelda Breath of the Wild (DLC)`.
-
-- Step 4: In Cemu top-bar select `Options>Graphics Packs`. In this window, click on `download latest community graphic packs`. If Cemu finds a new version, install it and wait for it to be installed. Then open the Graphic Packs again.
-
-- Step 5: In the graphics pack window, select `The Legend of Zelda Breath of the Wild` and open all the drop-down menus except the cheats if you don't need them.
-
-- Step 6: In `Mods`, enable `extended memory`. Then in `fps++`, click on it and select `mode>advanced settings`. Set the `frame rate limit` to 40fps, `cutscene fps limit` to `limit all cutscenes to 30fps`, `static mode` to `disabled`, `frame average` to `6 frames averaged`, `fence type` to `performance fence`. Now enable `fps++`.
-
-- Step 7: In `Workarounds`, enable `grass swaying`. Then in `Enhancements`, click on it and set `reflection range` to `disabled`. Then `anisotropic filtering` to `medium`. Now enable `Enhancements`. Now in `Graphics` set the `anti-aliasing` to `none`, `shadows` to `low`, `shadow draw distance` to `medium` or `low`, your choice here. Now enable `Graphics`.
-
-- Step 8: Restart Cemu and enjoy Botw :]
-
-
-
-## 30fps TOTK on YuzuEA for SteamDeck:
-
-
-- Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
-
-- Step 1: Go into desktop mode, install [Yuzu](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup) with EmuDeck (or use an alternative, like Sudachi or Suyu).
-
-- Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
-
-- Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
-
-- Step 4: Open Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
-
-- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
-
-- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
-
-- Step 7: Enjoy your TOTK experience on Deck :]
-  
-> [!NOTE]
-> NOTE: the mods present in this repository are quite old, please use [TOTK-Optimizer](https://github.com/hoverbike1/TOTK-Mods-collection/releases) to update them with a new pack.
-
-> [!TIP]
-> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
 
 
 
