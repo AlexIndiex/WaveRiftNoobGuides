@@ -129,8 +129,8 @@ To use the script, follow these steps:
 
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
-	- BIOS files (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
-	- ROM files (for the systems you want to emulate).
+	- [BIOS](https://drive.google.com/file/d/1oYzGY9LhV6D_5TX5NEAqe5T2dcN3Hy54/view?usp=drive_link) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
+	- [ROM](assets/images/titles.zip) [files](https://r-roms.github.io/) (for the systems you want to emulate).
 	- Free storage (either on your internal storage, microSD, or external storage).
 	- An internet connection (kinda obvious).
 
@@ -140,7 +140,7 @@ To use the script, follow these steps:
 	- External drive (either for moving files or using it for EmuDeck).
 	- [Syncthing](https://www.youtube.com/watch?v=nzix6-uKTA0) (if you care for syncing files between different PCs).
 	- [Warpinator](https://www.youtube.com/watch?v=sHdQT6kI6Q8) and [Winpinator](https://github.com/swiszczoo/winpinator) (if you don't have an external drive to move your files).
-	- Mods and Cheats (you either rely on communities or dedicated sites).
+	- [Mods](https://gamebanana.com/) and [Cheats](https://www.cheatslips.com/) (you either rely on communities or dedicated sites).
 	- [DeckyLoader](https://github.com/SteamDeckHomebrew/decky-loader) for PowerTools (it can be installed with EmuDeck).
 
 Now let's get started with the installation process:
@@ -152,7 +152,7 @@ Now let's get started with the installation process:
 
 It's time to move your files: 
 - [DISCLAIMER] In this section, I will tell you where to move your files with an external drive since it's the fastest way to do it. If you want to do it in any other way, please refer to the embedded links in [Syncthing](https://www.youtube.com/watch?v=nzix6-uKTA0), [Warpinator](https://www.youtube.com/watch?v=sHdQT6kI6Q8), and [Winpinator](https://github.com/swiszczoo/winpinator):
- 	- Open Dolphin, the file explorer (not the emulator), and navigate to your drive where you installed EmuDeck. You're gonna find a folder named Emulation. Right-click on it and open it in a new tab. While you are in it, open a new tab for both [BIOS](https://emulation.gametechwiki.com/index.php/Emulator_files) and [ROMs](assets/images/titles.zip) folders. Now return to the first tab and open the drive where you have the files you want to move. Now you should have 4 tabs: the drive of your files, the emulation folder, [BIOS](https://drive.google.com/file/d/1oYzGY9LhV6D_5TX5NEAqe5T2dcN3Hy54/view?usp=drive_link) folder, and [ROMs](https://r-roms.github.io/) folder. You can close the emulation folder if you don't have any kind of save file or texture pack to move.
+ 	- Open Dolphin, the file explorer (not the emulator), and navigate to your drive where you installed EmuDeck. You're gonna find a folder named Emulation. Right-click on it and open it in a new tab. While you are in it, open a new tab for both BIOS and ROMs folders. Now return to the first tab and open the drive where you have the files you want to move. Now you should have 4 tabs: the drive of your files, the emulation folder, BIOS folder, and ROMs folder. You can close the emulation folder if you don't have any kind of save file or texture pack to move.
    	- You can start moving your BIOS files from your drive to the BIOS folder. The only files that need a deeper location are your Nintendo Switch's keys and firmware files, which you can move to both Yuzu and Ryujinx folders (Ryujinx needs the firmware installed instead). (For any other emulator, please refer to the [EmuDeckWiki](https://emudeck.github.io/)).
 	- You can start moving your ROMs from your drive to the ROMs folder. Inside of it, you're going to find out that each system has a folder for its ROMs. You can read a text file inside each of them to know what ROMs' format each emulator supports. I would recommend creating an update folder for modern systems (like 3DS, WiiU, Switch, PS3, Xbox360, Xbox) that support update ROMs for your games in /Emulation/ROMs/ (please pay attention to folders like WiiU; you're gonna find another ROM folder inside of it, and you need to move your ROMs there instead of just /Emulation/ROMs/WiiU/).
 
@@ -181,7 +181,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
-> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for Citra Appimage(similar to yuzu SRM for Linux);
+> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://emulationking.com/citra/archive/)(similar to yuzu SRM for Linux);
 >
 > If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup).
 
