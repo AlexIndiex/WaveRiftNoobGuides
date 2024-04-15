@@ -56,8 +56,6 @@ download_notify() {
                                 curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
                                 chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
-                        
-                        #        ;;
                                                 
                         Sudachi)
                                 curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}"
