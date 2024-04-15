@@ -3,7 +3,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "suyu" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK7" ]] && [[ $1 != "Lemonade" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK7" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
