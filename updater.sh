@@ -179,4 +179,4 @@ download_notify citraPMK7
 #------------
 #mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lemonade-emu/Lemonade/releases | \
 #        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-download_notify Lemonade
+#download_notify Lemonade
