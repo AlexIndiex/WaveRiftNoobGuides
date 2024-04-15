@@ -57,7 +57,6 @@ download_notify() {
                                 chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
                         
-                        #        chmod +x ~/Applications/suyu.AppImage
                         #        ;;
                                                 
                         Sudachi)
