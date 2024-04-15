@@ -211,6 +211,7 @@ All the links below are the references to make the backup of the link above.
 - https://github.com/melonDS-emu/melonDS/releases .
 - https://github.com/cemu-project/Cemu/releases .
 - https://github.com/Rakashazi/emu-ex-plus-alpha .
+- https://github.com/Rosalie241/RMG/releases .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
 - https://mgba.io/downloads.html .
