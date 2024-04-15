@@ -203,6 +203,7 @@ All the links below are the references to make the backup of the link above.
 - https://github.com/huhao1987/mGBA_Android/releases .
 - https://github.com/skylersaleh/SkyEmu/releases .
 - https://github.com/Hydr8gon/NooDS/releases .
+- https://github.com/TASEmulators/BizHawk/releases .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
