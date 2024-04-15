@@ -209,6 +209,7 @@ All the links below are the references to make the backup of the link above.
 - https://github.com/rafaelvcaetano/melonDS-android/releases .
 - https://github.com/higan-emu/higan/releases .
 - https://mikage.app/download/ .
+- https://panda3ds.com/download.html .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
