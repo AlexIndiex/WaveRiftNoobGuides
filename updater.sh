@@ -93,7 +93,7 @@ download_notify() {
                         #        chmod +x ~/Applications/Lemonade/head/lemonade.AppImage
                         #        chmod +x ~/Applications/Lemonade/head/lemonade-qt.AppImage
                         #        chmod +x ~/Applications/Lemonade/head/lemonade-room.AppImage
-                                ;;
+                        #        ;;
                         
                         *)
                                 curl -s -L -o ~/Applications/"$(basename "${urls[0]}")" -z ~/Applications/"$(basename "${urls[0]}")" "${urls[0]}"
