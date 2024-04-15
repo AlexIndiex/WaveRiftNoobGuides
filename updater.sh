@@ -57,7 +57,7 @@ download_notify() {
                                 chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
                         
-                        suyu)
+                        #suyu)
                                 curl -L -o ~/Applications/suyu.AppImage -z ~/Applications/suyu.AppImage "${urls[0]}"
                                 chmod +x ~/Applications/suyu.AppImage
                                 ;;
