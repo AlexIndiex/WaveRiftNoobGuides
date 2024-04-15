@@ -209,6 +209,7 @@ All the links below are the references to make the backup of the link above.
 - https://github.com/rafaelvcaetano/melonDS-android/releases .
 - https://github.com/higan-emu/higan/releases .
 - https://github.com/melonDS-emu/melonDS/releases .
+- https://github.com/cemu-project/Cemu/releases .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
 - https://mgba.io/downloads.html .
