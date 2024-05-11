@@ -251,6 +251,7 @@ All the links below are the references to make the backup of the link above.
  	- https://www.shipofharkinian.com/
   	- https://sm64pc.info/
   	- https://github.com/snesrev/zelda3
+  	- https://github.com/Mr-Wiseguy/Zelda64Recomp
   	
 - BONUSES:
 	- [Super Mario Galaxy for NDS](https://cdn.discordapp.com/attachments/775383694948827176/1222191653041995816/smgds.nds?ex=6627c6ad&is=661551ad&hm=951c453c30302700d5f6c75ab9569b67395c3921bfa50dd35fee82b382c15caa&)
