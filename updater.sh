@@ -56,7 +56,7 @@ download_notify() {
                                 curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage
                                 chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
-                        
+                                           
                         Sudachi)
                                 curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}"
                                 7z x Sudachi.7z -o* -y
@@ -78,6 +78,16 @@ download_notify() {
                                 chmod +x ~/Applications/citraPMK7/head/citra.AppImage
                                 chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage
                                 chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
+                                ;;
+                        
+                        Citra-Enhanced)
+                                curl -L -o ~/Applications/Citra-Enhanced.zip -z ~/Applications/Citra-Enhanced.zip "${urls[0]}"
+                                7z x Citra-Enhanced.zip citra*7z -y
+                                mv ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z
+                                7z x Citra-Enhanced.7z -o* -y
+                                chmod +x ~/Applications/Citra-Enhanced/head/lemonade.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/lemonade-qt.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/lemonade-room.AppImage
                                 ;;
                         
                         *)
@@ -154,14 +164,8 @@ mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify citraPMK7
 
-#suyu
-#------------
-#mapfile -t urls < <(curl -s -H "https://git.suyu.dev/api/v1/repos" -G -d 'per_page=1' https://git.suyu.dev/api/v1/repos/suyu/suyu/releases | \
-#        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-#download_notify suyu
-
 #Lemonade
 #------------
-#mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lemonade-emu/Lemonade/releases | \
-#        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-#download_notify Lemonade
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Gamer64ytb/Citra-Enhanced/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+download_notify Citra-Enhanced 
