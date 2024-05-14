@@ -11,7 +11,8 @@ A collection of guides that range from recommended peripheral hardware, to emula
 
 The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Sudachi`, `SkyEmu` and `citrapmk7` from their respective repositories.
 
-You need Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications/`, or you can make/create it on your own.
+> [!NOTE]
+> NOTE: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`, but don't worry, if you don't want to, the script makes it for you.
 
 To use the script, follow these steps:
 
