@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir $HOME/Applications
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
