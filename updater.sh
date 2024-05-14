@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mkdir $HOME/Applications
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
@@ -12,7 +11,11 @@ download_notify() {
                         
                         Ryujinx)
                                 curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}"
-                                tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx && chmod +x ~/Applications/publish/Ryujinx.sh && chmod +x ~/Applications/publish/Ryujinx.SDL2.Common.dll.config && chmod +x ~/Applications/publish/mime/Ryujinx.xml
+                                tar xf Ryujinx.tar.gz
+                                chmod +x ~/Applications/publish/Ryujinx
+                                chmod +x ~/Applications/publish/Ryujinx.sh
+                                chmod +x ~/Applications/publish/Ryujinx.SDL2.Common.dll.config
+                                chmod +x ~/Applications/publish/mime/Ryujinx.xml
                                 ;;
                         
                         Cemu)
@@ -22,7 +25,9 @@ download_notify() {
                         
                         Panda3DS)
                                 curl -L -o ~/Applications/Panda3DS.zip -z ~/Applications/Panda3DS.zip https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
-                                7z x Panda3DS.zip -y && mv -f ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage && chmod +x ~/Applications/Panda3DS.AppImage
+                                7z x Panda3DS.zip -y
+                                mv -f ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
+                                chmod +x ~/Applications/Panda3DS.AppImage
                                 ;;
                         
                         DolphinDev)
@@ -37,12 +42,14 @@ download_notify() {
                         
                         melonDS)
                                 curl -L -o ~/Applications/melonDS.zip -z ~/Applications/melonDS.zip "${urls[0]}"
-                                7z x melonDS.zip -y && chmod +x ~/Applications/melonDS
+                                7z x melonDS.zip -y
+                                chmod +x ~/Applications/melonDS
                                 ;;
                         
                         SkyEmu)
                                 curl -L -o ~/Applications/SkyEmu.zip -z ~/Applications/SkyEmu.zip "${urls[0]}"
-                                7z x SkyEmu.zip -y && chmod +x ~/Applications/SkyEmu
+                                7z x SkyEmu.zip -y
+                                chmod +x ~/Applications/SkyEmu
                                 ;;
                         
                         mGBAdev)
@@ -52,22 +59,38 @@ download_notify() {
                                            
                         Sudachi)
                                 curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}"
-                                7z x Sudachi.7z -o* -y && chmod +x ~/Applications/Sudachi/sudachi && chmod +x ~/Applications/Sudachi/sudachi-cmd && xdg-open https://github.com/litucks/torzu/releases
+                                7z x Sudachi.7z -o* -y
+                                chmod +x ~/Applications/Sudachi/sudachi
+                                chmod +x ~/Applications/Sudachi/sudachi-cmd
+                                xdg-open https://github.com/litucks/torzu/releases
                                 ;;
                         
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}"
-                                mkdir ~/Applications/Lime3DS && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage && chmod +x ~/Applications/Lime3DS/lime3ds-gui.AppImage && chmod +x ~/Applications/Lime3DS/lime3ds-room.AppImage
+                                mkdir ~/Applications/Lime3DS
+                                tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1
+                                chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage
+                                chmod +x ~/Applications/Lime3DS/lime3ds-gui.AppImage
+                                chmod +x ~/Applications/Lime3DS/lime3ds-room.AppImage
                                 ;;
                          
                         citraPMK7)
                                 curl -L -o ~/Applications/citraPMK7.7z -z ~/Applications/citraPMK7.7z "${urls[0]}"
-                                cp ~/Applications/citraPMK7.7z ~/Applications/citraPMK7_backup.7z && 7z x citraPMK7.7z -o* -y && chmod +x ~/Applications/citraPMK7/head/citra.AppImage && chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage && chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
+                                mv -f ~/Applications/citraPMK7.7z ~/Applications/citraPMK7_backup.7z
+                                7z x citraPMK7.7z -o* -y
+                                chmod +x ~/Applications/citraPMK7/head/citra.AppImage
+                                chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage
+                                chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
                                 ;;
                         
                         Citra-Enhanced)
                                 curl -L -o ~/Applications/Citra-Enhanced.zip -z ~/Applications/Citra-Enhanced.zip "${urls[0]}"
-                                7z x Citra-Enhanced.zip citra*7z -y && mv -f ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z && 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-room.AppImage
+                                7z x Citra-Enhanced.zip citra*7z -y
+                                mv -f ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z
+                                7z x Citra-Enhanced.7z -o* -y
+                                chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/citra-room.AppImage
                                 ;;
                         
                         *)
