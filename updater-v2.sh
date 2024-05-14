@@ -4,6 +4,7 @@ mkdir -p "$HOME/Apps"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 
 download_notify() {
+    cd "$HOME/Applications" || exit
     local app_name=$1
 
     notify "Checking for updates for $app_name..."  # Debugging output
@@ -95,12 +96,12 @@ download_notify() {
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
                 Panda3DS | melonDS | SkyEmu)
-                    7z x "$HOME/Apps/$file_name" -o"$HOME/Apps/" -y
+                    7z x "$HOME/Apps/$file_name" -y
                     mv -f "$HOME/Apps/Alber-x86_64.AppImage" "$HOME/Apps/Panda3DS.AppImage"
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
                 Sudachi | citraPMK)
-                    7z x "$HOME/Apps/$file_name" -o"$HOME/Apps/*" -y
+                    7z x "$HOME/Apps/$file_name" -o* -y
                     chmod +x "$HOME/Apps/Sudachi/sudachi" "$HOME/Apps/Sudachi/sudachi-cmd" "$HOME/Apps/citraPMK/head/citra.AppImage" "$HOME/Apps/citraPMK/head/citra-qt.AppImage" "$HOME/Apps/citraPMK/head/citra-room.AppImage"
                     ;;
                 Lime3DS)
@@ -109,9 +110,9 @@ download_notify() {
                     chmod +x "$HOME/Apps/Lime3DS/lime3ds-cli.AppImage" "$HOME/Apps/Lime3DS/lime3ds-gui.AppImage" "$HOME/Apps/Lime3DS/lime3ds-room.AppImage"
                     ;;
                 Citra-Enhanced)
-                    7z x "$HOME/Apps/$file_name" -o"$HOME/Apps/" -y
+                    7z x "$HOME/Apps/$file_name" citra*7z -y
                     mv -f "$HOME/Apps/citra*7z" "$HOME/Apps/Citra-Enhanced.7z"
-                    7z x "$HOME/Apps/Citra-Enhanced.7z" -o"$HOME/Apps/" -y
+                    7z x "$HOME/Apps/Citra-Enhanced.7z" -o* -y
                     chmod +x "$HOME/Apps/Citra-Enhanced/head/citra.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-qt.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-room.AppImage"
                     ;;
                 *)
