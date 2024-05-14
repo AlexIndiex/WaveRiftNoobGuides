@@ -7,7 +7,7 @@ download_notify() {
     cd "$HOME/Apps" || exit
     local app_name=$1
 
-    notify "Checking for updates for $app_name..."  # Debugging output
+    notify "Checking for updates for $app_name..."\
 
     case $app_name in
         Ryujinx)
@@ -86,7 +86,7 @@ download_notify() {
         curl -s -L -o "$HOME/Apps/$file_name" "$url"
         if [ $? -eq 0 ]; then
             notify "Update successful: $app_name"
-            # Extract and set permissions if necessary
+            # Extract and set permissions
             case $app_name in
                 Ryujinx)
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
@@ -122,7 +122,7 @@ download_notify() {
             notify "Update failed: $app_name"
         fi
     else
-        notify "$app_name is already up to date."  # Debugging output
+        notify "$app_name is already up to date."
     fi
 }
 
