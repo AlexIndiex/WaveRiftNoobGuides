@@ -14,6 +14,9 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
 > [!NOTE]
 > NOTE: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`, but don't worry, if you don't want to, the script makes it for you.
 
+> [!IMPORTANT]
+> NOTE: The `updater-v2.sh` file is a work in progress new version of the current method of what the script does, in the current state it works and could replace the previous file while providing a much more clear notification output on what got updated, remained the same or even failed to download at the cost of 6 times more pop-ups! (these pop-ups are for torubleshooting reasons, you could disable them by editing what notifications you dont want to get by simply edit `notify "text here"` to `echo "text here"`)
+
 To use the script, follow these steps:
 
 * Download the `update.sh` file;
