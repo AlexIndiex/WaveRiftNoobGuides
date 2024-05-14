@@ -10,66 +10,68 @@ download_notify() {
     notify "Checking for updates for $app_name..."\
 
     case $app_name in
-        Ryujinx)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryujinx/release-channel-master/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
-            file_name="Ryujinx.tar.gz"
-            ;;
-        Cemu)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/cemu-project/Cemu/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-            file_name="Cemu.AppImage"
-            ;;
-        Panda3DS)
-            url="https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip"
-            file_name="Panda3DS.zip"
-            ;;
-        DolphinDev)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/qurious-pixel/dolphin/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-            file_name="DolphinDev.AppImage"
-            ;;
-        RMG)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Rosalie241/RMG/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-            file_name="RMG.AppImage"
-            ;;
-        melonDS)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
-            file_name="melonDS.zip"
-            ;;
-        SkyEmu)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/skylersaleh/SkyEmu/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("Linux")) | .browser_download_url')
-            file_name="SkyEmu.zip"
-            ;;
-        mGBAdev)
-            url="https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage"
-            file_name="mGBAdev.AppImage"
-            ;;
-        Sudachi)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/sudachi-emu/sudachi/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("linux")) | .browser_download_url')
-            file_name="Sudachi.7z"
-            ;;
-        Lime3DS)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lime3DS/Lime3DS/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-            file_name="Lime3DS.tar.gz"
-            ;;
-        citraPMK)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-            file_name="citraPMK.7z"
-            ;;
-        Citra-Enhanced)
-            url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Gamer64ytb/Citra-Enhanced/releases | \
-                jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-            file_name="Citra-Enhanced.zip"
-            ;;
-        *)
-            ;;
+    
+            Ryujinx)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryujinx/release-channel-master/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
+                file_name="Ryujinx.tar.gz"
+                ;;
+            Cemu)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/cemu-project/Cemu/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+                file_name="Cemu.AppImage"
+                ;;
+            Panda3DS)
+                url="https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip"
+                file_name="Panda3DS.zip"
+                ;;
+            DolphinDev)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/qurious-pixel/dolphin/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+                file_name="DolphinDev.AppImage"
+                ;;
+            RMG)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Rosalie241/RMG/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+                file_name="RMG.AppImage"
+                ;;
+            melonDS)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
+                file_name="melonDS.zip"
+                ;;
+            SkyEmu)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/skylersaleh/SkyEmu/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("Linux")) | .browser_download_url')
+                file_name="SkyEmu.zip"
+                ;;
+            mGBAdev)
+                url="https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage"
+                file_name="mGBAdev.AppImage"
+                ;;
+            Sudachi)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/sudachi-emu/sudachi/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("linux")) | .browser_download_url')
+                file_name="Sudachi.7z"
+                ;;
+            Lime3DS)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lime3DS/Lime3DS/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+                file_name="Lime3DS.tar.gz"
+                ;;
+            citraPMK)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+                file_name="citraPMK.7z"
+                ;;
+            Citra-Enhanced)
+                url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Gamer64ytb/Citra-Enhanced/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+                file_name="Citra-Enhanced.zip"
+                ;;
+            *)
+                ;;
+            
     esac
 
     local local_modification_time
@@ -88,6 +90,7 @@ download_notify() {
             notify "Update successful: $app_name"
             # Extract and set permissions
             case $app_name in
+            
                 Ryujinx)
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
                     chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
