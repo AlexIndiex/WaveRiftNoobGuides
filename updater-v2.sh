@@ -6,11 +6,11 @@ notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
     cd "$HOME/Apps" || exit
     local app_name=$1
-
-    notify "Checking for updates for $app_name..."\
-
-    case $app_name in
     
+    notify "Checking for updates for $app_name..."\
+    
+    case $app_name in
+            
             Ryujinx)
                 url=$(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryujinx/release-channel-master/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
@@ -71,18 +71,18 @@ download_notify() {
                 ;;
             *)
                 ;;
-            
+        
     esac
-
+    
     local local_modification_time
     local remote_modification_time
     local download_required=false
-
+    
     # Check if the file exists
     if [[ ! -f "$HOME/Apps/$file_name" ]]; then
         download_required=true
     fi
-
+    
     if [[ "$download_required" == true ]]; then
         notify "Updating $app_name..."  # Debugging output
         curl -s -L -o "$HOME/Apps/$file_name" "$url"
@@ -90,7 +90,7 @@ download_notify() {
             notify "Update successful: $app_name"
             # Extract and set permissions
             case $app_name in
-            
+                
                 Ryujinx)
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
                     chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
