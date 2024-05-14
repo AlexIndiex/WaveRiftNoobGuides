@@ -62,6 +62,7 @@ download_notify() {
                                 7z x Sudachi.7z -o* -y
                                 chmod +x ~/Applications/Sudachi/sudachi
                                 chmod +x ~/Applications/Sudachi/sudachi-cmd
+                                xdg-open https://github.com/litucks/torzu/releases
                                 ;;
                         
                         Lime3DS)
