@@ -85,9 +85,9 @@ download_notify() {
                                 7z x Citra-Enhanced.zip citra*7z -y
                                 mv ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z
                                 7z x Citra-Enhanced.7z -o* -y
-                                chmod +x ~/Applications/Citra-Enhanced/head/lemonade.AppImage
-                                chmod +x ~/Applications/Citra-Enhanced/head/lemonade-qt.AppImage
-                                chmod +x ~/Applications/Citra-Enhanced/head/lemonade-room.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage
+                                chmod +x ~/Applications/Citra-Enhanced/head/citra-room.AppImage
                                 ;;
                         
                         *)
