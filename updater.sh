@@ -51,7 +51,7 @@ download_notify() {
                                 ;;
                          
                         citraPMK7)
-                                curl -L -o ~/Applications/citraPMK7.7z -z ~/Applications/citraPMK7.7z "${urls[0]}" && cp ~/Applications/citraPMK7.7z ~/Applications/citraPMK7_backup.7z && 7z x citraPMK7.7z -o* -y && chmod +x ~/Applications/citraPMK7/head/citra.AppImage && chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage && chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
+                                curl -L -o ~/Applications/citraPMK7.7z -z ~/Applications/citraPMK7.7z "${urls[0]}" && 7z x citraPMK7.7z -o* -y && chmod +x ~/Applications/citraPMK7/head/citra.AppImage && chmod +x ~/Applications/citraPMK7/head/citra-qt.AppImage && chmod +x ~/Applications/citraPMK7/head/citra-room.AppImage
                                 ;;
                         
                         Citra-Enhanced)
