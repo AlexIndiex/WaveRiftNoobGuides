@@ -67,6 +67,7 @@ download_notify() {
                         
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}"
+                                mkdir ~/Applications/Lime3DS
                                 tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS lime3ds-*
                                 chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage
                                 chmod +x ~/Applications/Lime3DS/lime3ds-gui.AppImage
