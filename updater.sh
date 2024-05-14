@@ -68,9 +68,10 @@ download_notify() {
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}"
                                 tar xf Lime3DS.tar.gz
-                                chmod +x ~/Applications/lime3ds*/lime3ds-cli.AppImage
-                                chmod +x ~/Applications/lime3ds*/lime3ds-gui.AppImage
-                                chmod +x ~/Applications/lime3ds*/lime3ds-room.AppImage
+                                mv ~/Applications/lime3ds-* ~/Applications/Lime3DS
+                                chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage
+                                chmod +x ~/Applications/Lime3DS/lime3ds-gui.AppImage
+                                chmod +x ~/Applications/Lime3DS/lime3ds-room.AppImage
                                 ;;
                          
                         citraPMK7)
