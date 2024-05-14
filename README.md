@@ -197,6 +197,7 @@ All the links below are the references to make the backup of the link above.
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/litucks/torzu/releases .
+- https://github.com/Gamer64ytb/Citra-Enhanced/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases/ .
 - https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
 - https://github.com/PabloMK7/citra/releases .
