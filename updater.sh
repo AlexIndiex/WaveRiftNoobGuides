@@ -26,7 +26,7 @@ download_notify() {
                         Panda3DS)
                                 curl -L -o ~/Applications/Panda3DS.zip -z ~/Applications/Panda3DS.zip https://nightly.link/wheremyfoodat/Panda3DS/workflows/Qt_Build/master/Linux%20executable.zip
                                 7z x Panda3DS.zip -y
-                                mv ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
+                                mv -f ~/Applications/Alber-x86_64.AppImage ~/Applications/Panda3DS.AppImage
                                 chmod +x ~/Applications/Panda3DS.AppImage
                                 ;;
                         
@@ -68,7 +68,7 @@ download_notify() {
                         Lime3DS)
                                 curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}"
                                 tar xf Lime3DS.tar.gz
-                                mv ~/Applications/lime3ds-* ~/Applications/Lime3DS
+                                mv -f ~/Applications/lime3ds-* ~/Applications/Lime3DS
                                 chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage
                                 chmod +x ~/Applications/Lime3DS/lime3ds-gui.AppImage
                                 chmod +x ~/Applications/Lime3DS/lime3ds-room.AppImage
@@ -85,7 +85,7 @@ download_notify() {
                         Citra-Enhanced)
                                 curl -L -o ~/Applications/Citra-Enhanced.zip -z ~/Applications/Citra-Enhanced.zip "${urls[0]}"
                                 7z x Citra-Enhanced.zip citra*7z -y
-                                mv ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z
+                                mv -f ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z
                                 7z x Citra-Enhanced.7z -o* -y
                                 chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage
                                 chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage
