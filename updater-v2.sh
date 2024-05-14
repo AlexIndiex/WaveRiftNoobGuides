@@ -4,7 +4,7 @@ mkdir -p "$HOME/Apps"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 
 download_notify() {
-    cd "$HOME/Applications" || exit
+    cd "$HOME/Apps" || exit
     local app_name=$1
 
     notify "Checking for updates for $app_name..."  # Debugging output
