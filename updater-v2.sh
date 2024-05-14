@@ -103,6 +103,7 @@ download_notify() {
                 Sudachi | citraPMK)
                     7z x "$HOME/Apps/$file_name" -o* -y
                     chmod +x "$HOME/Apps/Sudachi/sudachi" "$HOME/Apps/Sudachi/sudachi-cmd" "$HOME/Apps/citraPMK/head/citra.AppImage" "$HOME/Apps/citraPMK/head/citra-qt.AppImage" "$HOME/Apps/citraPMK/head/citra-room.AppImage"
+                    xdg-open https://github.com/litucks/torzu/releases
                     ;;
                 Lime3DS)
                     mkdir -p "$HOME/Apps/Lime3DS"
