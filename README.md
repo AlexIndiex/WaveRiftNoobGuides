@@ -28,6 +28,7 @@ To use the script, follow these steps:
 
 > [!NOTE]
 > NOTE: When the script updates or installs Sudachi, it will also open in your browser another fork, `Torzu`, which doesnt have proper releases like the other emulators you get with this script, hence why I recommend grabbing the files yourself, either flatpak or appimage are the best options since the standalone executable works only with specific libraries.
+
 > [!IMPORTANT]
 > NOTE: **ONLY** `Cemu`, `mgbaDev`, `Torzu`, `Lime3DS`, `citrapmk7`, `citra-enhanced` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
