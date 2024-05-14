@@ -55,7 +55,7 @@ download_notify() {
                                 ;;
                         
                         Citra-Enhanced)
-                                curl -L -o ~/Applications/Citra-Enhanced.zip -z ~/Applications/Citra-Enhanced.zip "${urls[0]}" && 7z x Citra-Enhanced.zip citra*7z -y && mv ~/Applications/citra*.7z ~/Applications/Citra-Enhanced.7z && 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-room.AppImage
+                                curl -L -o ~/Applications/Citra-Enhanced.zip -z ~/Applications/Citra-Enhanced.zip "${urls[0]}" && 7z x Citra-Enhanced.zip citra*7z -y && mv -f ~/Applications/citra*.7z ~/Applications/Citra-Enhanced.7z && 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-room.AppImage
                                 ;;
                         
                         *)
