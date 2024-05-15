@@ -3,6 +3,19 @@
 mkdir -p "$HOME/Apps"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 
+check_modification_time() {
+    local file_path=$1
+    local local_modification_time=$(stat -c %Y "$file_path")
+    local remote_modification_time=$(curl -sI "${url[0]}" | awk '/^Last-Modified:/ {print $2 " " $3 " " $4}')
+    
+    # Compare modification times
+    if [[ $local_modification_time -lt $(date -d "$remote_modification_time" +%s) ]]; then
+        echo "true"  # Remote file is newer
+    else
+        echo "false"  # Local file is newer or same
+    fi
+}
+
 download_notify() {
     cd "$HOME/Apps" || exit
     local app_name=$1
@@ -73,17 +86,15 @@ download_notify() {
             ;;
     esac
 
-    notify "Checking for updates for $app_name..."
+    notify "Checking for updates for $app_name..." # Debugging output
 
-    local local_modification_time
-    local remote_modification_time
     local download_required=false
-    
-    # Check if the file exists
-    if [[ ! -f "$HOME/Apps/$file_name" ]]; then
+
+    # Check if the file exists and if it's older than the remote file
+    if [[ ! -f "$HOME/Apps/$file_name" || $(check_modification_time "$HOME/Apps/$file_name") == "true" ]]; then
         download_required=true
     fi
-    
+
     if [[ "$download_required" == true ]]; then
         notify "Updating $app_name..."  # Debugging output
         curl -s -L -o "$HOME/Apps/$file_name" "${url[0]}"
