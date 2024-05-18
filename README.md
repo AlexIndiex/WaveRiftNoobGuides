@@ -138,7 +138,7 @@ To use the script, follow these steps:
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
 	- [BIOS](https://drive.google.com/file/d/1oYzGY9LhV6D_5TX5NEAqe5T2dcN3Hy54/view?usp=drive_link) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
-	- [ROM](assets/images/titles.zip) [files](https://r-roms.github.io/) (for the systems you want to emulate).
+	- [ROM](assets/images/titles.zip) [files](https://www.reddit.com/r/Piracy/wiki/megathread/emulators/#wiki_.1F4D1_.279C_roms) (for the systems you want to emulate).
 	- Free storage (either on your internal storage, microSD, or external storage).
 	- An internet connection (kinda obvious).
 
