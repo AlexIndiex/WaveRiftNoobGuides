@@ -157,8 +157,8 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
-	- [BIOS](https://drive.google.com/file/d/1oYzGY9LhV6D_5TX5NEAqe5T2dcN3Hy54/view?usp=drive_link) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
-	- [ROM](assets/images/titles.zip) [files](https://www.reddit.com/r/Piracy/wiki/megathread/emulators/#wiki_.1F4D1_.279C_roms) (for the systems you want to emulate).
+	- [BIOS](https://drive.google.com/file/d/1hW_GWu0B-ydASF4IDdoWkcor1If6lAYG/view?usp=sharing) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
+	- [ROM](assets/images/titles.zip) [files](https://www.reddit.com/r/Piracy/wiki/megathread/) (for the systems you want to emulate).
 	- Free storage (either on your internal storage, microSD, or external storage).
 	- An internet connection (kinda obvious).
 
@@ -235,7 +235,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 	- https://www.retrostic.com/
 	- https://romhacking.com/
 
-- [P](https://drive.google.com/file/d/1NkLw-vIulJfUGWQ7QshgdXA1VzByM22J/view?usp=drive_link)[c](https://drive.google.com/file/d/1mN67vlLIwQqoMuX_2eu_IXqpr7lyAadn/view?usp=drive_link) ports:
+- [Pc](https://drive.google.com/file/d/1KGbo-B_cFv2NrIL1nNr6WN0iGK8cXkjE/view?usp=sharing) ports:
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
  	- https://www.shipofharkinian.com/
