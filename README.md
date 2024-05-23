@@ -39,7 +39,11 @@ To use the script, follow these steps:
 
 
 
-## 45fps BOTW on Cemu for SteamDeck:
+## Botw and Totk guides:
+
+
+<details>
+  <summary>45fps BOTW on Cemu for SteamDeck.</summary>
 
 
 - Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
@@ -57,10 +61,11 @@ To use the script, follow these steps:
 - Step 7: In `Workarounds`, enable `grass swaying`. Then in `Enhancements`, click on it and set `reflection range` to `disabled`. Then `anisotropic filtering` to `medium`. Now enable `Enhancements`. Now in `Graphics` set the `anti-aliasing` to `none`, `shadows` to `low`, `shadow draw distance` to `medium` or `low`, your choice here. Now enable `Graphics`.
 
 - Step 8: Restart Cemu and enjoy Botw :]
+</details>
 
 
-
-## 30fps TOTK on YuzuEA for SteamDeck:
+<details>
+  <summary>30fps TOTK on YuzuEA for SteamDeck.</summary>
 
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
@@ -84,6 +89,7 @@ To use the script, follow these steps:
 
 > [!TIP]
 > NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
+</details>
 
 
 
