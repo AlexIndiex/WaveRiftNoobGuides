@@ -86,8 +86,8 @@ To use the script, follow these steps:
 > NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
 
 
-
-## Accessories and Hardware Recommendations for SteamDeck:
+<details>
+  <summary></summary>## Accessories and Hardware Recommendations for SteamDeck:</summary>
 
 
 - Accessories you could need:
@@ -129,6 +129,7 @@ To use the script, follow these steps:
 	- Flatseal (Flatpak's permissions manager).
 	- ProtonTricks (side loader for dependencies needed for certain games).
 	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
+</details>
 
 
 
