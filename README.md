@@ -101,6 +101,7 @@ To use the script, follow these steps:
 
 
 
+I made some lists regarding emulators, pc ports and utilities this repository follows to make backups of, you can find them [here](https://github.com/AlexIndiex?tab=stars).
 <details>
   <summary>Accessories and Hardware Recommendations for SteamDeck.</summary>
 
