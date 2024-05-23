@@ -215,7 +215,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 <details>
-  <summary>[BACKUP](https://drive.google.com/file/d/1MA-xzTvTSwM_pc-z0ZYxLVpP1EzmTUZ6/view?usp=drive_link).</summary>
+  <summary>[BACKUP](<https://drive.google.com/file/d/1MA-xzTvTSwM_pc-z0ZYxLVpP1EzmTUZ6/view?usp=drive_link>).</summary>
 
 
 All the links below are the references to make the backup of the link above.
@@ -265,7 +265,7 @@ All the links below are the references to make the backup of the link above.
 - Made [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) working on Linux with a [bottles](https://usebottles.com/) environment,  here is the [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing those .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it worked just fine, and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
 
 <details>
-  <summary>RomHack[s](https://cdromance.org/)' places.</summary>
+  <summary>RomHack[s](<https://cdromance.org/>)' places.</summary>
 	- https://gamebanana.com/
 	- https://www.romhacking.net/
 	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
@@ -276,7 +276,7 @@ All the links below are the references to make the backup of the link above.
 </details>
 
 <details>
-  <summary>[P](https://drive.google.com/file/d/1NkLw-vIulJfUGWQ7QshgdXA1VzByM22J/view?usp=drive_link)[c](https://drive.google.com/file/d/1mN67vlLIwQqoMuX_2eu_IXqpr7lyAadn/view?usp=drive_link) ports.</summary>
+  <summary>[P](<https://drive.google.com/file/d/1NkLw-vIulJfUGWQ7QshgdXA1VzByM22J/view?usp=drive_link>)[c](<https://drive.google.com/file/d/1mN67vlLIwQqoMuX_2eu_IXqpr7lyAadn/view?usp=drive_link>) ports.</summary>
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
  	- https://www.shipofharkinian.com/
