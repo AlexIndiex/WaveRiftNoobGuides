@@ -86,8 +86,10 @@ To use the script, follow these steps:
 > NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
 
 
+
+## EXTRA
 <details>
-  <summary></summary>## Accessories and Hardware Recommendations for SteamDeck:</summary>
+  <summary>Accessories and Hardware Recommendations for SteamDeck.</summary>
 
 
 - Accessories you could need:
@@ -132,8 +134,8 @@ To use the script, follow these steps:
 </details>
 
 
-
-## OLD EmuDeck Setup Guide (prior Citrus death):
+<details>
+  <summary>EmuDeck Setup Guide (prior Citrus death).</summary>
 
 
 - Files and programs you need:
@@ -196,6 +198,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
+</details>
 
 
 
