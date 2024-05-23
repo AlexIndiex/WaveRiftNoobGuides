@@ -267,7 +267,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/litucks/torzu/releases .
 - https://github.com/Gamer64ytb/Citra-Enhanced/releases .
-- https://github.com/cemu-project/cemu_graphic_packs/releases/ .
+- https://github.com/cemu-project/cemu_graphic_packs/releases .
 - https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
 - https://github.com/PabloMK7/citra/releases .
 - https://github.com/sudachi-emu/sudachi/releases .
@@ -288,7 +288,8 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/weihuoya/citra/releases .
 - https://github.com/visualboyadvance-m/visualboyadvance-m/releases .
 - https://github.com/pineappleEA/pineapple-src/releases .
-- https://github.com/decaf-emu/decaf-emu .
+- https://github.com/decaf-emu/decaf-emu/releases .
+- https://github.com/qurious-pixel/Ryujinx/releases .
 - https://emulationking.com/ .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
