@@ -42,8 +42,10 @@ To use the script, follow these steps:
 ## Botw and Totk guides:
 
 
+
 <details>
   <summary>45fps BOTW on Cemu for SteamDeck.</summary>
+
 
 
 - Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
@@ -64,8 +66,10 @@ To use the script, follow these steps:
 </details>
 
 
+
 <details>
   <summary>30fps TOTK on YuzuEA for SteamDeck.</summary>
+
 
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
@@ -94,8 +98,12 @@ To use the script, follow these steps:
 
 
 ## EXTRA
+
+
+
 <details>
   <summary>Accessories and Hardware Recommendations for SteamDeck.</summary>
+
 
 
 - Accessories you could need:
@@ -140,8 +148,10 @@ To use the script, follow these steps:
 </details>
 
 
+
 <details>
   <summary>EmuDeck Setup Guide (prior Citrus death).</summary>
+
 
 
 - Files and programs you need:
@@ -211,7 +221,11 @@ You can now open EmuDeck again and start installing extra programs you might nee
 ## [BACKUP](https://drive.google.com/file/d/1MA-xzTvTSwM_pc-z0ZYxLVpP1EzmTUZ6/view?usp=drive_link):
 
 
-All the links below are the references to make the backup of the link above.
+
+<details>
+  <summary>All the links below are the references to make the backup of the link above.</summary>
+
+
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/litucks/torzu/releases .
@@ -247,10 +261,12 @@ All the links below are the references to make the backup of the link above.
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
+</details>
 
 
 
 ## Miscellaneous content:
+
 
 
 - Made [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) working on Linux with a [bottles](https://usebottles.com/) environment,  here is the [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing those .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it worked just fine, and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
