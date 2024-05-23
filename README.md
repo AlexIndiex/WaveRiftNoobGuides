@@ -42,6 +42,7 @@ To use the script, follow these steps:
 ## Botw and Totk guides:
 
 
+
 <details>
   <summary>45fps BOTW on Cemu for SteamDeck.</summary>
 
@@ -62,6 +63,7 @@ To use the script, follow these steps:
 
 - Step 8: Restart Cemu and enjoy Botw :]
 </details>
+
 
 
 <details>
@@ -94,6 +96,9 @@ To use the script, follow these steps:
 
 
 ## EXTRA
+
+
+
 <details>
   <summary>Accessories and Hardware Recommendations for SteamDeck.</summary>
 
@@ -138,6 +143,7 @@ To use the script, follow these steps:
 	- ProtonTricks (side loader for dependencies needed for certain games).
 	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
 </details>
+
 
 
 <details>
@@ -208,7 +214,8 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 
-## [BACKUP](https://drive.google.com/file/d/1MA-xzTvTSwM_pc-z0ZYxLVpP1EzmTUZ6/view?usp=drive_link):
+<details>
+  <summary>[BACKUP](https://drive.google.com/file/d/1MA-xzTvTSwM_pc-z0ZYxLVpP1EzmTUZ6/view?usp=drive_link).</summary>
 
 
 All the links below are the references to make the backup of the link above.
@@ -247,15 +254,18 @@ All the links below are the references to make the backup of the link above.
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
+</details>
 
 
 
 ## Miscellaneous content:
 
 
+
 - Made [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) working on Linux with a [bottles](https://usebottles.com/) environment,  here is the [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing those .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it worked just fine, and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
 
-- RomHack[s](https://cdromance.org/)' places:
+<details>
+  <summary>RomHack[s](https://cdromance.org/)' places.</summary>
 	- https://gamebanana.com/
 	- https://www.romhacking.net/
 	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
@@ -263,22 +273,27 @@ All the links below are the references to make the backup of the link above.
 	- https://romhacks.org/
 	- https://www.retrostic.com/
 	- https://romhacking.com/
+</details>
 
-- [P](https://drive.google.com/file/d/1NkLw-vIulJfUGWQ7QshgdXA1VzByM22J/view?usp=drive_link)[c](https://drive.google.com/file/d/1mN67vlLIwQqoMuX_2eu_IXqpr7lyAadn/view?usp=drive_link) ports:
+<details>
+  <summary>[P](https://drive.google.com/file/d/1NkLw-vIulJfUGWQ7QshgdXA1VzByM22J/view?usp=drive_link)[c](https://drive.google.com/file/d/1mN67vlLIwQqoMuX_2eu_IXqpr7lyAadn/view?usp=drive_link) ports.</summary>
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
  	- https://www.shipofharkinian.com/
   	- https://sm64pc.info/
   	- https://github.com/snesrev/zelda3
   	- https://github.com/Mr-Wiseguy/Zelda64Recomp
-  	
-- BONUSES:
+</details>
+
+<details>
+  <summary>BONUSES.</summary>
 	- [Super Mario Galaxy for NDS](https://cdn.discordapp.com/attachments/775383694948827176/1222191653041995816/smgds.nds?ex=6627c6ad&is=661551ad&hm=951c453c30302700d5f6c75ab9569b67395c3921bfa50dd35fee82b382c15caa&)
 	- Citra [core](https://drive.google.com/file/d/1iM5RAYg_kq2zSY7Gbx7XBs6jcPpVaTQs/view?usp=drive_link) for NSwitch Retroarch and complete versions [pack](https://drive.google.com/file/d/1rPWZdQx-01jh8nfw974-2XGeRPK-mt3D/view?usp=drive_link) 
 	- [SmallAnt's Pk RomHacks](https://drive.google.com/drive/folders/1J2tHtAK-UXRYmRMl3gN8sH7yy06cZBmM?usp=drive_link) 
+</details>
 
-- List of decomp projects:
+<details>
+  <summary>List of decomp projects.</summary>
 	- https://www.resetera.com/threads/decompilation-projects-ot-free-next-gen-update-for-your-favorite-classics-jak-ii-pc-port-out-in-beta.682687/
 	- https://www.retroreversing.com/source-code/decompiled-retail-console-games
-
-
+</details>
