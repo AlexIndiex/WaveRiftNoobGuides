@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p "$HOME/Apps"
+[ -d "$HOME/Apps" ] || mkdir -p "$HOME/Apps"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 
 check_modification_time() {
@@ -121,7 +121,7 @@ download_notify() {
                     xdg-open https://github.com/litucks/torzu/releases
                     ;;
                 Lime3DS)
-                    mkdir -p "$HOME/Apps/Lime3DS"
+                    [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/Lime3DS" --strip-components=1
                     chmod +x "$HOME/Apps/Lime3DS/lime3ds-cli.AppImage" "$HOME/Apps/Lime3DS/lime3ds-gui.AppImage" "$HOME/Apps/Lime3DS/lime3ds-room.AppImage"
                     ;;
