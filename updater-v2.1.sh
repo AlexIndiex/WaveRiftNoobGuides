@@ -1,5 +1,6 @@
 #!/bin/bash
 
+[ -d "$HOME/Apps" ] || mkdir -p "$HOME/Apps"
 ROOT_APPS_FOLDER="$HOME/Apps"
 
 function notify() {
@@ -148,7 +149,7 @@ function download_notify() {
                 xdg-open https://github.com/litucks/torzu/releases
                 ;;
             Lime3DS)
-                mkdir -p "$APP_FOLDER/Lime3DS"
+                [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
                 chmod +x "$APP_FOLDER/Lime3DS/lime3ds-cli.AppImage" "$APP_FOLDER/Lime3DS/lime3ds-gui.AppImage" "$APP_FOLDER/Lime3DS/lime3ds-room.AppImage"
                 ;;
