@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir $HOME/Applications
+[ -d "$HOME/Applications" ] || mkdir -p "$HOME/Applications"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
@@ -11,7 +11,7 @@ download_notify() {
                 case $1 in
                         
                         Ryujinx)
-                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx && chmod +x ~/Applications/publish/Ryujinx.sh && chmod +x ~/Applications/publish/Ryujinx.SDL2.Common.dll.config && chmod +x ~/Applications/publish/mime/Ryujinx.xml
+                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml
                                 ;;
                         
                         Cemu)
@@ -43,20 +43,19 @@ download_notify() {
                                 ;;
                                            
                         Sudachi)
-                                curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}" && 7z x Sudachi.7z -o* -y && chmod +x ~/Applications/Sudachi/sudachi && chmod +x ~/Applications/Sudachi/sudachi-cmd && xdg-open https://github.com/litucks/torzu/releases
+                                curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}" && 7z x Sudachi.7z -o* -y && chmod +x ~/Applications/Sudachi/sudachi ~/Applications/Sudachi/sudachi-cmd && xdg-open https://github.com/litucks/torzu/releases
                                 ;;
                         
                         Lime3DS)
-                                mkdir ~/Applications/Lime3DS
-                                curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}" && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage && chmod +x ~/Applications/Lime3DS/lime3ds-gui.AppImage && chmod +x ~/Applications/Lime3DS/lime3ds-room.AppImage
+                                [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS" && curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}" && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage ~/Applications/Lime3DS/lime3ds-gui.AppImage ~/Applications/Lime3DS/lime3ds-room.AppImage
                                 ;;
                          
                         citraPMK)
-                                curl -L -o ~/Applications/citraPMK.7z -z ~/Applications/citraPMK.7z "${urls[0]}" && 7z x citraPMK.7z -o* -y && chmod +x ~/Applications/citraPMK/head/citra.AppImage && chmod +x ~/Applications/citraPMK/head/citra-qt.AppImage && chmod +x ~/Applications/citraPMK/head/citra-room.AppImage
+                                curl -L -o ~/Applications/citraPMK.7z -z ~/Applications/citraPMK.7z "${urls[0]}" && 7z x citraPMK.7z -o* -y && chmod +x ~/Applications/citraPMK/head/citra.AppImage ~/Applications/citraPMK/head/citra-qt.AppImage ~/Applications/citraPMK/head/citra-room.AppImage
                                 ;;
                         
                         Citra-Enhanced)
-                                curl -L -o ~/Applications/Citra-Enhanced.7z -z ~/Applications/Citra-Enhanced.zip "${urls[0]}" && 7z x Citra-Enhanced.zip citra*7z -y && mv -f ~/Applications/citra*7z ~/Applications/Citra-Enhanced.7z&& 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-qt.AppImage && chmod +x ~/Applications/Citra-Enhanced/head/citra-room.AppImage
+                                curl -L -o ~/Applications/Citra-Enhanced.7z -z ~/Applications/Citra-Enhanced.7z "${urls[0]}" && 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage ~/Applications/Citra-Enhanced/head/citra-qt.AppImage ~/Applications/Citra-Enhanced/head/citra-room.AppImage
                                 ;;
                         
                         *)
