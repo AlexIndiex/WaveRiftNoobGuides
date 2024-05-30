@@ -115,22 +115,16 @@ download_notify() {
                     mv -f "$HOME/Apps/Alber-x86_64.AppImage" "$HOME/Apps/Panda3DS.AppImage"
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
-                Sudachi | citraPMK)
+                Sudachi | citraPMK | Citra-Enhanced)
                     7z x "$HOME/Apps/$file_name" -o* -y
-                    chmod +x "$HOME/Apps/Sudachi/sudachi" "$HOME/Apps/Sudachi/sudachi-cmd" "$HOME/Apps/citraPMK/head/citra.AppImage" "$HOME/Apps/citraPMK/head/citra-qt.AppImage" "$HOME/Apps/citraPMK/head/citra-room.AppImage"
+                    chmod +x "$HOME/Apps/Sudachi/sudachi" "$HOME/Apps/Sudachi/sudachi-cmd" "$HOME/Apps/citraPMK/head/citra.AppImage" "$HOME/Apps/citraPMK/head/citra-qt.AppImage" "$HOME/Apps/citraPMK/head/citra-room.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-qt.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-room.AppImage"
                     xdg-open https://github.com/litucks/torzu/releases
                     ;;
                 Lime3DS)
                     mkdir -p "$HOME/Apps/Lime3DS"
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/Lime3DS" --strip-components=1
                     chmod +x "$HOME/Apps/Lime3DS/lime3ds-cli.AppImage" "$HOME/Apps/Lime3DS/lime3ds-gui.AppImage" "$HOME/Apps/Lime3DS/lime3ds-room.AppImage"
-                    ;;
-                Citra-Enhanced)
-                    7z x "$HOME/Apps/$file_name" citra*7z -y
-                    mv -f $HOME/Apps/citra*7z $HOME/Apps/Citra-Enhanced.7z
-                    7z x "$HOME/Apps/Citra-Enhanced.7z" -o* -y
-                    chmod +x "$HOME/Apps/Citra-Enhanced/head/citra.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-qt.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-room.AppImage"
-                    ;;
+                    ;:
                 *)
                     ;;
             esac
