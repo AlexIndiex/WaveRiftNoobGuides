@@ -134,6 +134,6 @@ download_notify citraPMK
 
 #Citra-Enhanced
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Gamer64ytb/Citra-Enhanced/releases | \
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/CitraEnhanced/citra/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify Citra-Enhanced 
