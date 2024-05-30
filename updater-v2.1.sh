@@ -107,7 +107,7 @@ function download_notify() {
         Citra-Enhanced)
             EXTENSION="zip"
             TYPE="appimage"
-            REPO="Gamer64ytb/Citra-Enhanced"
+            REPO="CitraEnhanced/citra"
             ;;
     esac
 
