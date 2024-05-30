@@ -105,7 +105,7 @@ function download_notify() {
             REPO="PabloMK7/citra"
             ;;
         Citra-Enhanced)
-            EXTENSION="zip"
+            EXTENSION="7z"
             TYPE="appimage"
             REPO="CitraEnhanced/citra"
             ;;
@@ -142,21 +142,15 @@ function download_notify() {
                 mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage"
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
-            Sudachi | citraPMK)
+            Sudachi | citraPMK | Citra-Enhanced)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -o* -y
-                chmod +x "$APP_FOLDER/Sudachi/sudachi" "$APP_FOLDER/Sudachi/sudachi-cmd" "$APP_FOLDER/citraPMK/head/citra.AppImage" "$APP_FOLDER/citraPMK/head/citra-qt.AppImage" "$APP_FOLDER/citraPMK/head/citra-room.AppImage"
+                chmod +x "$APP_FOLDER/Sudachi/sudachi" "$APP_FOLDER/Sudachi/sudachi-cmd" "$APP_FOLDER/citraPMK/head/citra.AppImage" "$APP_FOLDER/citraPMK/head/citra-qt.AppImage" "$APP_FOLDER/citraPMK/head/citra-room.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra-qt.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra-room.AppImage"
                 xdg-open https://github.com/litucks/torzu/releases
                 ;;
             Lime3DS)
                 mkdir -p "$APP_FOLDER/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
                 chmod +x "$APP_FOLDER/Lime3DS/lime3ds-cli.AppImage" "$APP_FOLDER/Lime3DS/lime3ds-gui.AppImage" "$APP_FOLDER/Lime3DS/lime3ds-room.AppImage"
-                ;;
-            Citra-Enhanced)
-                7z x "$APP_FOLDER/$FETCHED_FILE" citra*7z -y
-                mv -f "$APP_FOLDER"/citra*7z "$APP_FOLDER"/Citra-Enhanced.7z
-                7z x "$APP_FOLDER/Citra-Enhanced.7z" -o* -y
-                chmod +x "$APP_FOLDER/Citra-Enhanced/head/citra.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra-qt.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra-room.AppImage"
                 ;;
         esac
     else
