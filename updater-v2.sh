@@ -80,7 +80,7 @@ download_notify() {
         Citra-Enhanced)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/CitraEnhanced/citra/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-            file_name="Citra-Enhanced.zip"
+            file_name="Citra-Enhanced.7z"
             ;;
         *)
             ;;
