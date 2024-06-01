@@ -76,6 +76,11 @@ function download_notify() {
             TYPE="$EXTENSION"
             REPO="Rosalie241/RMG"
             ;;
+        Torzu)
+            EXTENSION="AppImage"
+            TYPE="$EXTENSION"
+            REPO="litucks/torzu"
+            ;;
         melonDS)
             EXTENSION="zip"
             TYPE="linux_x64"
@@ -135,7 +140,7 @@ function download_notify() {
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/"
                 chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
                 ;;
-            Cemu | DolphinDev | RMG | mGBAdev)
+            Cemu | DolphinDev | RMG | mGBAdev | Torzu)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
             Panda3DS | melonDS | SkyEmu)
@@ -168,7 +173,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Ryujinx Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Sudachi Lime3DS citraPMK Citra-Enhanced; do
+for APP in Ryujinx Cemu Panda3DS DolphinDev RMG Torzu melonDS SkyEmu mGBAdev Sudachi Lime3DS citraPMK Citra-Enhanced; do
     download_notify "$APP"
 done
 popd || exit
