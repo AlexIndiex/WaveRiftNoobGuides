@@ -4,7 +4,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "Citra-Enhanced" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "Citra-Enhanced" ]] && [[ $1 != "Torzu" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -28,6 +28,10 @@ download_notify() {
                         
                         RMG)
                                 curl -L -o ~/Applications/RMG.AppImage -z ~/Applications/RMG.AppImage "${urls[0]}" && chmod +x ~/Applications/RMG.AppImage
+                                ;;
+
+                         Torzu)
+                                curl -L -o ~/Applications/Torzu.AppImage -z ~/Applications/Torzu.AppImage "${urls[0]}" && chmod +x ~/Applications/Torzu.AppImage
                                 ;;
                         
                         melonDS)
@@ -96,6 +100,12 @@ download_notify DolphinDev
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Rosalie241/RMG/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
 download_notify RMG
+
+#Torzu
+#------------
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/litucks/torzu/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+download_notify Torzu
 
 #melonDS
 #------------
