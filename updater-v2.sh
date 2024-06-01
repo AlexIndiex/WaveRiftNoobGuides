@@ -48,6 +48,11 @@ download_notify() {
                     jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
             file_name="RMG.AppImage"
             ;;
+        Torzu)
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/litucks/torzu/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+            file_name="Torzu.AppImage"
+            ;;
         melonDS)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
@@ -107,7 +112,7 @@ download_notify() {
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
                     chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
                     ;;
-                Cemu | DolphinDev | RMG | mGBAdev)
+                Cemu | DolphinDev | RMG | mGBAdev | Torzu)
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
                 Panda3DS | melonDS | SkyEmu)
@@ -118,7 +123,6 @@ download_notify() {
                 Sudachi | citraPMK | Citra-Enhanced)
                     7z x "$HOME/Apps/$file_name" -o* -y
                     chmod +x "$HOME/Apps/Sudachi/sudachi" "$HOME/Apps/Sudachi/sudachi-cmd" "$HOME/Apps/citraPMK/head/citra.AppImage" "$HOME/Apps/citraPMK/head/citra-qt.AppImage" "$HOME/Apps/citraPMK/head/citra-room.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-qt.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-room.AppImage"
-                    xdg-open https://github.com/litucks/torzu/releases
                     ;;
                 Lime3DS)
                     [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
@@ -148,6 +152,7 @@ download_notify Cemu
 download_notify Panda3DS
 download_notify DolphinDev
 download_notify RMG
+download_notify Torzu
 download_notify melonDS
 download_notify SkyEmu
 download_notify mGBAdev
