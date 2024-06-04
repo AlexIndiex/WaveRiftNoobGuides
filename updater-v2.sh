@@ -101,6 +101,21 @@ download_notify() {
                     jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
             file_name="Citra-Enhanced.7z"
             ;;
+        GearBoy)
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/drhelius/Gearboy/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
+            file_name="Gearboy.zip"
+            ;;
+        bsnes)
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/bsnes-emu/bsnes/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
+            file_name="bsnes.zip"
+            ;;
+        snes9x)
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/snes9xgit/snes9x/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+            file_name="snes9x.AppImage"
+            ;;
         *)
             ;;
     esac
@@ -126,22 +141,22 @@ download_notify() {
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
                     chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
                     ;;
-                Cemu | DolphinDev | RMG | mGBAdev | Torzu)
+                Cemu | DolphinDev | RMG | mGBAdev | Torzu | snes9x)
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
                 Panda3DS | melonDS | SkyEmu)
                     7z x "$HOME/Apps/$file_name" -y
-                    mv -f "$HOME/Apps/Alber-x86_64.AppImage" "$HOME/Apps/Panda3DS.AppImage"
-                    chmod +x "$HOME/Apps/$file_name"
+                    mv -f "$HOME/Apps/Alber-x86_64.AppImage" "$HOME/Apps/Panda3DS.AppImage" && chmod +x "$HOME/Apps/Panda3DS.AppImage"
+                    chmod +x "$HOME/Apps/$app_name"
                     ;;
-                Sudachi | citraPMK | Citra-Enhanced)
+                Sudachi | citraPMK | Citra-Enhanced | GearBoy | bsnes)
                     7z x "$HOME/Apps/$file_name" -o* -y
-                    chmod +x "$HOME/Apps/Sudachi/sudachi" "$HOME/Apps/Sudachi/sudachi-cmd" "$HOME/Apps/citraPMK/head/citra.AppImage" "$HOME/Apps/citraPMK/head/citra-qt.AppImage" "$HOME/Apps/citraPMK/head/citra-room.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-qt.AppImage" "$HOME/Apps/Citra-Enhanced/head/citra-room.AppImage"
+                    chmod +x "$HOME/Apps/$app_name/sudachi" "$HOME/Apps/$app_name/sudachi-cmd" "$HOME/Apps/$app_name/head/citra.AppImage" "$HOME/Apps/$app_name/head/citra-qt.AppImage" "$HOME/Apps/$app_name/head/citra-room.AppImage" "$HOME/Apps/$app_name/gearboy" "$HOME/Apps/$app_name/bsnes-nightly/bsnes"
                     ;;
                 Lime3DS)
                     [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/Lime3DS" --strip-components=1
-                    chmod +x "$HOME/Apps/Lime3DS/lime3ds-cli.AppImage" "$HOME/Apps/Lime3DS/lime3ds-gui.AppImage" "$HOME/Apps/Lime3DS/lime3ds-room.AppImage"
+                    chmod +x "$HOME/Apps/$app_name/lime3ds-cli.AppImage" "$HOME/Apps/$app_name/lime3ds-gui.AppImage" "$HOME/Apps/$app_name/lime3ds-room.AppImage"
                     ;;
                 *)
                     ;;
@@ -174,3 +189,6 @@ download_notify Sudachi
 download_notify Lime3DS
 download_notify citraPMK
 download_notify Citra-Enhanced
+download_notify GearBoy 
+download_notify bsnes 
+download_notify snes9x
