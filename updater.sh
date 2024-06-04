@@ -18,7 +18,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "Citra-Enhanced" ]] && [[ $1 != "Torzu" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "Citra-Enhanced" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -30,6 +30,11 @@ download_notify() {
                         
                         Cemu)
                                 curl -L -o ~/Applications/Cemu.AppImage -z ~/Applications/Cemu.AppImage "${urls[0]}" && chmod +x ~/Applications/Cemu.AppImage
+                                ;;
+                        
+                        
+                        snes9x)
+                                curl -L -o ~/Applications/snes9x.AppImage -z ~/Applications/snes9x.AppImage "${urls[0]}" && chmod +x ~/Applications/snes9x.AppImage
                                 ;;
                         
                         Panda3DS)
@@ -74,6 +79,14 @@ download_notify() {
                         
                         Citra-Enhanced)
                                 curl -L -o ~/Applications/Citra-Enhanced.7z -z ~/Applications/Citra-Enhanced.7z "${urls[0]}" && 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage ~/Applications/Citra-Enhanced/head/citra-qt.AppImage ~/Applications/Citra-Enhanced/head/citra-room.AppImage
+                                ;;
+                        
+                        bsnes)
+                                curl -L -o ~/Applications/bsnes.zip -z ~/Applications/bsnes.zip "${urls[0]}" && 7z x bsnes.zip -o* -y && chmod +x ~/Applications/bsnes/bsnes-nightly/bsnes
+                                ;;
+                        
+                        GearBoy)
+                                curl -L -o ~/Applications/GearBoy.zip -z ~/Applications/GearBoy.zip "${urls[0]}" && 7z x GearBoy.zip -o* -y && chmod +x ~/Applications/GearBoy/gearboy
                                 ;;
                         
                         *)
@@ -160,3 +173,21 @@ download_notify citraPMK
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/CitraEnhanced/citra/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify Citra-Enhanced 
+
+#GearBoy
+#------------
+mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/drhelius/Gearboy/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
+download_notify Gearboy
+
+#bsnes
+#------------
+mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/bsnes-emu/bsnes/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
+download_notify bsnes
+
+#snes9x
+#------------
+mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/snes9xgit/snes9x/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+download_notify snes9x
