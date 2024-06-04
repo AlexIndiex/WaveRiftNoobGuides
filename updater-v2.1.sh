@@ -129,6 +129,21 @@ function download_notify() {
             TYPE="appimage"
             REPO="CitraEnhanced/citra"
             ;;
+        GearBoy)
+            EXTENSION="zip"
+            TYPE="ubuntu"
+            REPO="drhelius/Gearboy"
+            ;;
+        bsnes)
+            EXTENSION="zip"
+            TYPE="ubuntu"
+            REPO="bsnes-emu/bsnes"
+            ;;
+        snes9x)
+            EXTENSION="AppImage"
+            TYPE="$EXTENSION"
+            REPO="snes9xgit/snes9x"
+            ;;
     esac
 
     mapfile -t url < <(github_fetch $REPO | filter_fetched $TYPE)
@@ -154,23 +169,22 @@ function download_notify() {
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/"
                 chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
                 ;;
-            Cemu | DolphinDev | RMG | mGBAdev | Torzu)
+            Cemu | DolphinDev | RMG | mGBAdev | Torzu | snes9x)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
             Panda3DS | melonDS | SkyEmu)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -y
-                mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage"
-                chmod +x "$APP_FOLDER/$FETCHED_FILE"
+                mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage" && chmod +x "$APP_FOLDER/Panda3DS.AppImage"
+                chmod +x "$APP_FOLDER/$APP_NAME"
                 ;;
-            Sudachi | citraPMK | Citra-Enhanced)
+            Sudachi | citraPMK | Citra-Enhanced | GearBoy | bsnes)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -o* -y
-                chmod +x "$APP_FOLDER/Sudachi/sudachi" "$APP_FOLDER/Sudachi/sudachi-cmd" "$APP_FOLDER/citraPMK/head/citra.AppImage" "$APP_FOLDER/citraPMK/head/citra-qt.AppImage" "$APP_FOLDER/citraPMK/head/citra-room.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra-qt.AppImage" "$APP_FOLDER/Citra-Enhanced/head/citra-room.AppImage"
-                xdg-open https://github.com/litucks/torzu/releases
+                chmod +x "$APP_FOLDER/$APP_NAME/sudachi" "$APP_FOLDER/$APP_NAME/sudachi-cmd" "$APP_FOLDER/$APP_NAME/head/citra.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-qt.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-room.AppImage" "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes"
                 ;;
             Lime3DS)
                 [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
-                chmod +x "$APP_FOLDER/Lime3DS/lime3ds-cli.AppImage" "$APP_FOLDER/Lime3DS/lime3ds-gui.AppImage" "$APP_FOLDER/Lime3DS/lime3ds-room.AppImage"
+                chmod +x "$APP_FOLDER/$APP_NAME/lime3ds-cli.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-gui.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-room.AppImage"
                 ;;
         esac
     else
