@@ -1,4 +1,4 @@
-# Amplitude Noob Guides
+# WaveRift Noob Guides
 
 A collection of guides, that range from an autoinstaller, recommended peripheral hardware, to emulation and more...
 
