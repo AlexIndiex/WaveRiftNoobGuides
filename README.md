@@ -1,6 +1,6 @@
-# DeckNoobGuides
+# Amplitude Noob Guides
 
-A collection of guides that range from recommended peripheral hardware, to emulation and more...
+A collection of guides, that range from an autoinstaller, recommended peripheral hardware, to emulation and more...
 
 [Quick emulators backup link](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup)
 
