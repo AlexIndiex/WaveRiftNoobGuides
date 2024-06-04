@@ -1,5 +1,5 @@
 #/*
-# * Amplitude - BETA Emulators autoinstall script for Linux users
+# * WaveRift - BETA Emulators autoinstall script for Linux users
 # * BSD 3-Clause License
 # *
 # * Copyright (c) 2024, Alex&Indie
