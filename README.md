@@ -155,7 +155,7 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
 	- [BIOS](https://drive.google.com/file/d/1hW_GWu0B-ydASF4IDdoWkcor1If6lAYG/view?usp=sharing) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
-	- [ROM](assets/images/titles.zip) [files](https://www.reddit.com/r/Piracy/wiki/megathread/) (for the systems you want to emulate).
+	- [ROM](https://r-roms.github.io/) [files](https://www.reddit.com/r/Piracy/wiki/megathread/emulators/) (for the systems you want to emulate).
 	- Free storage (either on your internal storage, microSD, or external storage).
 	- An internet connection (kinda obvious).
 
