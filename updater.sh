@@ -1,16 +1,16 @@
-/*
- * Amplitude - BETA Emulators autoinstall script for Linux users
- * BSD 3-Clause License
- *
- * Copyright (c) 2024, Alex&Indie
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the BSD 3-Clause License under written permission.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- */
+#/*
+# * Amplitude - BETA Emulators autoinstall script for Linux users
+# * BSD 3-Clause License
+# *
+# * Copyright (c) 2024, Alex&Indie
+# *
+# * This program is free software: you can redistribute it and/or modify
+# * it under the terms of the BSD 3-Clause License under written permission.
+# *
+# * This program is distributed in the hope that it will be useful,
+# * but WITHOUT ANY WARRANTY; without even the implied warranty of
+# * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# */
 
 #!/bin/bash
 
