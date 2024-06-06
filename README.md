@@ -9,7 +9,7 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 ## WaveRift: BETA Emulators autoinstall script for Linux users:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Sudachi`, `Torzu`, `SkyEmu`, `citra-enhanced` and `citrapmk7` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Sudachi`, `Torzu`, `SkyEmu`, `citra-enhanced`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 
 > [!NOTE]
 > NOTE: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`. But don't worry, if you don't want to, the script makes it for you!
@@ -32,7 +32,7 @@ To use the script, follow these steps:
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
 
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Torzu`, `Lime3DS`, `citrapmk7`, `citra-enhanced` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS` and `Panda3DS` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Torzu`, `Lime3DS`, `citrapmk7`, `citra-enhanced` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 
 
