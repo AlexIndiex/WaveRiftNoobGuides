@@ -2,7 +2,7 @@
 
 A collection of guides, that range from an autoinstaller, recommended peripheral hardware, to emulation and more...
 
-[Quick emulators backup link](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup)
+[Quick emulators backup link](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing)
 
 
 
@@ -71,7 +71,7 @@ To use the script, follow these steps:
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install [Yuzu](https://github.com/pineappleEA/pineapple-src/releases) with EmuDeck (or use an alternative, like Sudachi or Suyu).
+- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
 
 - Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
 
@@ -196,19 +196,19 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > [!NOTE]
 > BTW, don't update EmuDeck, or you will lose Citrus' entries for SteamRomManager if you try to parse newer games,
 > 
-> but if you did, the way SteamRomManager parsed [Yuzu](https://github.com/pineappleEA/pineapple-src/releases) is:
+> but if you did, the way SteamRomManager parsed [Yuzu](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck` in target;
 > 
 > - For Linux: `"/home/deck/Emulation/tools/launchers/yuzu.sh"` in target, and `vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"` in launch options;
 > 
-> meanwhile for [Citra](https://emulationking.com/citra/archive/) is:
+> meanwhile for [Citra](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
-> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://emulationking.com/citra/archive/)(similar to yuzu SRM for Linux);
+> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing)(similar to yuzu SRM for Linux);
 >
-> If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://github.com/AlexIndiex/DeckNoobGuides/tree/main?tab=readme-ov-file#backup).
+> If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing).
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
@@ -284,7 +284,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/simple64/simple64/releases .
 - https://github.com/weihuoya/citra/releases .
 - https://github.com/visualboyadvance-m/visualboyadvance-m/releases .
-- https://github.com/pineappleEA/pineapple-src/releases .
+- https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing .
 - https://github.com/decaf-emu/decaf-emu/releases .
 - https://github.com/qurious-pixel/Ryujinx/releases .
 - https://emulationking.com/ .
