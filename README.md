@@ -241,8 +241,12 @@ You can now open EmuDeck again and start installing extra programs you might nee
   	- https://github.com/Mr-Wiseguy/Zelda64Recomp
   
   - What you need for smw and sm64 compiling:
+    
   	https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/gcc-13.2.1-3.fc39.x86_64.rpm
-	```sudo dnf install make gcc python3 glew-devel SDL2-devel```
+
+	```
+	sudo dnf install make gcc python3 glew-devel SDL2-devel
+	```
 	```
   	cd $HOME/Downloads
 	git clone https://github.com/AloXado320/sm64ex-alo
