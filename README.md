@@ -239,6 +239,26 @@ You can now open EmuDeck again and start installing extra programs you might nee
   	- https://sm64pc.info/
   	- https://github.com/snesrev/zelda3
   	- https://github.com/Mr-Wiseguy/Zelda64Recomp
+  
+  - What you need for smw and sm64 compiling:
+  	https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/gcc-13.2.1-3.fc39.x86_64.rpm
+	```sudo dnf install make gcc python3 glew-devel SDL2-devel```
+	```
+  	cd $HOME/Downloads
+	git clone https://github.com/AloXado320/sm64ex-alo
+	cd sm64ex-alo
+	make BETTERCAMERA=1 EXTERNAL_DATA=1 QOL_FIXES=1 QOL_FEATURES=1 TEXTURE_FIX=1 -j$(nproc)
+	make clean all
+	CC=clang make
+	```
+	```
+  	cd $HOME/Downloads
+	git clone https://github.com/snesrev/smw
+	cd smw
+	make -j$(nproc)
+	make clean all
+	CC=clang make
+  	```
   	
 - BONUSES:
 	- [Super Mario Galaxy for NDS](https://cdn.discordapp.com/attachments/775383694948827176/1222191653041995816/smgds.nds?ex=6627c6ad&is=661551ad&hm=951c453c30302700d5f6c75ab9569b67395c3921bfa50dd35fee82b382c15caa&)
