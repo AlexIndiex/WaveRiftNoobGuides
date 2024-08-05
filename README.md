@@ -233,7 +233,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 	- [https://www.romhacking.net/](https://archive.org/details/romhacking.net-20240801)
 	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
 
-- [Pc]() ports:
+- [Pc](https://drive.google.com/file/d/1sSil5HH3stPDpB6HtDbs3Gk-1K-Puo8z/view?usp=sharing) ports:
   	- https://sm64pc.info/
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
