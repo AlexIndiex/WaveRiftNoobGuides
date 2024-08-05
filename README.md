@@ -221,11 +221,11 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 
-- Made [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) working on Linux with a [bottles](https://usebottles.com/) environment,  here is the [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing those .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it worked just fine, and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
+- [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) can work on Linux with a [bottles](https://usebottles.com/) environment, by following this [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing older .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it works and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
 
 - RomHack[s](https://cdromance.org/)' places:
 	- https://gamebanana.com/
-	- https://www.romhacking.net/
+	- [https://www.romhacking.net/](https://archive.org/details/romhacking.net-20240801)
 	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
 	- https://www.pokecommunity.com/
 	- https://romhacks.org/
