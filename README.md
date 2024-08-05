@@ -2,7 +2,7 @@
 
 A collection of guides, that range from an autoinstaller, recommended peripheral hardware, to emulation and more...
 
-[Quick emulators backup link](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing)
+[Quick emulators backup link](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing)
 
 
 
@@ -71,7 +71,7 @@ To use the script, follow these steps:
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
+- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
 
 - Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
 
@@ -124,6 +124,7 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 	- Controllers (Flydigi, Gamesir, 8bitdo).
 
 - Extra programs you could like to have:
+	- WaveRift (shameless plug)
 	- ProtonUp-QT (useful for compatibility layers other than Valve's Proton).
 	- DeckyLoader (for plugins in gaming mode).
 	- EmuDeck (wrapper to install everything you need for emulation).
@@ -154,7 +155,7 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
-	- [BIOS](https://drive.google.com/file/d/1hW_GWu0B-ydASF4IDdoWkcor1If6lAYG/view?usp=sharing) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
+	- [BIOS](https://drive.google.com/file/d/1XfR8c4riFvkdkrARhYJ5-ghPog-_ioUj/view?usp=drive_link) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
 	- [ROM](https://r-roms.github.io/) [files](https://www.reddit.com/r/Piracy/wiki/megathread/emulators/) (for the systems you want to emulate).
 	- Free storage (either on your internal storage, microSD, or external storage).
 	- An internet connection (kinda obvious).
@@ -172,7 +173,7 @@ Now let's get started with the installation process:
 - Initial EmuDeck installation:
 	- In Desktop Mode, download [EmuDeck.desktop](https://www.emudeck.com/#download) and move it to your desktop window.
 	- Double click it. It will start installing EmuDeck (and only EmuDeck). You'll notice the previous file being replaced with a new one with the EmuDeck logo. Once it finishes, it's going to open the program for you.
-	- Select either quick or custom installation. The difference between the two is the ability to choose what emulators you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
+	- Select either quick or custom installation. The difference between the two is the ability to choose what [emulators](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
 	- Select where you want to install your emulation folder (Which contains the aformentioned emulators based on the selection you made), the aspect ratio for your emulators (I would recommend using the original aspect ratio of each system so you won't encounter graphical glitches), the EmulationStation's theme and whether you want homebrew games or not. Now click the finish button and let EmuDeck install everything you chose.
 
 It's time to move your files: 
@@ -196,19 +197,19 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > [!NOTE]
 > BTW, don't update EmuDeck, or you will lose Citrus' entries for SteamRomManager if you try to parse newer games,
 > 
-> but if you did, the way SteamRomManager parsed [Yuzu](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing) is:
+> but if you did, the way SteamRomManager parsed [Yuzu](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck` in target;
 > 
 > - For Linux: `"/home/deck/Emulation/tools/launchers/yuzu.sh"` in target, and `vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"` in launch options;
 > 
-> meanwhile for [Citra](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing) is:
+> meanwhile for [Citra](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
-> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing)(similar to yuzu SRM for Linux);
+> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing)(similar to yuzu SRM for Linux);
 >
-> If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing).
+> If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing).
 
 > [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
@@ -225,20 +226,28 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - RomHack[s](https://cdromance.org/)' places:
 	- https://gamebanana.com/
-	- [https://www.romhacking.net/](https://archive.org/details/romhacking.net-20240801)
-	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
 	- https://www.pokecommunity.com/
 	- https://romhacks.org/
-	- https://www.retrostic.com/
 	- https://romhacking.com/
+	- https://www.retrostic.com/
+	- [https://www.romhacking.net/](https://archive.org/details/romhacking.net-20240801)
+	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
 
-- [Pc](https://drive.google.com/file/d/1KGbo-B_cFv2NrIL1nNr6WN0iGK8cXkjE/view?usp=sharing) ports:
+- [Pc]() ports:
+  	- https://sm64pc.info/
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
- 	- https://www.shipofharkinian.com/
-  	- https://sm64pc.info/
+ 	- https://github.com/HarbourMasters/Shipwright
+    	- https://github.com/Waterdish/Shipwright-Android
+  	- https://github.com/snesrev/smw
+  	- https://github.com/stephini/SMAS_Launcher
+  	- https://github.com/MorsGames/sm64plus
+  	- https://github.com/AloUltraExt/sm64ex-alo
+  	- https://github.com/RadzPrower/Zelda-3-Launcher
   	- https://github.com/snesrev/zelda3
   	- https://github.com/Mr-Wiseguy/Zelda64Recomp
+  	- https://github.com/HarbourMasters/2ship2harkinian
+  	- https://github.com/Waterdish/2ship2harkinian-Android
   
   - What you need for smw and sm64 compiling:
     
@@ -276,7 +285,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 
-## [BACKUP](https://drive.google.com/file/d/1MA-xzTvTSwM_pc-z0ZYxLVpP1EzmTUZ6/view?usp=drive_link):
+## [BACKUP](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing):
 
 
 
@@ -286,7 +295,6 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 - https://github.com/qurious-pixel/dolphin/releases .
-- https://codeberg.org/litucks/torzu .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
 - https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
 - https://github.com/PabloMK7/citra/releases .
@@ -307,15 +315,17 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/simple64/simple64/releases .
 - https://github.com/weihuoya/citra/releases .
 - https://github.com/visualboyadvance-m/visualboyadvance-m/releases .
-- https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing .
 - https://github.com/decaf-emu/decaf-emu/releases .
 - https://github.com/qurious-pixel/Ryujinx/releases .
+- https://github.com/Medard22/Dolphin-MMJR2-VBI/releases .
+- https://codeberg.org/litucks/torzu .
 - https://emulationking.com/ .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
 - https://mgba.io/downloads.html .
 - https://dolphin-emu.org/download/ .
 - https://www.pj64-emu.com/nightly-builds .
+- https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
