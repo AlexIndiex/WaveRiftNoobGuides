@@ -90,11 +90,6 @@ function download_notify() {
             TYPE="$EXTENSION"
             REPO="Rosalie241/RMG"
             ;;
-        Torzu)
-            EXTENSION="AppImage"
-            TYPE="$EXTENSION"
-            REPO="litucks/torzu"
-            ;;
         melonDS)
             EXTENSION="zip"
             TYPE="linux_x64"
@@ -109,11 +104,6 @@ function download_notify() {
             EXTENSION="AppImage"
             url="https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage"
             ;;
-        Sudachi)
-            EXTENSION="7z"
-            TYPE="linux"
-            REPO="sudachi-emu/sudachi"
-            ;;
         Lime3DS)
             EXTENSION="tar.gz"
             TYPE="appimage"
@@ -123,11 +113,6 @@ function download_notify() {
             EXTENSION="7z"
             TYPE="appimage"
             REPO="PabloMK7/citra"
-            ;;
-        Citra-Enhanced)
-            EXTENSION="7z"
-            TYPE="appimage"
-            REPO="CitraEnhanced/citra"
             ;;
         GearBoy)
             EXTENSION="zip"
@@ -168,8 +153,9 @@ function download_notify() {
             Ryujinx)
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/"
                 chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
+                xdg-open https://codeberg.org/litucks/torzu/src/branch/master/build-for-linux.md
                 ;;
-            Cemu | DolphinDev | RMG | mGBAdev | Torzu | snes9x)
+            Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
             Panda3DS | melonDS | SkyEmu)
@@ -177,14 +163,21 @@ function download_notify() {
                 mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage" && chmod +x "$APP_FOLDER/Panda3DS.AppImage"
                 chmod +x "$APP_FOLDER/$APP_NAME"
                 ;;
-            Sudachi | citraPMK | Citra-Enhanced | GearBoy | bsnes)
+            citraPMK | GearBoy | bsnes)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -o* -y
-                chmod +x "$APP_FOLDER/$APP_NAME/sudachi" "$APP_FOLDER/$APP_NAME/sudachi-cmd" "$APP_FOLDER/$APP_NAME/head/citra.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-qt.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-room.AppImage" "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes"
+                chmod +x "$APP_FOLDER/$APP_NAME/head/citra.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-qt.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-room.AppImage" "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes"
                 ;;
-            Lime3DS)
+            Lime3DS) # also mandarine
                 [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
                 chmod +x "$APP_FOLDER/$APP_NAME/lime3ds-cli.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-gui.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-room.AppImage"
+                [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
+                curl -s -L -o "$APP_FOLDER/linux-appimage.zip" -z "$APP_FOLDER/linux-appimage.zip" "https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip"
+                7z x "$APP_FOLDER/linux-appimage.zip" -y
+                mv -f "$APP_FOLDER/mandarine*.tar.gz" "$APP_FOLDER/mandarine.tar.gz"
+                tar xf "$APP_FOLDER/mandarine.tar.gz" -C "$APP_FOLDER/mandarine" --strip-components=1 
+                rm -f "$APP_FOLDER/mandarine.tar.gz"
+                chmod +x "$APP_FOLDER/mandarine/mandarine-cli.AppImage" "$APP_FOLDER/mandarine/mandarine-gui.AppImage" "$APP_FOLDER/mandarine/mandarine-room.AppImage"
                 ;;
         esac
     else
@@ -201,7 +194,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Ryujinx Cemu Panda3DS DolphinDev RMG Torzu melonDS SkyEmu mGBAdev Sudachi Lime3DS citraPMK Citra-Enhanced GearBoy bsnes snes9x; do
+for APP in Ryujinx Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x; do
     download_notify "$APP"
 done
 popd || exit
