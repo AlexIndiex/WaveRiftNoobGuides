@@ -15,9 +15,9 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
 > NOTE: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`. But don't worry, if you don't want to, the script makes it for you!
 
 > [!IMPORTANT]
-> NOTE: The `updater-v2.sh` file is a work in progress new version of the current method of what the script does.
-> In the current state it works and could replace the previous version while providing a much more clear notification output on what got updated, remained the same or even failed to download, at the cost of 6 times more pop-ups! (these pop-ups are for troubleshooting reasons, you could disable them by editing what notifications you dont want to get by simply modify `notify "text here"` to `echo "text here"` inside the script file);
-> Also, this script uses another folder, which is `$HOME/Apps`: like the previous version, the script will make this folder for you! This change was made to have Emudeck and the emulators this script grabs in separated directories, so if something goes wrong, you dont have to reset your Emudeck's configuration!
+> NOTE: The `updater-v2.1.sh` file is the new version of the script.
+> In the current state it could replace the previous version while providing notifications on what got updated, remained the same or even failed to download, at the cost of 6 times more pop-ups! (these pop-ups are for troubleshooting reasons, you could disable what you dont need by simply modify `notify "text here"` to `echo "text here"` inside the script file);
+> Also this script uses another folder, which is `$HOME/Apps`, and like the previous version, the script will make this folder for you! This change was made so if something goes wrong you don't have to reset your Emudeck's configuration!
 
 To use the script, follow these steps:
 
@@ -29,7 +29,7 @@ To use the script, follow these steps:
   
 * Now go to `$HOME/Applications/` and link in your desktop the emulators (for `Ryujinx` link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS` and `citrapmk7` link `.AppImage` from their respective `$HOME/Applications/` folders);
   
-* Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
+* Add the `.sh` file and the new linked emulators to Steam and enjoy the latest updates.
 
 > [!IMPORTANT]
 > NOTE: **ONLY** `Cemu`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
