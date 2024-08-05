@@ -9,7 +9,7 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 ## WaveRift: BETA Emulators autoinstall script for Linux users:
 
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `Sudachi`, `Torzu`, `SkyEmu`, `citra-enhanced`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `SkyEmu`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 
 > [!NOTE]
 > NOTE: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`. But don't worry, if you don't want to, the script makes it for you!
@@ -27,12 +27,12 @@ To use the script, follow these steps:
   
 * Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
   
-* Now go to `$HOME/Applications/` and link in your desktop the emulators (for `Ryujinx` link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS`, `citra-enhanced` and `citrapmk7` link `.AppImage` from their respective `$HOME/Applications/` folders);
+* Now go to `$HOME/Applications/` and link in your desktop the emulators (for `Ryujinx` link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS` and `citrapmk7` link `.AppImage` from their respective `$HOME/Applications/` folders);
   
 * Add the `.sh` file and the new appimages to Steam and enjoy the latest updates.
 
 > [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Torzu`, `Lime3DS`, `citrapmk7`, `citra-enhanced` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 
 
@@ -286,12 +286,11 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 
 - https://github.com/qurious-pixel/dolphin/releases .
-- https://github.com/litucks/torzu/releases .
-- https://github.com/Gamer64ytb/Citra-Enhanced/releases .
+- https://codeberg.org/litucks/torzu .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
 - https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
 - https://github.com/PabloMK7/citra/releases .
-- https://github.com/sudachi-emu/sudachi/releases .
+- https://github.com/mandarine3ds/mandarine .
 - https://github.com/huhao1987/mGBA_Android/releases .
 - https://github.com/skylersaleh/SkyEmu/releases .
 - https://github.com/Hydr8gon/NooDS/releases .
