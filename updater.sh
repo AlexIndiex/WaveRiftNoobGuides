@@ -14,18 +14,18 @@
 
 #!/bin/bash
 
-[ -d "$HOME/Applications" ] || mkdir -p "$HOME/Applications"
+{[ -d "$HOME/Applications" ] || mkdir -p "$HOME/Applications"}
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Sudachi" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "Citra-Enhanced" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
                 case $1 in
                         
                         Ryujinx)
-                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml
+                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://codeberg.org/litucks/torzu/src/branch/master/build-for-linux.md
                                 ;;
                         
                         Cemu)
@@ -49,10 +49,6 @@ download_notify() {
                                 curl -L -o ~/Applications/RMG.AppImage -z ~/Applications/RMG.AppImage "${urls[0]}" && chmod +x ~/Applications/RMG.AppImage
                                 ;;
 
-                         Torzu)
-                                curl -L -o ~/Applications/Torzu.AppImage -z ~/Applications/Torzu.AppImage "${urls[0]}" && chmod +x ~/Applications/Torzu.AppImage
-                                ;;
-                        
                         melonDS)
                                 curl -L -o ~/Applications/melonDS.zip -z ~/Applications/melonDS.zip "${urls[0]}" && 7z x melonDS.zip -y && chmod +x ~/Applications/melonDS
                                 ;;
@@ -64,21 +60,14 @@ download_notify() {
                         mGBAdev)
                                 curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage && chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
-                                           
-                        Sudachi)
-                                curl -L -o ~/Applications/Sudachi.7z -z ~/Applications/Sudachi.7z "${urls[0]}" && 7z x Sudachi.7z -o* -y && chmod +x ~/Applications/Sudachi/sudachi ~/Applications/Sudachi/sudachi-cmd && xdg-open https://github.com/litucks/torzu/releases
-                                ;;
-                        
+                              
                         Lime3DS)
-                                {[ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"} && curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}" && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage ~/Applications/Lime3DS/lime3ds-gui.AppImage ~/Applications/Lime3DS/lime3ds-room.AppImage
+                                {[ -d "$HOME/Applications/Lime3DS" ] || mkdir -p "$HOME/Applications/Lime3DS"} && curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}" && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage ~/Applications/Lime3DS/lime3ds-gui.AppImage ~/Applications/Lime3DS/lime3ds-room.AppImage
+                                {[ -d "$HOME/Applications/mandarine" ] || mkdir -p "$HOME/Applications/mandarine"} && curl -s -L -o ~/Applications/linux-appimage.zip -z ~/Applications/linux-appimage.zip https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip && 7z x ~/Applications/linux-appimage.zip -y && mv -f ~/Applications/mandarine*.tar.gz ~/Applications/mandarine.tar.gz && tar xf ~/Applications/mandarine.tar.gz -C ~/Applications/mandarine --strip-components=1 && rm -f ~/Applications/mandarine.tar.gz && chmod +x ~/Applications/mandarine/mandarine-cli.AppImage ~/Applications/mandarine/mandarine-gui.AppImage ~/Applications/mandarine/mandarine-room.AppImage
                                 ;;
                          
                         citraPMK)
                                 curl -L -o ~/Applications/citraPMK.7z -z ~/Applications/citraPMK.7z "${urls[0]}" && 7z x citraPMK.7z -o* -y && chmod +x ~/Applications/citraPMK/head/citra.AppImage ~/Applications/citraPMK/head/citra-qt.AppImage ~/Applications/citraPMK/head/citra-room.AppImage
-                                ;;
-                        
-                        Citra-Enhanced)
-                                curl -L -o ~/Applications/Citra-Enhanced.7z -z ~/Applications/Citra-Enhanced.7z "${urls[0]}" && 7z x Citra-Enhanced.7z -o* -y && chmod +x ~/Applications/Citra-Enhanced/head/citra.AppImage ~/Applications/Citra-Enhanced/head/citra-qt.AppImage ~/Applications/Citra-Enhanced/head/citra-room.AppImage
                                 ;;
                         
                         bsnes)
@@ -128,12 +117,6 @@ mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_
         jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
 download_notify RMG
 
-#Torzu
-#------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/litucks/torzu/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
-download_notify Torzu
-
 #melonDS
 #------------
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/melonDS-emu/melonDS/releases | \
@@ -150,12 +133,6 @@ download_notify SkyEmu
 #------------
 download_notify mGBAdev
 
-#Sudachi
-#------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/sudachi-emu/sudachi/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("linux")) | .browser_download_url')
-download_notify Sudachi
-
 #Lime3DS
 #------------
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lime3DS/Lime3DS/releases | \
@@ -167,12 +144,6 @@ download_notify Lime3DS
 mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify citraPMK
-
-#Citra-Enhanced
-#------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/CitraEnhanced/citra/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-download_notify Citra-Enhanced 
 
 #GearBoy
 #------------
