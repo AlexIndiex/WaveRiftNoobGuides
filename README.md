@@ -4,21 +4,31 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 
 [Quick emulators backup link](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing)
 
-
-
 ## WaveRift: BETA Emulators autoinstall script for Linux users:
-
 
 The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `Ryujinx`, `RMG`, `Lime3DS`, `SkyEmu`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 
-> [!NOTE]
-> NOTE: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`. But don't worry, if you don't want to, the script makes it for you!
+<details>
+	
+  <summary>Some preliminary notes: ⮧</summary>
+  
+> NOTE 1: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`.
+>
+> But don't worry, if you don't want to, the script makes it for you!
+>
+> NOTE 2: The `updater-v2.1.sh` file is the new version of the script.
+> In the current state it could replace the previous version while providing notifications on what got updated, remained the same or even failed to download, at the cost of 6 times more pop-ups!
+> 
+> (these pop-ups are for troubleshooting reasons, you could disable what you dont need by simply modify `notify "text here"` to `echo "text here"` inside the script file);
+> 
+> Also this script uses another folder, which is `$HOME/Apps`, and the script will make this folder for you!
+> 
+> This change was made so if something goes wrong you don't have to reset your Emudeck's configuration!
+>
+> IMPORTANT: **ONLY** `Cemu`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
-> [!IMPORTANT]
-> NOTE: The `updater-v2.1.sh` file is the new version of the script.
-> In the current state it could replace the previous version while providing notifications on what got updated, remained the same or even failed to download, at the cost of 6 times more pop-ups! (these pop-ups are for troubleshooting reasons, you could disable what you dont need by simply modify `notify "text here"` to `echo "text here"` inside the script file);
-> Also this script uses another folder, which is `$HOME/Apps`, and the script will make this folder for you! This change was made so if something goes wrong you don't have to reset your Emudeck's configuration!
-
+</details>
+	
 To use the script, follow these steps:
 
 * Download the `update.sh` file;
@@ -31,78 +41,13 @@ To use the script, follow these steps:
   
 * Add the `.sh` file and the new linked emulators to Steam and enjoy the latest updates.
 
-> [!IMPORTANT]
-> NOTE: **ONLY** `Cemu`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `Ryujinx` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
-
-
-
-## Botw and Totk guides:
-
-
-
-<details>
-  <summary>45fps BOTW on Cemu for SteamDeck.</summary>
-
-
-
-- Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
-
-- Step 2: Put your ROMs into the EmuDeck folder inside `/Emulation/ROMs/WiiU/ROMs`. You need the base game and the latest update.
-
-- Step 3: Open Cemu, select `File>Install game title, update or DLC` and select the update and/or DLC file in the previously said path. The update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA) (vXXX)` and DLC `The Legend of Zelda Breath of the Wild (DLC)`.
-
-- Step 4: In Cemu top-bar select `Options>Graphics Packs`. In this window, click on `download latest community graphic packs`. If Cemu finds a new version, install it and wait for it to be installed. Then open the Graphic Packs again.
-
-- Step 5: In the graphics pack window, select `The Legend of Zelda Breath of the Wild` and open all the drop-down menus except the cheats if you don't need them.
-
-- Step 6: In `Mods`, enable `extended memory`. Then in `fps++`, click on it and select `mode>advanced settings`. Set the `frame rate limit` to 40fps, `cutscene fps limit` to `limit all cutscenes to 30fps`, `static mode` to `disabled`, `frame average` to `6 frames averaged`, `fence type` to `performance fence`. Now enable `fps++`.
-
-- Step 7: In `Workarounds`, enable `grass swaying`. Then in `Enhancements`, click on it and set `reflection range` to `disabled`. Then `anisotropic filtering` to `medium`. Now enable `Enhancements`. Now in `Graphics` set the `anti-aliasing` to `none`, `shadows` to `low`, `shadow draw distance` to `medium` or `low`, your choice here. Now enable `Graphics`.
-
-- Step 8: Restart Cemu and enjoy Botw :]
-</details>
-
-
-
-<details>
-  <summary>30fps TOTK on YuzuEA for SteamDeck.</summary>
-
-
-
-- Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
-
-- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
-
-- Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
-
-- Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
-
-- Step 4: Open Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
-
-- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
-
-- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
-
-- Step 7: Enjoy your TOTK experience on Deck :]
-  
-> [!NOTE]
-> NOTE: the mods present in this repository are quite old, please use [TOTK-Optimizer](https://github.com/hoverbike1/TOTK-Mods-collection/releases) to update them with a new pack.
-
-> [!TIP]
-> NOTE: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
-</details>
-
-
-
 ## EXTRA
 
+I made some lists regarding emulators, pc ports and utilities this repository follows to make backups of, you can find them [here](https://github.com/AlexIndiex?direction=desc&sort=updated&tab=stars).
 
-
-I made some lists regarding emulators, pc ports and utilities this repository follows to make backups of, you can find them [here](https://github.com/AlexIndiex?tab=stars).
 <details>
-  <summary>Accessories and Hardware Recommendations for SteamDeck.</summary>
-
-
+	
+  <summary>Accessories and Hardware Recommendations for SteamDeck: ⮧</summary>
 
 - Accessories you could need:
 	- Screen protector (self-explanatory).
@@ -144,14 +89,12 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 	- Flatseal (Flatpak's permissions manager).
 	- ProtonTricks (side loader for dependencies needed for certain games).
 	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
+
 </details>
 
-
-
 <details>
-  <summary>EmuDeck Setup Guide (prior Citrus death).</summary>
-
-
+	
+  <summary>EmuDeck Setup (prior Citrus death): ⮧</summary>
 
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
@@ -194,10 +137,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		- https://github.com/kmicki/SteamDeckGyroDSU/issues/45#issuecomment-1518530487;
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks.
 
-> [!NOTE]
-> BTW, don't update EmuDeck, or you will lose Citrus' entries for SteamRomManager if you try to parse newer games,
-> 
-> but if you did, the way SteamRomManager parsed [Yuzu](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) is:
+> If you updated Emudeck and lost your Citrus entries after using SteamRomManager, the way it parsed [Yuzu](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck` in target;
 > 
@@ -209,20 +149,71 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > 
 > - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing)(similar to yuzu SRM for Linux);
 >
-> If you need the middleware files used by SteamRomManager, you can find them in the [Citrus folder](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing).
-
-> [!IMPORTANT]
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
+> 
+> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder inside the [retired emulators](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing).
+
 </details>
 
+<details>
+	
+  <summary>45fps BOTW on Cemu for SteamDeck: ⮧</summary>
 
+- Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
+
+- Step 2: Put your ROMs into the EmuDeck folder inside `/Emulation/ROMs/WiiU/ROMs`. You need the base game and the latest update.
+
+- Step 3: Open Cemu, select `File>Install game title, update or DLC` and select the update and/or DLC file in the previously said path. The update should be called `The Legend of Zelda Breath of the Wild (UPDATE DATA) (vXXX)` and DLC `The Legend of Zelda Breath of the Wild (DLC)`.
+
+- Step 4: In Cemu top-bar select `Options>Graphics Packs`. In this window, click on `download latest community graphic packs`. If Cemu finds a new version, install it and wait for it to be installed. Then open the Graphic Packs again.
+
+- Step 5: In the graphics pack window, select `The Legend of Zelda Breath of the Wild` and open all the drop-down menus except the cheats if you don't need them.
+
+- Step 6: In `Mods`, enable `extended memory`. Then in `fps++`, click on it and select `mode>advanced settings`. Set the `frame rate limit` to 40fps, `cutscene fps limit` to `limit all cutscenes to 30fps`, `static mode` to `disabled`, `frame average` to `6 frames averaged`, `fence type` to `performance fence`. Now enable `fps++`.
+
+- Step 7: In `Workarounds`, enable `grass swaying`. Then in `Enhancements`, click on it and set `reflection range` to `disabled`. Then `anisotropic filtering` to `medium`. Now enable `Enhancements`. Now in `Graphics` set the `anti-aliasing` to `none`, `shadows` to `low`, `shadow draw distance` to `medium` or `low`, your choice here. Now enable `Graphics`.
+
+- Step 8: Restart Cemu and enjoy Botw :]
+
+</details>
 
 <details>
-  <summary>Miscellaneous content.</summary>
+	
+  <summary>30fps TOTK on YuzuEA for SteamDeck: ⮧</summary>
 
+- Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
+- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
+
+- Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
+
+- Step 3: Move the ROMs into EmuDeck inside `~/Emulation/ROMs/switch/` and install the update.
+
+- Step 4: Open Yuzu, go into `Emulation>Configure>Graphics` in `Graphics` change `vsync mode` to `fifo relaxed`, move to the advanced tab and switch `ASTC recompression` to `BC3`, enable `Enable asynchronous presentation` and `Force maximum clocks`, switch `VRAM usage mode` to `Aggresive` everything else is stock.
+
+- Step 5: Download the zip file `TOTK-1.2.0-30fps.zip` and extract the content into the mods directory. With Yuzu right-click on the game and select `open mod data location`.
+
+- Step 6: Go back into gaming mode and make sure you set in the quick access menu ![:button_aux_1:](assets/images/1054855178588795011.png?raw=true)![:button_aux_2:](assets/images/1054855180253929542.png?raw=true) the GPU clock at 1200 and lock the FPS limiter to 30. With some decks decreasing the TDP to 11/13 watts helps with battery life.
+
+- Step 7: Enjoy your TOTK experience on Deck :]
+  
+> NOTE: the mods present in this repository are quite old, please use [TOTK-Optimizer](https://github.com/hoverbike1/TOTK-Mods-collection/releases) to update them with a new pack.
+>
+> TIP: if you are updating the mods or is the first time you are using them, clean all your pipeline shaders from TOTK in the remove section of Yuzu when you right-click on the title.
+
+</details>
+
+<details>
+	
+  <summary>PKHex on Linux: ⮧</summary>
 
 - [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) can work on Linux with a [bottles](https://usebottles.com/) environment, by following this [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing older .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it works and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
+
+</details>
+
+<details>
+	
+  <summary>Modding and Romhacks: ⮧</summary>
 
 - RomHack[s](https://cdromance.org/)' places:
 	- https://gamebanana.com/
@@ -233,23 +224,29 @@ You can now open EmuDeck again and start installing extra programs you might nee
 	- [https://www.romhacking.net/](https://archive.org/details/romhacking.net-20240801)
 	- [https://reliccastle.com/](https://web.archive.org/web/20240321004101/https://reliccastle.com/tags/completed/)
 
-- [Pc](https://drive.google.com/file/d/1sSil5HH3stPDpB6HtDbs3Gk-1K-Puo8z/view?usp=sharing) ports:
+</details>
+
+<details>
+	
+  <summary>PC ports of retail games: ⮧</summary>
+
+- Nintendo [Pc](https://drive.google.com/file/d/1sSil5HH3stPDpB6HtDbs3Gk-1K-Puo8z/view?usp=sharing) ports:
   	- https://sm64pc.info/
+		- https://github.com/MorsGames/sm64plus
+		- https://github.com/AloUltraExt/sm64ex-alo
 	- https://github.com/ihm-tswow/Links-Awakening-DX-HD
 	- https://github.com/blawar/ooot
- 	- https://github.com/HarbourMasters/Shipwright
-    	- https://github.com/Waterdish/Shipwright-Android
+  		- https://github.com/Mr-Wiseguy/Zelda64Recomp
+			- https://github.com/HarbourMasters/Shipwright
+				- https://github.com/Waterdish/Shipwright-Android
   	- https://github.com/snesrev/smw
-  	- https://github.com/stephini/SMAS_Launcher
-  	- https://github.com/MorsGames/sm64plus
-  	- https://github.com/AloUltraExt/sm64ex-alo
-  	- https://github.com/RadzPrower/Zelda-3-Launcher
+  		- https://github.com/stephini/SMAS_Launcher
   	- https://github.com/snesrev/zelda3
-  	- https://github.com/Mr-Wiseguy/Zelda64Recomp
+		- https://github.com/RadzPrower/Zelda-3-Launcher
   	- https://github.com/HarbourMasters/2ship2harkinian
-  	- https://github.com/Waterdish/2ship2harkinian-Android
+  		- https://github.com/Waterdish/2ship2harkinian-Android
   
-  - What you need for smw and sm64 compiling:
+	- What you need for smw and sm64 compiling:
     
   	https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/gcc-13.2.1-3.fc39.x86_64.rpm
 
@@ -272,27 +269,24 @@ You can now open EmuDeck again and start installing extra programs you might nee
 	make clean all
 	CC=clang make
   	```
-  	
-- BONUSES:
-	- [Super Mario Galaxy for NDS](https://cdn.discordapp.com/attachments/775383694948827176/1222191653041995816/smgds.nds?ex=6627c6ad&is=661551ad&hm=951c453c30302700d5f6c75ab9569b67395c3921bfa50dd35fee82b382c15caa&)
-	- Citra [core](https://drive.google.com/file/d/1iM5RAYg_kq2zSY7Gbx7XBs6jcPpVaTQs/view?usp=drive_link) for NSwitch Retroarch and complete versions [pack](https://drive.google.com/file/d/1rPWZdQx-01jh8nfw974-2XGeRPK-mt3D/view?usp=drive_link) 
-	- [SmallAnt's Pk RomHacks](https://drive.google.com/drive/folders/1J2tHtAK-UXRYmRMl3gN8sH7yy06cZBmM?usp=drive_link) 
 
-- List of decomp projects:
+- List of decompilation projects:
 	- https://www.resetera.com/threads/decompilation-projects-ot-free-next-gen-update-for-your-favorite-classics-jak-ii-pc-port-out-in-beta.682687/
 	- https://www.retroreversing.com/source-code/decompiled-retail-console-games
+ 
+- [Super Mario Galaxy for NDS](https://cdn.discordapp.com/attachments/775383694948827176/1222191653041995816/smgds.nds?ex=6627c6ad&is=661551ad&hm=951c453c30302700d5f6c75ab9569b67395c3921bfa50dd35fee82b382c15caa&).
+
+- [SmallAnt's Pk RomHacks](https://drive.google.com/drive/folders/1J2tHtAK-UXRYmRMl3gN8sH7yy06cZBmM?usp=drive_link).
+
+- Citra [core](https://drive.google.com/file/d/1iM5RAYg_kq2zSY7Gbx7XBs6jcPpVaTQs/view?usp=drive_link) for NSwitch Retroarch and complete versions [pack](https://drive.google.com/file/d/1rPWZdQx-01jh8nfw974-2XGeRPK-mt3D/view?usp=drive_link).
+
 </details>
-
-
 
 ## [BACKUP](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing):
 
-
-
 <details>
-  <summary>All the links below are the references to make the backup of the link above.</summary>
-
-
+	
+  <summary>All the links below are the references to make the backup of the link above: ⮧</summary>
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
@@ -329,6 +323,5 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
+
 </details>
-
-
