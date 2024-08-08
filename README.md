@@ -319,7 +319,6 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://mgba.io/downloads.html .
 - https://dolphin-emu.org/download/ .
 - https://www.pj64-emu.com/nightly-builds .
-- https://drive.google.com/file/d/1SKT3g1s7hErCwfF56vTk-9qx4eX9bK7y/view?usp=sharing .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
