@@ -76,6 +76,10 @@ download_notify() {
             url="https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage"
             file_name="mGBAdev.AppImage"
             ;;
+        mandarine)
+            url="https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip"
+            file_name="mandarine.zip"
+            ;;
         Lime3DS)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Lime3DS/Lime3DS/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
@@ -143,9 +147,10 @@ download_notify() {
                     [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/Lime3DS" --strip-components=1
                     chmod +x "$HOME/Apps/$app_name/lime3ds-cli.AppImage" "$HOME/Apps/$app_name/lime3ds-gui.AppImage" "$HOME/Apps/$app_name/lime3ds-room.AppImage"
+                    ;;
+                mandarine)
                     [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
-                    curl -s -L -o "$HOME/Apps/linux-appimage.zip" -z "$HOME/Apps/linux-appimage.zip" "https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip"
-                    7z x "$HOME/Apps/linux-appimage.zip" -y
+                    7z x "$HOME/Apps/$file_name" -y
                     mv -f "$HOME/Apps/mandarine*.tar.gz" "$HOME/Apps/mandarine.tar.gz"
                     tar xf "$HOME/Apps/mandarine.tar.gz" -C "$HOME/Apps/mandarine" --strip-components=1 
                     rm -f "$HOME/Apps/mandarine.tar.gz"
@@ -182,3 +187,4 @@ download_notify citraPMK
 download_notify GearBoy 
 download_notify bsnes 
 download_notify snes9x
+download_notify mandarine
