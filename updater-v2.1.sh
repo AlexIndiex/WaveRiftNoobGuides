@@ -104,6 +104,10 @@ function download_notify() {
             EXTENSION="AppImage"
             url="https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage"
             ;;
+        mandarine)
+            EXTENSION="zip"
+            url="https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip"
+            ;;
         Lime3DS)
             EXTENSION="tar.gz"
             TYPE="appimage"
@@ -171,9 +175,10 @@ function download_notify() {
                 [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
                 chmod +x "$APP_FOLDER/$APP_NAME/lime3ds-cli.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-gui.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-room.AppImage"
+                ;;
+            mandarine)
                 [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
-                curl -s -L -o "$APP_FOLDER/linux-appimage.zip" -z "$APP_FOLDER/linux-appimage.zip" "https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip"
-                7z x "$APP_FOLDER/linux-appimage.zip" -y
+                7z x "$APP_FOLDER/$FETCHED_FILE" -y
                 mv -f "$APP_FOLDER/mandarine*.tar.gz" "$APP_FOLDER/mandarine.tar.gz"
                 tar xf "$APP_FOLDER/mandarine.tar.gz" -C "$APP_FOLDER/mandarine" --strip-components=1 
                 rm -f "$APP_FOLDER/mandarine.tar.gz"
@@ -194,7 +199,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Ryujinx Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x; do
+for APP in Ryujinx Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x mandarine; do
     download_notify "$APP"
 done
 popd || exit
