@@ -313,6 +313,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/qurious-pixel/Ryujinx/releases .
 - https://github.com/Medard22/Dolphin-MMJR2-VBI/releases .
 - https://codeberg.org/litucks/torzu .
+- https://sudachi.emuplace.app/ .
 - https://emulationking.com/ .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
