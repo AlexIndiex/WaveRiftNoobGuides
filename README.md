@@ -218,7 +218,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - RomHack[s](https://cdromance.org/)' places:
 	- https://gamebanana.com/
 	- https://www.pokecommunity.com/
-	- https://romhacks.org/
+	- https://romhackplaza.org/
 	- https://romhacking.com/
 	- https://www.retrostic.com/
 	- [https://www.romhacking.net/](https://archive.org/details/romhacking.net-20240801)
