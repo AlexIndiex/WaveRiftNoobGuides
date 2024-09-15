@@ -25,7 +25,7 @@ download_notify() {
                 case $1 in
                         
                         Ryujinx)
-                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://codeberg.org/litucks/torzu/src/branch/master/build-for-linux.md
+                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
                                 ;;
                         
                         Cemu)
