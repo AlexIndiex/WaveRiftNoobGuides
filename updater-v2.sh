@@ -129,7 +129,7 @@ download_notify() {
                 Ryujinx)
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
                     chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
-                    xdg-open https://codeberg.org/litucks/torzu/src/branch/master/build-for-linux.md
+                    xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
                     ;;
                 Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                     chmod +x "$HOME/Apps/$file_name"
