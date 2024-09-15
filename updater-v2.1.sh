@@ -157,7 +157,7 @@ function download_notify() {
             Ryujinx)
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/"
                 chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
-                xdg-open https://codeberg.org/litucks/torzu/src/branch/master/build-for-linux.md
+                xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
                 ;;
             Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
