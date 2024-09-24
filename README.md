@@ -312,7 +312,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/decaf-emu/decaf-emu/releases .
 - https://github.com/qurious-pixel/Ryujinx/releases .
 - https://github.com/Medard22/Dolphin-MMJR2-VBI/releases .
-- https://codeberg.org/litucks/torzu .
+- https://notabug.org/litucks/torzu .
 - https://sudachi.emuplace.app/ .
 - https://emulationking.com/ .
 - https://mikage.app/download/ .
@@ -320,8 +320,30 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://mgba.io/downloads.html .
 - https://dolphin-emu.org/download/ .
 - https://www.pj64-emu.com/nightly-builds .
-- https://emulation.gametechwiki.com/index.php/Emulators_on_Windows#Nintendo .
-- https://emulation.gametechwiki.com/index.php/Emulators_on_Linux#Nintendo .
-- https://emulation.gametechwiki.com/index.php/Emulators_on_Android#Nintendo .
+- https://play.google.com/store/apps/details?id=com.epsxe.ePSXe .
+- https://play.google.com/store/apps/details?id=xyz.aethersx2.android .
+- https://github.com/AetherSX2-backup/AetherSX2-builds .
+- https://play.google.com/store/apps/details?id=org.devmiyax.yabasanshioro2 .
+- https://codeberg.org/vimuser/duckstation .
+- https://github.com/stenzek/duckstation/actions/runs/10634034303 .
+- https://github.com/Trixarian/NetherSX2-patch/releases .
+- https://github.com/Trixarian/EtherealSX2/releases .
+- https://mednafen.github.io/releases/ .
+- https://pcsx2.net/downloads .
+- https://github.com/RPCS3/rpcs3/releases .
+- https://github.com/shadps4-emu/shadPS4 .
+- https://www.ppsspp.org/download/ .
+- https://github.com/Vita3K/Vita3K/releases/ .
+- https://flyinghead.github.io/flycast-builds/ .
+- https://redream.io/download .
+- https://github.com/FCare/Kronos/releases .
+- https://www.retrodev.com/blastem/changes.html .
+- https://tasvideos.org/BizHawk/ReleaseHistory .
+- https://www.carpeludum.com/kega-fusion/ .
+- https://github.com/xemu-project/xemu/releases .
+- https://github.com/xenia-project/xenia .
+- https://emulation.gametechwiki.com/index.php/Emulators_on_Windows .
+- https://emulation.gametechwiki.com/index.php/Emulators_on_Linux .
+- https://emulation.gametechwiki.com/index.php/Emulators_on_Android .
 
 </details>
