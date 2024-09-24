@@ -342,7 +342,6 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://www.carpeludum.com/kega-fusion/ .
 - https://github.com/xemu-project/xemu/releases .
 - https://github.com/xenia-project/xenia .
-- https://play.google.com/store/apps/details?id=com.chronicler.leisure .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android .
