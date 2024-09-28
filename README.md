@@ -336,10 +336,11 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/Vita3K/Vita3K/releases/ .
 - https://flyinghead.github.io/flycast-builds/ .
 - https://redream.io/download .
+- https://sudachi.emuplace.app .
 - https://github.com/FCare/Kronos/releases .
 - https://www.retrodev.com/blastem/changes.html .
 - https://tasvideos.org/BizHawk/ReleaseHistory .
-- https://www.carpeludum.com/kega-fusion/ .
+- https://www.carpeludum.com/kega-fusion .
 - https://github.com/xemu-project/xemu/releases .
 - https://github.com/xenia-project/xenia .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows .
