@@ -37,12 +37,6 @@ download_notify() {
     local file_name
     
     case $app_name in
-            
-        Ryujinx)
-            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryujinx/release-channel-master/releases | \
-                    jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
-            file_name="Ryujinx.tar.gz"
-            ;;
         Cemu)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/cemu-project/Cemu/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
@@ -125,12 +119,6 @@ download_notify() {
             notify "Update successful: $app_name"
             # Extract and set permissions
             case $app_name in
-                
-                Ryujinx)
-                    tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
-                    chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
-                    xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
-                    ;;
                 Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
@@ -147,6 +135,8 @@ download_notify() {
                     [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/Lime3DS" --strip-components=1
                     chmod +x "$HOME/Apps/$app_name/lime3ds-cli.AppImage" "$HOME/Apps/$app_name/lime3ds-gui.AppImage" "$HOME/Apps/$app_name/lime3ds-room.AppImage"
+                    xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
+                    xdg-open https://sudachi.emuplace.app/
                     ;;
                 mandarine)
                     [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
@@ -174,7 +164,6 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 
 # Update applications
 # -------------------
-download_notify Ryujinx
 download_notify Cemu
 download_notify Panda3DS
 download_notify DolphinDev
