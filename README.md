@@ -305,15 +305,14 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/cemu-project/Cemu/releases .
 - https://github.com/Rakashazi/emu-ex-plus-alpha .
 - https://github.com/Rosalie241/RMG/releases .
-- https://github.com/Ryujinx/release-channel-master/releases .
 - https://github.com/simple64/simple64/releases .
 - https://github.com/weihuoya/citra/releases .
 - https://github.com/visualboyadvance-m/visualboyadvance-m/releases .
 - https://github.com/decaf-emu/decaf-emu/releases .
-- https://github.com/qurious-pixel/Ryujinx/releases .
 - https://github.com/Medard22/Dolphin-MMJR2-VBI/releases .
 - https://notabug.org/litucks/torzu .
 - https://sudachi.emuplace.app/ .
+- https://git.uzuy-edge.org/Uzuy-X/Uzuy .
 - https://emulationking.com/ .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
