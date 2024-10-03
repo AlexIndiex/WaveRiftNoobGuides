@@ -23,15 +23,9 @@ download_notify() {
         else
                 notify "Updating: $1"
                 case $1 in
-                        
-                        Ryujinx)
-                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
-                                ;;
-                        
                         Cemu)
-                                curl -L -o ~/Applications/Cemu.AppImage -z ~/Applications/Cemu.AppImage "${urls[0]}" && chmod +x ~/Applications/Cemu.AppImage
+                                curl -L -o ~/Applications/Cemu.AppImage -z ~/Applications/Cemu.AppImage "${urls[0]}" && chmod +x ~/Applications/Cemu.AppImage xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md xdg-open https://sudachi.emuplace.app/
                                 ;;
-                        
                         
                         snes9x)
                                 curl -L -o ~/Applications/snes9x.AppImage -z ~/Applications/snes9x.AppImage "${urls[0]}" && chmod +x ~/Applications/snes9x.AppImage
@@ -90,12 +84,6 @@ download_notify() {
 #------------
 notify "Flatpak updating"
 flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
-
-#Ryujinx
-#------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryujinx/release-channel-master/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
-download_notify Ryujinx
 
 #Cemu
 #------------
