@@ -66,11 +66,6 @@ function download_notify() {
     local TYPE
 
     case $APP_NAME in
-        Ryujinx)
-            EXTENSION="tar.gz"
-            TYPE="linux_x64"
-            REPO="Ryujinx/release-channel-master"
-            ;;
         Cemu)
             EXTENSION="AppImage"
             TYPE="$EXTENSION"
@@ -154,11 +149,6 @@ function download_notify() {
 
         notify "Update successful: $APP_NAME"
         case $APP_NAME in
-            Ryujinx)
-                tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/"
-                chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
-                xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
-                ;;
             Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
@@ -175,6 +165,8 @@ function download_notify() {
                 [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
                 chmod +x "$APP_FOLDER/$APP_NAME/lime3ds-cli.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-gui.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-room.AppImage"
+                xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
+                xdg-open https://sudachi.emuplace.app/
                 ;;
             mandarine)
                 [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
@@ -199,7 +191,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Ryujinx Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x mandarine; do
+for APP in Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x mandarine; do
     download_notify "$APP"
 done
 popd || exit
