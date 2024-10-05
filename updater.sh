@@ -18,7 +18,7 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "mandarine" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "sudachi" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "mandarine" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
@@ -68,6 +68,10 @@ download_notify() {
                         
                         bsnes)
                                 curl -L -o ~/Applications/bsnes.zip -z ~/Applications/bsnes.zip "${urls[0]}" && 7z x bsnes.zip -o* -y && chmod +x ~/Applications/bsnes/bsnes-nightly/bsnes
+                                ;;
+                        
+                        sudachi)
+                                curl -L -o ~/Applications/sudachi.7z -z ~/Applications/sudachi.7z "${urls[0]}" && 7z x sudachi.7z -o* -y && chmod +x ~/Applications/sudachi/sudachi ~/Applications/sudachi/sudachi-cmd ~/Applications/sudachi/tzdb2nx
                                 ;;
                         
                         GearBoy)
@@ -150,6 +154,12 @@ download_notify Gearboy
 mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/bsnes-emu/bsnes/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
 download_notify bsnes
+
+#sudachi
+#------------
+mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/emuplace/sudachi.emuplace.app/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("linux")) | .browser_download_url')
+download_notify sudachi
 
 #snes9x
 #------------
