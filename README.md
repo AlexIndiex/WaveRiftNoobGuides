@@ -2,7 +2,7 @@
 
 A collection of guides, that range from an autoinstaller, recommended peripheral hardware, to emulation and more...
 
-[Quick emulators backup link](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing)
+[Quick emulators backup link](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)
 
 ## WaveRift: BETA Emulators autoinstall script for Linux users:
 
@@ -98,7 +98,7 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
-	- [BIOS](https://drive.google.com/file/d/1XfR8c4riFvkdkrARhYJ5-ghPog-_ioUj/view?usp=drive_link) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
+	- [BIOS](https://drive.google.com/file/d/1XfR8c4riFvkdkrARhYJ5-ghPog-_ioUj) [files](https://emulation.gametechwiki.com/index.php/Emulator_files) (needed for PS1, PS2, Nintendo Switch, Nintendo DS/DSi, Sega CD, Saturn, and DreamCast emulation).
 	- [ROM](https://r-roms.github.io/) [files](https://www.reddit.com/r/Piracy/wiki/megathread/emulators/) (for the systems you want to emulate).
 	- Free storage (either on your internal storage, microSD, or external storage).
 	- An internet connection (kinda obvious).
@@ -116,7 +116,7 @@ Now let's get started with the installation process:
 - Initial EmuDeck installation:
 	- In Desktop Mode, download [EmuDeck.desktop](https://www.emudeck.com/#download) and move it to your desktop window.
 	- Double click it. It will start installing EmuDeck (and only EmuDeck). You'll notice the previous file being replaced with a new one with the EmuDeck logo. Once it finishes, it's going to open the program for you.
-	- Select either quick or custom installation. The difference between the two is the ability to choose what [emulators](https://drive.google.com/file/d/1lIw15MZHweBwIBEIJLSlBnySWGSEAkYI/view?usp=sharing) you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
+	- Select either quick or custom installation. The difference between the two is the ability to choose what [emulators](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_) you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
 	- Select where you want to install your emulation folder (Which contains the aformentioned emulators based on the selection you made), the aspect ratio for your emulators (I would recommend using the original aspect ratio of each system so you won't encounter graphical glitches), the EmulationStation's theme and whether you want homebrew games or not. Now click the finish button and let EmuDeck install everything you chose.
 
 It's time to move your files: 
@@ -137,21 +137,21 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		- https://github.com/kmicki/SteamDeckGyroDSU/issues/45#issuecomment-1518530487;
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks.
 
-> If you updated Emudeck and lost your Citrus entries after using SteamRomManager, the way it parsed [Yuzu](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing) is:
+> If you updated Emudeck and lost your Citrus entries after using SteamRomManager, the way it parsed [Yuzu](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck` in target;
 > 
 > - For Linux: `"/home/deck/Emulation/tools/launchers/yuzu.sh"` in target, and `vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"` in launch options;
 > 
-> meanwhile for [Citra](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing) is:
+> meanwhile for [Citra](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
-> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing)(similar to yuzu SRM for Linux);
+> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)(similar to yuzu SRM for Linux);
 >
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
 > 
-> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder inside the [retired emulators](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing).
+> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder inside the [retired emulators](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_).
 
 </details>
 
@@ -183,7 +183,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
+- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
 
 - Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
 
@@ -230,7 +230,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 	
   <summary>PC ports of retail games: ⮧</summary>
 
-- Ninty [Pc](https://drive.google.com/file/d/1sSil5HH3stPDpB6HtDbs3Gk-1K-Puo8z/view?usp=sharing) ports:
+- Ninty [Pc](https://drive.google.com/file/d/1sSil5HH3stPDpB6HtDbs3Gk-1K-Puo8z) ports:
   	- https://sm64pc.info/
 		- https://github.com/MorsGames/sm64plus
 		- https://github.com/AloUltraExt/sm64ex-alo
@@ -276,13 +276,13 @@ You can now open EmuDeck again and start installing extra programs you might nee
  
 - [Super Mario Galaxy for NDS](https://cdn.discordapp.com/attachments/775383694948827176/1222191653041995816/smgds.nds?ex=6627c6ad&is=661551ad&hm=951c453c30302700d5f6c75ab9569b67395c3921bfa50dd35fee82b382c15caa&).
 
-- [SmallAnt's Pk RomHacks](https://drive.google.com/drive/folders/1J2tHtAK-UXRYmRMl3gN8sH7yy06cZBmM?usp=drive_link).
+- [SmallAnt's Pk RomHacks](https://drive.google.com/drive/folders/1J2tHtAK-UXRYmRMl3gN8sH7yy06cZBmM).
 
-- Citra [core](https://drive.google.com/file/d/1iM5RAYg_kq2zSY7Gbx7XBs6jcPpVaTQs/view?usp=drive_link) for NSwitch Retroarch and complete versions [pack](https://drive.google.com/file/d/1rPWZdQx-01jh8nfw974-2XGeRPK-mt3D/view?usp=drive_link).
+- Citra [core](https://drive.google.com/file/d/1iM5RAYg_kq2zSY7Gbx7XBs6jcPpVaTQs) for NSwitch Retroarch and complete versions [pack](https://drive.google.com/file/d/1rPWZdQx-01jh8nfw974-2XGeRPK-mt3D).
 
 </details>
 
-## [BACKUP](https://drive.google.com/file/d/1u5eiek0QW9oQE7b3cTFYlT6J1NQgODFz/view?usp=sharing):
+## [BACKUP](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_):
 
 <details>
 	
