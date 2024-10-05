@@ -123,6 +123,11 @@ function download_notify() {
             TYPE="ubuntu"
             REPO="bsnes-emu/bsnes"
             ;;
+        sudachi)
+            EXTENSION="7z"
+            TYPE="linux"
+            REPO="emuplace/sudachi.emuplace.app"
+            ;;
         snes9x)
             EXTENSION="AppImage"
             TYPE="$EXTENSION"
@@ -157,9 +162,9 @@ function download_notify() {
                 mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage" && chmod +x "$APP_FOLDER/Panda3DS.AppImage"
                 chmod +x "$APP_FOLDER/$APP_NAME"
                 ;;
-            citraPMK | GearBoy | bsnes)
+            citraPMK | GearBoy | bsnes | sudachi)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -o* -y
-                chmod +x "$APP_FOLDER/$APP_NAME/head/citra.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-qt.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-room.AppImage" "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes"
+                chmod +x "$APP_FOLDER/$APP_NAME/head/citra.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-qt.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-room.AppImage" "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes" "$APP_FOLDER/$APP_NAME/sudachi" "$APP_FOLDER/$APP_NAME/sudachi-cmd" "$APP_FOLDER/$APP_NAME/tzdb2nx"
                 ;;
             Lime3DS) # also mandarine
                 [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
@@ -191,7 +196,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x mandarine; do
+for APP in sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x mandarine; do
     download_notify "$APP"
 done
 popd || exit
