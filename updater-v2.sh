@@ -94,6 +94,11 @@ download_notify() {
                     jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
             file_name="bsnes.zip"
             ;;
+        sudachi)
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/emuplace/sudachi.emuplace.app/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("linux")) | .browser_download_url')
+            file_name="sudachi.7z"
+            ;;
         snes9x)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/snes9xgit/snes9x/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
@@ -127,9 +132,9 @@ download_notify() {
                     mv -f "$HOME/Apps/Alber-x86_64.AppImage" "$HOME/Apps/Panda3DS.AppImage" && chmod +x "$HOME/Apps/Panda3DS.AppImage"
                     chmod +x "$HOME/Apps/$app_name"
                     ;;
-                citraPMK | GearBoy | bsnes)
+                citraPMK | GearBoy | bsnes | sudachi)
                     7z x "$HOME/Apps/$file_name" -o* -y
-                    chmod +x "$HOME/Apps/$app_name/sudachi" "$HOME/Apps/$app_name/sudachi-cmd" "$HOME/Apps/$app_name/head/citra.AppImage" "$HOME/Apps/$app_name/head/citra-qt.AppImage" "$HOME/Apps/$app_name/head/citra-room.AppImage" "$HOME/Apps/$app_name/gearboy" "$HOME/Apps/$app_name/bsnes-nightly/bsnes"
+                    chmod +x "$HOME/Apps/$app_name/sudachi" "$HOME/Apps/$app_name/sudachi-cmd" "$HOME/Apps/$app_name/tzdb2nx" "$HOME/Apps/$app_name/head/citra.AppImage" "$HOME/Apps/$app_name/head/citra-qt.AppImage" "$HOME/Apps/$app_name/head/citra-room.AppImage" "$HOME/Apps/$app_name/gearboy" "$HOME/Apps/$app_name/bsnes-nightly/bsnes"
                     ;;
                 Lime3DS)
                     [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
@@ -165,6 +170,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # Update applications
 # -------------------
 download_notify Cemu
+download_notify sudachi
 download_notify Panda3DS
 download_notify DolphinDev
 download_notify RMG
