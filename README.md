@@ -6,7 +6,7 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 
 ## WaveRift: BETA Emulators autoinstall script for Linux users:
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 
 <details>
 	
@@ -25,7 +25,7 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `Cemu`, `
 > 
 > This change was made so if something goes wrong you don't have to reset your Emudeck's configuration!
 >
-> IMPORTANT: **ONLY** `Cemu`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `mandarine` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+> IMPORTANT: **ONLY** `Cemu`, `sudachi`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `mandarine` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 </details>
 	
