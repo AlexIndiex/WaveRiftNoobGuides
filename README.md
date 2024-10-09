@@ -4,13 +4,13 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 
 [Quick emulators backup link](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)
 
-## WaveRift: BETA Emulators autoinstall script for Linux users:
+## WaveRift: BETA Emulators autoinstall script for Linux users
 
 The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 
 <details>
 	
-  <summary>Some preliminary notes: ⮧</summary>
+  <summary>Some preliminary notes ⮧</summary>
   
 > NOTE 1: I recommend getting Emudeck installed, because the script relies on a folder in your user directory, which is `$HOME/Applications`.
 >
@@ -47,7 +47,7 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 
 <details>
 	
-  <summary>Accessories and Hardware Recommendations for SteamDeck: ⮧</summary>
+  <summary>Accessories and Hardware Recommendations for SteamDeck ⮧</summary>
 
 - Accessories you could need:
 	- Screen protector (self-explanatory).
@@ -94,7 +94,7 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 
 <details>
 	
-  <summary>EmuDeck Setup (prior Citrus death): ⮧</summary>
+  <summary>EmuDeck Setup (prior Citrus death) ⮧</summary>
 
 - Files and programs you need:
 	- [EmuDeck](https://www.emudeck.com/#download).
@@ -157,7 +157,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 <details>
 	
-  <summary>45fps BOTW on Cemu for SteamDeck: ⮧</summary>
+  <summary>45fps BOTW on Cemu for SteamDeck ⮧</summary>
 
 - Step 1: Install EmuDeck and Cemu with it. The appimage is advised due to compatibility in gaming mode.
 
@@ -179,7 +179,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 <details>
 	
-  <summary>30fps TOTK on YuzuEA for SteamDeck: ⮧</summary>
+  <summary>30fps TOTK on YuzuEA for SteamDeck ⮧</summary>
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
@@ -205,7 +205,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 <details>
 	
-  <summary>PKHex on Linux: ⮧</summary>
+  <summary>PKHex on Linux ⮧</summary>
 
 - [pkhex](https://projectpokemon.org/home/files/file/1-pkhex/) can work on Linux with a [bottles](https://usebottles.com/) environment, by following this [link](https://projectpokemon.org/home/forums/topic/62968-pkhex-on-linux/?do=findComment&comment=282035), after installing older .net dependencies, [wine ge 9.1](https://bitbucket.org/amidevous/pkhex/downloads/wine-GE-9.1-x86_64.tar.xz) and [.net 8](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer), it works and the [legality plugin](https://github.com/santacrab2/PKHeX-Plugins/releases) loads too
 
@@ -213,7 +213,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 <details>
 	
-  <summary>Modding and Romhacks: ⮧</summary>
+  <summary>Modding and Romhacks ⮧</summary>
 
 - RomHack[s](https://cdromance.org/)' places:
 	- https://gamebanana.com/
@@ -228,7 +228,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 <details>
 	
-  <summary>PC ports of retail games: ⮧</summary>
+  <summary>PC ports of retail games ⮧</summary>
 
 - Ninty [Pc](https://drive.google.com/file/d/1sSil5HH3stPDpB6HtDbs3Gk-1K-Puo8z) ports:
   	- https://sm64pc.info/
@@ -282,11 +282,11 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 </details>
 
-## [BACKUP](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_):
+## [BACKUP](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)
 
 <details>
 	
-  <summary>All the links below are the references to make the backup of the link above: ⮧</summary>
+  <summary>All the links below are the references to make the backup of the link above ⮧</summary>
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
