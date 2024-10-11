@@ -312,7 +312,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/Medard22/Dolphin-MMJR2-VBI/releases .
 - https://notabug.org/litucks/torzu .
 - https://sudachi.emuplace.app/ .
-- https://git.uzuy-edge.org/Uzuy-X/Uzuy .
+- https://git.uzuy-edge.org/Uzuy/Uzuy .
 - https://emulationking.com/ .
 - https://mikage.app/download/ .
 - https://panda3ds.com/download.html .
