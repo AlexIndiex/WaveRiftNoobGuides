@@ -290,6 +290,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://free-git.org/Emulator-Archive/torzu .
+- https://git.citron-emu.org/ .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
 - https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
 - https://github.com/PabloMK7/citra/releases .
