@@ -334,7 +334,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/FCare/Kronos/releases .
 - https://www.retrodev.com/blastem/changes.html .
 - https://tasvideos.org/BizHawk/ReleaseHistory .
-- https://www.carpeludum.com/kega-fusion .
+- [https://www.carpeludum.com/kega-fusion](https://segaretro.org/Kega_Fusion) .
 - https://github.com/xemu-project/xemu/releases .
 - https://github.com/xenia-project/xenia .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows .
