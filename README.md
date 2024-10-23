@@ -289,6 +289,9 @@ You can now open EmuDeck again and start installing extra programs you might nee
   <summary>All the links below are the references to make the backup of the link above ⮧</summary>
 
 - https://github.com/qurious-pixel/dolphin/releases .
+- https://github.com/KeatonTheBot/Ryujinx/releases .
+- https://github.com/GreemDev/Ryujinx/releases .
+- https://github.com/ryujinx-mirror/ryujinx/releases .
 - https://free-git.org/Emulator-Archive/torzu/releases .
 - https://git.citron-emu.org/Citron/Citron/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
