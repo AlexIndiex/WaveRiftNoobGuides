@@ -2,7 +2,7 @@
 
 A collection of guides, that range from an autoinstaller, recommended peripheral hardware, to emulation and more...
 
-[Quick emulators backup link](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)
+[Quick emulators backup link](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI)
 
 ## WaveRift: BETA Emulators autoinstall script for Linux users
 
@@ -116,7 +116,7 @@ Now let's get started with the installation process:
 - Initial EmuDeck installation:
 	- In Desktop Mode, download [EmuDeck.desktop](https://www.emudeck.com/#download) and move it to your desktop window.
 	- Double click it. It will start installing EmuDeck (and only EmuDeck). You'll notice the previous file being replaced with a new one with the EmuDeck logo. Once it finishes, it's going to open the program for you.
-	- Select either quick or custom installation. The difference between the two is the ability to choose what [emulators](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_) you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
+	- Select either quick or custom installation. The difference between the two is the ability to choose what [emulators](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI) you want to install. The first one installs everything EmuDeck offers support for, while with the second, you can just install the emulators you care for.
 	- Select where you want to install your emulation folder (Which contains the aformentioned emulators based on the selection you made), the aspect ratio for your emulators (I would recommend using the original aspect ratio of each system so you won't encounter graphical glitches), the EmulationStation's theme and whether you want homebrew games or not. Now click the finish button and let EmuDeck install everything you chose.
 
 It's time to move your files: 
@@ -137,21 +137,21 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		- https://github.com/kmicki/SteamDeckGyroDSU/issues/45#issuecomment-1518530487;
 		- https://emudeck.github.io/emulators/steamos/dolphin/#dolphin-tips-and-tricks.
 
-> If you updated Emudeck and lost your Citrus entries after using SteamRomManager, the way it parsed [Yuzu](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_) is:
+> If you updated Emudeck and lost your Citrus entries after using SteamRomManager, the way it parsed [Yuzu](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe"" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {C:\Emulation\tools\launchers\yuzu.ps1 '-f' '-g' 'C:\Emulation\roms\switch\[rom].nsp'}" && exit " && exit --emudeck` in target;
 > 
 > - For Linux: `"/home/deck/Emulation/tools/launchers/yuzu.sh"` in target, and `vblank_mode=0 %command% -f -g "'/home/deck/Emulation/roms/switch/[rom].nsp'"` in launch options;
 > 
-> meanwhile for [Citra](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_) is:
+> meanwhile for [Citra](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI) is:
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
-> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)(similar to yuzu SRM for Linux);
+> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI)(similar to yuzu SRM for Linux);
 >
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
 > 
-> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder inside the [retired emulators](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_).
+> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder inside the [retired emulators](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI).
 
 </details>
 
@@ -183,7 +183,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - Requirements: keys and firmware 16.0.3 or newer from your switch, base game and update 1.2.0, EmuDeck, and mods.
 
-- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
+- Step 1: Go into desktop mode, install [Yuzu](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI/view?usp=sharing) with EmuDeck (or use an alternative, like Sudachi or Suyu).
 
 - Step 2: Move the keys and firmware inside `~/Emulation/bios/yuzu/` if you prefer it.
 
@@ -282,7 +282,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 </details>
 
-## [BACKUP](https://drive.google.com/file/d/1Gz1UwejlWOxb4Cc5Qv6uIbtEt-fsvaA_)
+## [BACKUP](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI)
 
 <details>
 	
