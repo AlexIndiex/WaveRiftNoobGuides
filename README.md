@@ -230,7 +230,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 	
   <summary>PC ports of retail games ⮧</summary>
 
-- Ninty [Pc](https://drive.google.com/file/d/198-nU5akwToKrKt2bp6QHevQTdYWOccf) ports:
+- Ninty [Pc](https://drive.google.com/drive/folders/1ABAJkQeHOLFv8v3wfQVchViRL3sft0j-) ports:
   	- https://sm64pc.info/
 		- https://github.com/MorsGames/sm64plus
 		- https://github.com/AloUltraExt/sm64ex-alo
