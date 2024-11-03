@@ -37,6 +37,11 @@ download_notify() {
     local file_name
     
     case $app_name in
+        Ryujinx)
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx/releases | \
+                    jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
+            file_name="Ryujinx.tar.gz"
+            ;;
         Cemu)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/cemu-project/Cemu/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
@@ -79,11 +84,6 @@ download_notify() {
                     jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
             file_name="Lime3DS.tar.gz"
             ;;
-        citraPMK)
-            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
-                    jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-            file_name="citraPMK.7z"
-            ;;
         GearBoy)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/drhelius/Gearboy/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("ubuntu")) | .browser_download_url')
@@ -124,6 +124,11 @@ download_notify() {
             notify "Update successful: $app_name"
             # Extract and set permissions
             case $app_name in
+                Ryujinx)
+                    tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/"
+                    chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
+                    xdg-open https://free-git.org/Emulator-Archive/torzu/releases
+                    ;;
                 Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
@@ -132,16 +137,14 @@ download_notify() {
                     mv -f "$HOME/Apps/Alber-x86_64.AppImage" "$HOME/Apps/Panda3DS.AppImage" && chmod +x "$HOME/Apps/Panda3DS.AppImage"
                     chmod +x "$HOME/Apps/$app_name"
                     ;;
-                citraPMK | GearBoy | bsnes | sudachi)
+                GearBoy | bsnes | sudachi)
                     7z x "$HOME/Apps/$file_name" -o* -y
-                    chmod +x "$HOME/Apps/$app_name/sudachi" "$HOME/Apps/$app_name/sudachi-cmd" "$HOME/Apps/$app_name/tzdb2nx" "$HOME/Apps/$app_name/head/citra.AppImage" "$HOME/Apps/$app_name/head/citra-qt.AppImage" "$HOME/Apps/$app_name/head/citra-room.AppImage" "$HOME/Apps/$app_name/gearboy" "$HOME/Apps/$app_name/bsnes-nightly/bsnes"
+                    chmod +x "$HOME/Apps/$app_name/sudachi" "$HOME/Apps/$app_name/sudachi-cmd" "$HOME/Apps/$app_name/tzdb2nx" "$HOME/Apps/$app_name/gearboy" "$HOME/Apps/$app_name/bsnes-nightly/bsnes"
                     ;;
                 Lime3DS)
                     [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                     tar xf "$HOME/Apps/$file_name" -C "$HOME/Apps/Lime3DS" --strip-components=1
                     chmod +x "$HOME/Apps/$app_name/lime3ds-cli.AppImage" "$HOME/Apps/$app_name/lime3ds-gui.AppImage" "$HOME/Apps/$app_name/lime3ds-room.AppImage"
-                    xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
-                    xdg-open https://sudachi.emuplace.app/
                     ;;
                 mandarine)
                     [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
@@ -170,6 +173,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # Update applications
 # -------------------
 download_notify Cemu
+download_notify Ryujinx
 download_notify sudachi
 download_notify Panda3DS
 download_notify DolphinDev
