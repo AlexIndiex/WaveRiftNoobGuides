@@ -6,7 +6,7 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 
 ## WaveRift: BETA Emulators autoinstall script for Linux users
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `citrapmk7`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
+The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`, `Ryujinx`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 
 <details>
 	
@@ -25,7 +25,7 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`
 > 
 > This change was made so if something goes wrong you don't have to reset your Emudeck's configuration!
 >
-> IMPORTANT: **ONLY** `Cemu`, `sudachi`, `mgbaDev`, `Lime3DS`, `citrapmk7` and `mandarine` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+> IMPORTANT: **ONLY** `Cemu`, `Ryujinx`, `sudachi`, `mgbaDev`, `Lime3DS` and `mandarine` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 
 </details>
 	
@@ -37,7 +37,7 @@ To use the script, follow these steps:
   
 * Now open the `.sh` file, it's going to download the latest builds in `$HOME/Applications/` and notify you with pop-ups of what it got updated;
   
-* Now go to `$HOME/Applications/` and link in your desktop the emulators (for `Lime3DS`, `mandarine` and `citrapmk7` link `.AppImage` from their respective `$HOME/Applications/` folders);
+* Now go to `$HOME/Applications/` and link in your desktop the emulators (for `Ryujinx` link `Ryujinx.sh` from `$HOME/Applications/publish/`, for `Lime3DS` and `mandarine` link `.AppImage` from their respective `$HOME/Applications/` folders);
   
 * Add the `.sh` file and the new linked emulators to Steam and enjoy the latest updates.
 
