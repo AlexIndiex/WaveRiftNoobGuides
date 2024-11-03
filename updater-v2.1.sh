@@ -66,6 +66,11 @@ function download_notify() {
     local TYPE
 
     case $APP_NAME in
+        Ryujinx)
+            EXTENSION="tar.gz"
+            TYPE="linux_x64"
+            REPO="GreemDev/Ryujinx"
+            ;;
         Cemu)
             EXTENSION="AppImage"
             TYPE="$EXTENSION"
@@ -108,11 +113,6 @@ function download_notify() {
             TYPE="appimage"
             REPO="Lime3DS/Lime3DS"
             ;;
-        citraPMK)
-            EXTENSION="7z"
-            TYPE="appimage"
-            REPO="PabloMK7/citra"
-            ;;
         GearBoy)
             EXTENSION="zip"
             TYPE="ubuntu"
@@ -154,6 +154,11 @@ function download_notify() {
 
         notify "Update successful: $APP_NAME"
         case $APP_NAME in
+            Ryujinx)
+                tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/"
+                chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
+                xdg-open https://free-git.org/Emulator-Archive/torzu/releases
+                ;;
             Cemu | DolphinDev | RMG | mGBAdev | snes9x)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
@@ -162,16 +167,14 @@ function download_notify() {
                 mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage" && chmod +x "$APP_FOLDER/Panda3DS.AppImage"
                 chmod +x "$APP_FOLDER/$APP_NAME"
                 ;;
-            citraPMK | GearBoy | bsnes | sudachi)
+            GearBoy | bsnes | sudachi)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -o* -y
-                chmod +x "$APP_FOLDER/$APP_NAME/head/citra.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-qt.AppImage" "$APP_FOLDER/$APP_NAME/head/citra-room.AppImage" "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes" "$APP_FOLDER/$APP_NAME/sudachi" "$APP_FOLDER/$APP_NAME/sudachi-cmd" "$APP_FOLDER/$APP_NAME/tzdb2nx"
+                chmod +x "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes" "$APP_FOLDER/$APP_NAME/sudachi" "$APP_FOLDER/$APP_NAME/sudachi-cmd" "$APP_FOLDER/$APP_NAME/tzdb2nx"
                 ;;
             Lime3DS) # also mandarine
                 [ -d "$HOME/Apps/Lime3DS" ] || mkdir -p "$HOME/Apps/Lime3DS"
                 tar xf "$APP_FOLDER/$FETCHED_FILE" -C "$APP_FOLDER/Lime3DS" --strip-components=1
                 chmod +x "$APP_FOLDER/$APP_NAME/lime3ds-cli.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-gui.AppImage" "$APP_FOLDER/$APP_NAME/lime3ds-room.AppImage"
-                xdg-open https://notabug.org/litucks/torzu/src/branch/master/build-for-linux.md
-                xdg-open https://sudachi.emuplace.app/
                 ;;
             mandarine)
                 [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
@@ -196,7 +199,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS citraPMK GearBoy bsnes snes9x mandarine; do
+for APP in Ryujinx sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS GearBoy bsnes snes9x mandarine; do
     download_notify "$APP"
 done
 popd || exit
