@@ -1,17 +1,11 @@
-#/*
-# * WaveRift - BETA Emulators autoinstall script for Linux users
-# * BSD 3-Clause License
-# *
-# * Copyright (c) 2024, Alex&Indie
-# *
-# * This program is free software: you can redistribute it and/or modify
-# * it under the terms of the BSD 3-Clause License under written permission.
-# *
-# * This program is distributed in the hope that it will be useful,
-# * but WITHOUT ANY WARRANTY; without even the implied warranty of
-# * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-# */
-
+#WaveRift - BETA Emulators autoinstall script for Linux users
+#BSD 3-Clause License
+#Copyright (c) 2024, Alex&Indie
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the BSD 3-Clause License under written permission.
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #!/bin/bash
 
 [ -d "$HOME/Apps" ] || mkdir -p "$HOME/Apps"
@@ -182,7 +176,6 @@ download_notify melonDS
 download_notify SkyEmu
 download_notify mGBAdev
 download_notify Lime3DS
-download_notify citraPMK
 download_notify GearBoy 
 download_notify bsnes 
 download_notify snes9x
