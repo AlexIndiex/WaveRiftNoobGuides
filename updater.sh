@@ -1,3 +1,4 @@
+#!/bin/bash
 #WaveRift - BETA Emulators autoinstall script for Linux users
 #BSD 3-Clause License
 #Copyright (c) 2024, Alex&Indie
@@ -6,9 +7,8 @@
 #This program is distributed in the hope that it will be useful,
 #but WITHOUT ANY WARRANTY; without even the implied warranty of
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-#!/bin/bash
 
-{[ -d "$HOME/Applications" ] || mkdir -p "$HOME/Applications"}
+[ -d "$HOME/Applications" ] || mkdir -p "$HOME/Applications"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
@@ -45,10 +45,10 @@ download_notify() {
                                 curl -L -o ~/Applications/mGBAdev.AppImage -z ~/Applications/mGBAdev.AppImage https://s3.amazonaws.com/mgba/mGBA-build-latest-appimage-x64.appimage && chmod +x ~/Applications/mGBAdev.AppImage
                                 ;;
                         Lime3DS)
-                                {[ -d "$HOME/Applications/Lime3DS" ] || mkdir -p "$HOME/Applications/Lime3DS"} && curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}" && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage ~/Applications/Lime3DS/lime3ds-gui.AppImage ~/Applications/Lime3DS/lime3ds-room.AppImage
+                                [ -d "$HOME/Applications/Lime3DS" ] || mkdir -p "$HOME/Applications/Lime3DS" && curl -L -o ~/Applications/Lime3DS.tar.gz -z ~/Applications/Lime3DS.tar.gz "${urls[0]}" && tar xf Lime3DS.tar.gz -C ~/Applications/Lime3DS --strip-components=1 && chmod +x ~/Applications/Lime3DS/lime3ds-cli.AppImage ~/Applications/Lime3DS/lime3ds-gui.AppImage ~/Applications/Lime3DS/lime3ds-room.AppImage
                                 ;;
                         mandarine)
-                                {[ -d "$HOME/Applications/mandarine" ] || mkdir -p "$HOME/Applications/mandarine"} && curl -s -L -o ~/Applications/linux-appimage.zip -z ~/Applications/linux-appimage.zip https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip && 7z x ~/Applications/linux-appimage.zip -y && mv -f ~/Applications/mandarine*.tar.gz ~/Applications/mandarine.tar.gz && tar xf ~/Applications/mandarine.tar.gz -C ~/Applications/mandarine --strip-components=1 && rm -f ~/Applications/mandarine.tar.gz && chmod +x ~/Applications/mandarine/mandarine-cli.AppImage ~/Applications/mandarine/mandarine-gui.AppImage ~/Applications/mandarine/mandarine-room.AppImage
+                                [ -d "$HOME/Applications/mandarine" ] || mkdir -p "$HOME/Applications/mandarine" && curl -s -L -o ~/Applications/linux-appimage.zip -z ~/Applications/linux-appimage.zip https://nightly.link/mandarine3ds/mandarine/workflows/build/master/linux-appimage.zip && 7z x ~/Applications/linux-appimage.zip -y && mv -f ~/Applications/mandarine*.tar.gz ~/Applications/mandarine.tar.gz && tar xf ~/Applications/mandarine.tar.gz -C ~/Applications/mandarine --strip-components=1 && rm -f ~/Applications/mandarine.tar.gz && chmod +x ~/Applications/mandarine/mandarine-cli.AppImage ~/Applications/mandarine/mandarine-gui.AppImage ~/Applications/mandarine/mandarine-room.AppImage
                                 ;; 
                         bsnes)
                                 curl -L -o ~/Applications/bsnes.zip -z ~/Applications/bsnes.zip "${urls[0]}" && 7z x bsnes.zip -o* -y && chmod +x ~/Applications/bsnes/bsnes-nightly/bsnes
