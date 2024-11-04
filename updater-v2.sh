@@ -1,3 +1,4 @@
+#!/bin/bash
 #WaveRift - BETA Emulators autoinstall script for Linux users
 #BSD 3-Clause License
 #Copyright (c) 2024, Alex&Indie
@@ -6,7 +7,6 @@
 #This program is distributed in the hope that it will be useful,
 #but WITHOUT ANY WARRANTY; without even the implied warranty of
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-#!/bin/bash
 
 [ -d "$HOME/Apps" ] || mkdir -p "$HOME/Apps"
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
@@ -95,7 +95,7 @@ download_notify() {
             ;;
         snes9x)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/snes9xgit/snes9x/releases | \
-                    jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
+                    jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
             file_name="snes9x.AppImage"
             ;;
         *)
@@ -143,7 +143,7 @@ download_notify() {
                 mandarine)
                     [ -d "$HOME/Apps/mandarine" ] || mkdir -p "$HOME/Apps/mandarine"
                     7z x "$HOME/Apps/$file_name" -y
-                    mv -f "$HOME/Apps/mandarine*.tar.gz" "$HOME/Apps/mandarine.tar.gz"
+                    mv -f "$HOME/Apps/mandarine-linux-appimage-*.tar.gz" "$HOME/Apps/mandarine.tar.gz"
                     tar xf "$HOME/Apps/mandarine.tar.gz" -C "$HOME/Apps/mandarine" --strip-components=1 
                     rm -f "$HOME/Apps/mandarine.tar.gz"
                     chmod +x "$HOME/Apps/mandarine/mandarine-cli.AppImage" "$HOME/Apps/mandarine/mandarine-gui.AppImage" "$HOME/Apps/mandarine/mandarine-room.AppImage"
