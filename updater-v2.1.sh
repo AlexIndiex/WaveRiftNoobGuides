@@ -1,3 +1,4 @@
+#!/bin/bash
 #WaveRift - BETA Emulators autoinstall script for Linux users
 #BSD 3-Clause License
 #Copyright (c) 2024, Alex&Indie
@@ -6,7 +7,6 @@
 #This program is distributed in the hope that it will be useful,
 #but WITHOUT ANY WARRANTY; without even the implied warranty of
 #MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-#!/bin/bash
 
 [ -d "$HOME/Apps" ] || mkdir -p "$HOME/Apps"
 ROOT_APPS_FOLDER="$HOME/Apps"
@@ -107,7 +107,7 @@ function download_notify() {
             TYPE="appimage"
             REPO="Lime3DS/Lime3DS"
             ;;
-        GearBoy)
+        Gearboy)
             EXTENSION="zip"
             TYPE="ubuntu"
             REPO="drhelius/Gearboy"
@@ -161,7 +161,7 @@ function download_notify() {
                 mv -f "$APP_FOLDER/Alber-x86_64.AppImage" "$APP_FOLDER/Panda3DS.AppImage" && chmod +x "$APP_FOLDER/Panda3DS.AppImage"
                 chmod +x "$APP_FOLDER/$APP_NAME"
                 ;;
-            GearBoy | bsnes | sudachi)
+            Gearboy | bsnes | sudachi)
                 7z x "$APP_FOLDER/$FETCHED_FILE" -o* -y
                 chmod +x "$APP_FOLDER/$APP_NAME/gearboy" "$APP_FOLDER/$APP_NAME/bsnes-nightly/bsnes" "$APP_FOLDER/$APP_NAME/sudachi" "$APP_FOLDER/$APP_NAME/sudachi-cmd" "$APP_FOLDER/$APP_NAME/tzdb2nx"
                 ;;
@@ -193,7 +193,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Ryujinx sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS GearBoy bsnes snes9x mandarine; do
+for APP in Ryujinx sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS Gearboy bsnes snes9x mandarine; do
     download_notify "$APP"
 done
 popd || exit
