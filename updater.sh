@@ -124,12 +124,6 @@ mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_
         jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
 download_notify Lime3DS
 
-#citraPMK
-#------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/PabloMK7/citra/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("appimage")) | .browser_download_url')
-download_notify citraPMK
-
 #GearBoy
 #------------
 mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/drhelius/Gearboy/releases | \
