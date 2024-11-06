@@ -51,44 +51,45 @@ I made some lists regarding emulators, pc ports and utilities this repository fo
 
 - Accessories you could need:
 	- Screen protector (self-explanatory).
-	- Cover or skin (self-explanatory).
+	- Cover  (self-explanatory).
+	- Skin (self-explanatory).
 	- Travel bag (self-explanatory).
 
 - Extra hardware you could need:
 	- MicroSD (Samsung, SanDisk, Team-Group).
-	- 2230 NVMe SSD for storage upgrade (Corsair, Sabrent, Western Digital).
+	- 2230 NVMe SSD for storage upgrade (Crucial, Sabrent, Western Digital).
 	- 45w to 65w PD power bank (20000mAh capacity highly suggested).
-	- External storage in case something happens with the microSD (ShargeDisk or a normal SATA to USB enclosure).
+	- External Storage for extra backup (ShargeDisk or a normal SATA to USB enclosure).
 	- [Monitor](https://youtu.be/Z8rJxJo3cfI) (LG, Alienware, Gigabyte).
-	- Keyboard (Keychron, Akko/Epomaker, Wooting).
+	- Keyboard (Keychron, Akko, Epomaker, Wooting).
 	- Mouse (Logitech, Pulsar, Endgame Gear).
 	- IEMs (Moondrop, Tangzu, 7hz, Truthear).
 	- Headphones (Sennheiser, AKG, Shure).
 	- Portable DAC/AMP (Qudelix, Fiio, Moondrop).
-	- Cables/hubs (Ugreen, Anker, StarTech).
+	- Cables/Hubs (Ugreen, Anker, StarTech).
 	- Controllers (Flydigi, Gamesir, 8bitdo).
 
 - Extra programs you could like to have:
 	- WaveRift (shameless plug)
-	- ProtonUp-QT (useful for compatibility layers other than Valve's Proton).
+	- ProtonUp-QT (compatibility layers installer).
 	- DeckyLoader (for plugins in gaming mode).
-	- EmuDeck (wrapper to install everything you need for emulation).
+	- EmuDeck (wrapper to install most things emulation).
 	- Discord/Vencord (self-explanatory).
 	- Vivaldi (better alternative to Chrome).
-	- Lutris (to install non-Steam games from other launchers or sources).
-	- Heroic Launcher (to install EpicGames and GOG Galaxy games).
-	- Prism Launcher (to install Minecraft Java).
+	- Zen/Floorp (custom fork of FireFox).
+	- Lutris (Non-Steam games installer).
+	- Heroic Launcher (EpicGames and GOG Galaxy games installer).
+	- Bottles (for simple exe programs that don't need many dependencies).
+	- Prism Launcher (Minecraft Java launcher).
 	- LibreOffice (Microsoft Office alternative).
-	- OnlyOffice (Microsoft Office alternative).
-	- VLC media player (media player for audio and video files).
+	- VLC (media player for audio and video files).
 	- OBS (recording and streaming program).
 	- KdenLive (Adobe Premiere alternative).
 	- Krita (Adobe Photoshop alternative).
 	- Gimp (Adobe Photoshop alternative).
-	- Bottles (similar to Lutris but only for simple exe programs that don't need many dependencies).
-	- Flatseal (Flatpak's permissions manager).
-	- ProtonTricks (side loader for dependencies needed for certain games).
-	- DeckThemes (CSS Loader of DeckyLoader but for desktop Steam).
+	- Flatseal (Flatpaks' permissions manager).
+	- ProtonTricks (dependencies installer for Steam games).
+	- DeckThemes (CSS Loader for desktop Steam).
 
 </details>
 
@@ -147,11 +148,11 @@ You can now open EmuDeck again and start installing extra programs you might nee
 > 
 > - For Windows: `"C:\Windows\System32\cmd.exe" /k start /min "Loading PowerShell Launcher" "C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -Command "& {D:\Emulation\tools\launchers\citra.ps1 'D:\Emulation\roms\n3ds\[rom].cxi'}" && exit " && exit --emudeck` in target;
 > 
-> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI)(similar to yuzu SRM for Linux);
+> - For Linux: `"/usr/bin/flatpak" run org.citra_emu.citra "/home/deck/Emulation/roms/n3ds/[rom].cxi"` in target for [Citra flatpak](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI); `your citra-qt.appimage path here` in target, and `vblank_mode=0 %command% "'/home/deck/Emulation/roms/n3ds/[rom].cxi'"` in launch options for [Citra Appimage](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI)(similar to Yuzu SRM for Linux);
 >
 > These values go into the properties when creating a new entry for a Non-Steam game/app.
 > 
-> If you need the middleware files used by SteamRomManager, you can find them in the Citrus folder inside the [retired emulators](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI).
+> If you need the middleware files used by SteamRomManager, you can find them inside the [retired emulators](https://drive.google.com/drive/folders/1Yb-pRJDzffE7aNfqEPYQyTOFLMSabsXI).
 
 </details>
 
@@ -292,6 +293,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/KeatonTheBot/Ryujinx/releases .
 - https://github.com/GreemDev/Ryujinx/releases .
 - https://github.com/ryujinx-mirror/ryujinx/releases .
+- https://github.com/Scandal-UK/ryujinx/releases.
 - https://free-git.org/Emulator-Archive/torzu/releases .
 - https://git.citron-emu.org/Citron/Citron/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
