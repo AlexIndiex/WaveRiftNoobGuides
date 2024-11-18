@@ -72,7 +72,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 
 #Ryujinx
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx/releases | \
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx-Canary/releases | \
         jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
 download_notify Ryujinx
 
