@@ -7,7 +7,7 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 ## WaveRift: BETA Emulators autoinstall script for Linux users
 
 The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`, `Ryujinx`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
-
+(`Citron` will be added as soon as the devs fix the dependencies problem of the executable)
 <details>
 	
   <summary>Some preliminary notes ⮧</summary>
