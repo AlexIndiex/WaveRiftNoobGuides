@@ -291,7 +291,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 
 - https://github.com/qurious-pixel/dolphin/releases .
 - https://github.com/KeatonTheBot/Ryujinx/releases .
-- https://github.com/GreemDev/Ryujinx/releases .
+- https://github.com/GreemDev/Ryujinx-Canary/releases .
 - https://github.com/ryujinx-mirror/ryujinx/releases .
 - https://github.com/Scandal-UK/ryujinx/releases.
 - https://free-git.org/Emulator-Archive/torzu/releases .
