@@ -32,7 +32,7 @@ download_notify() {
     
     case $app_name in
         Ryujinx)
-            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx/releases | \
+            mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx-Canary/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
             file_name="Ryujinx.tar.gz"
             ;;
