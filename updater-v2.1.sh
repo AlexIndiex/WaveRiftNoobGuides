@@ -63,7 +63,7 @@ function download_notify() {
         Ryujinx)
             EXTENSION="tar.gz"
             TYPE="linux_x64"
-            REPO="GreemDev/Ryujinx"
+            REPO="GreemDev/Ryujinx-Canary"
             ;;
         Cemu)
             EXTENSION="AppImage"
