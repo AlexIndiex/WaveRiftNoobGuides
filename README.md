@@ -248,6 +248,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
   		- https://github.com/Waterdish/2ship2harkinian-Android
   
 	- What you need for smw and sm64 compiling:
+	  - Under Fedora(39+):
     
   		https://rpmfind.net/linux/fedora/linux/releases/39/Everything/x86_64/os/Packages/g/gcc-13.2.1-3.fc39.x86_64.rpm
 
@@ -258,6 +259,8 @@ You can now open EmuDeck again and start installing extra programs you might nee
   		cd $HOME/Downloads
 		git clone https://github.com/AloXado320/sm64ex-alo
 		cd sm64ex-alo
+  		git config core.fileMode false
+		chmod -R 775 .
 		make BETTERCAMERA=1 EXTERNAL_DATA=1 QOL_FIXES=1 QOL_FEATURES=1 TEXTURE_FIX=1 -j$(nproc)
 		make clean all
 		CC=clang make
@@ -270,6 +273,36 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		make clean all
 		CC=clang make
   		```
+	  - Under Android(Termux)(needs testing):
+     		
+		```pkg install git wget make python getconf zip apksigner clang binutils which libglvnd-dev```
+   		```
+		git clone https://github.com/AloUltraExt/sm64ex-alo
+		cd sm64ex-alo
+		git config core.fileMode false
+		chmod -R 775 .
+		```
+   		```cd platform/android/```
+		```
+		mkdir ~/../usr/include/KHR
+		wget https://www.khronos.org/registry/EGL/api/KHR/khrplatform.h -O ~/../usr/include/KHR/khrplatform.h
+		mkdir SDL
+		pushd SDL
+		wget https://www.libsdl.org/release/SDL2-2.0.12.zip
+		unzip -q SDL2-2.0.12.zip
+		mv SDL2-2.0.12/include include
+		ln -s . include/SDL2
+		rm SDL2-2.0.12.zip
+		rm -r SDL2-2.0.12
+		popd
+		```
+		```
+		cd ../..
+		termux-setup-storage
+		cp /storage/emulated/0/Download/baserom.z64 ./baserom.us.z64
+		make -j4
+		cp build/us_android/sm64.us.f3dex2e.apk /storage/emulated/0/Download/sm64.us.f3dex2e.apk
+		```
 
 - List of decompilation projects:
 	- https://www.resetera.com/threads/decompilation-projects-ot-free-next-gen-update-for-your-favorite-classics-jak-ii-pc-port-out-in-beta.682687/
