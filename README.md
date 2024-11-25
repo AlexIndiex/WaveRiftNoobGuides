@@ -290,6 +290,8 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		```
 		mkdir ~/../usr/include/KHR
 		wget https://www.khronos.org/registry/EGL/api/KHR/khrplatform.h -O ~/../usr/include/KHR/khrplatform.h
+		```
+		```
 		mkdir SDL
 		pushd SDL
 		wget https://www.libsdl.org/release/SDL2-2.0.12.zip
