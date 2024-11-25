@@ -273,7 +273,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		make clean all
 		CC=clang make
   		```
-	  - Under Android(Termux)(needs testing):
+	  - Under Android(Termux):
      		
 		```
 		pkg install git wget make python getconf zip apksigner clang binutils which libglvnd-dev
@@ -303,7 +303,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		```
 		cd ../..
 		termux-setup-storage
-		cp /storage/emulated/0/Download/baserom.z64 ./baserom.us.z64
+		cp /storage/emulated/0/Download/baserom.us.z64 ./baserom.us.z64
 		make -j4
 		cp build/us_android/sm64.us.f3dex2e.apk /storage/emulated/0/Download/sm64.us.f3dex2e.apk
 		```
