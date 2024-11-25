@@ -275,14 +275,18 @@ You can now open EmuDeck again and start installing extra programs you might nee
   		```
 	  - Under Android(Termux)(needs testing):
      		
-		```pkg install git wget make python getconf zip apksigner clang binutils which libglvnd-dev```
+		```
+		pkg install git wget make python getconf zip apksigner clang binutils which libglvnd-dev
+		```
    		```
 		git clone https://github.com/AloUltraExt/sm64ex-alo
 		cd sm64ex-alo
 		git config core.fileMode false
 		chmod -R 775 .
 		```
-   		```cd platform/android/```
+   		```
+		cd platform/android/
+		```
 		```
 		mkdir ~/../usr/include/KHR
 		wget https://www.khronos.org/registry/EGL/api/KHR/khrplatform.h -O ~/../usr/include/KHR/khrplatform.h
