@@ -12,11 +12,14 @@
 notify() { notify-send -a "Application Updater" "$1" && echo "$1"; }
 download_notify() {
         cd ~/Applications || exit
-        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]] && [[ $1 != "sudachi" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "mandarine" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
+        if [[ -f $(basename "${urls[0]}") ]] && [[ $1 != "Ryujinx" ]]  && [[ $1 != "Citron" ]] && [[ $1 != "sudachi" ]] && [[ $1 != "Cemu" ]] && [[ $1 != "Panda3DS" ]] && [[ $1 != "DolphinDev" ]] && [[ $1 != "RMG" ]] && [[ $1 != "melonDS" ]] && [[ $1 != "SkyEmu" ]] && [[ $1 != "mGBAdev" ]] && [[ $1 != "Lime3DS" ]] && [[ $1 != "mandarine" ]] && [[ $1 != "citraPMK" ]] && [[ $1 != "GearBoy" ]] && [[ $1 != "bsnes" ]] && [[ $1 != "snes9x" ]]; then
                 notify "Already up to date: $1"
         else
                 notify "Updating: $1"
                 case $1 in
+                        Citron)
+                                curl -L -o ~/Applications/Citron.AppImage -z ~/Applications/Citron.AppImage "${urls[0]}" &&& chmod +x ~/Applications/Citron.AppImage
+                                ;;
                         Ryujinx)
                                 curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://free-git.org/Emulator-Archive/torzu/releases
                                 ;;
@@ -69,6 +72,12 @@ download_notify() {
 #------------
 notify "Flatpak updating"
 flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
+
+#Citron
+#------------
+mapfile -t urls < <(curl -s -H "https://git.citron-emu.org/api/v1/repos" -G -d 'per_page=1' https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+download_notify Citron
 
 #Ryujinx
 #------------
