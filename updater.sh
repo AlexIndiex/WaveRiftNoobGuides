@@ -18,7 +18,7 @@ download_notify() {
                 notify "Updating: $1"
                 case $1 in
                         Citron)
-                                curl -L -o ~/Applications/Citron.AppImage -z ~/Applications/Citron.AppImage "${urls[0]}" &&& chmod +x ~/Applications/Citron.AppImage
+                                curl -L -o ~/Applications/Citron.AppImage -z ~/Applications/Citron.AppImage "${urls[0]}" && chmod +x ~/Applications/Citron.AppImage
                                 ;;
                         Ryujinx)
                                 curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://free-git.org/Emulator-Archive/torzu/releases
