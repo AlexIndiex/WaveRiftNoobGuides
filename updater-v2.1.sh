@@ -35,7 +35,7 @@ function filter_fetched() {
 }
 
 function fetch_citron() {
-    mapfile -t urls < <(curl -s -H "Accept: application/json" "https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases" | \
+    mapfile -t urls < <(curl -s -H "https://git.citron-emu.org/api/v1/repos" -G -d 'per_page=1' "https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases" | \
         jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
     
     if [[ -z "${urls[0]}" ]]; then
