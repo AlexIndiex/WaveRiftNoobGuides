@@ -31,6 +31,11 @@ download_notify() {
     local file_name
     
     case $app_name in
+        Citron)
+            mapfile -t urls < <(curl -s -H "https://git.citron-emu.org/api/v1/repos" -G -d 'per_page=1' https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases | \
+                jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+            file_name="Citron.AppImage"
+            ;;
         Ryujinx)
             mapfile -t url < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx-Canary/releases | \
                     jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
@@ -123,7 +128,7 @@ download_notify() {
                     chmod +x "$HOME/Apps/publish/Ryujinx" "$HOME/Apps/publish/Ryujinx.sh" "$HOME/Apps/publish/Ryujinx.SDL2.Common.dll.config" "$HOME/Apps/publish/mime/Ryujinx.xml"
                     xdg-open https://free-git.org/Emulator-Archive/torzu/releases
                     ;;
-                Cemu | DolphinDev | RMG | mGBAdev | snes9x)
+                Cemu | DolphinDev | RMG | mGBAdev | snes9x | Citron)
                     chmod +x "$HOME/Apps/$file_name"
                     ;;
                 Panda3DS | melonDS | SkyEmu)
@@ -167,6 +172,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # Update applications
 # -------------------
 download_notify Cemu
+download_notify Citron
 download_notify Ryujinx
 download_notify sudachi
 download_notify Panda3DS
