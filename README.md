@@ -6,8 +6,7 @@ A collection of guides, that range from an autoinstaller, recommended peripheral
 
 ## WaveRift: BETA Emulators autoinstall script for Linux users
 
-The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`, `Ryujinx`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
-(`Citron` will be added as soon as the devs fix the dependencies problem of the executable)
+The `update.sh` is a script to install and update `Dolphin Developer`, `Citron`, `sudachi`, `Ryujinx`, `Cemu`, `Panda3DS`, `mgbaDev`, `melonDS`, `RMG`, `Lime3DS`, `mandarine`, `SkyEmu`, `GearBoy`, `bsnes` and `snes9x` from their respective repositories.
 <details>
 	
   <summary>Some preliminary notes ⮧</summary>
@@ -25,72 +24,8 @@ The `update.sh` is a script to install and update `Dolphin Developer`, `sudachi`
 > 
 > This change was made so if something goes wrong you don't have to reset your Emudeck's configuration!
 >
-> IMPORTANT: **ONLY** `Cemu`, `Ryujinx`, `sudachi`, `mgbaDev`, `Lime3DS` and `mandarine` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
+> IMPORTANT: **ONLY** `Cemu`, `Ryujinx`, `Citron`, `sudachi`, `mgbaDev`, `Lime3DS` and `mandarine` work with `EmuDeck` and `SteamRomManager`; `SkyEmu`, `Dolphin Developer`, `melonDS`, `Panda3DS`, `GearBoy`, `bsnes` and `snes9x` **DO NOT**, **CHANGE ANYTHING AT YOUR OWN RISK**.
 </details>
-<details>
-	
-  <summary>Building Citron under Ubuntu ⮧</summary>
-
-  ```
-  sudo apt-get install autoconf -y g++-11 gcc-11 libboost-context-dev libtool ninja-build libmbedtls-dev catch2 libfmt-dev liblz4-dev nlohmann-json3-dev libzstd-dev build-essential cmake ninja-build git qtbase5-dev qtmultimedia5-dev mesa-common-dev libssl-dev zlib1g-dev zip unzip curl pkg-config libusb-1.0-0-dev libavcodec-dev libavfilter-dev libavutil-dev libswscale-dev libva-dev glslang-tools libsdl2-dev libsdl2-2.0-0 libasound2-dev libglu1-mesa-dev libhidapi-dev libpulse-dev libudev-dev libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libxcb-xkb1 libxext-dev libxkbcommon-x11-0 nasm qtbase5-private-dev
-  ```
-  ```
-  git clone --recursive https://git.citron-emu.org/Citron/Citron.git
-  cd Citron && git submodule update --init --recursive
-  ```
-  ```
-  mkdir build || true && cd build
-  cmake .. -GNinja -DCITRON_USE_BUNDLED_VCPKG=ON -DCITRON_TESTS=OFF -DCITRON_USE_EXTERNAL_SDL2=OFF -DCITRON_USE_EXTERNAL_FFMEG=OFF
-  ninja
-  sudo ninja install
-  ```
-  
-  Some extra cmake option to try out:
-  ```
-  mkdir build || true && cd build
-  cmake .. \
-      -DBoost_USE_STATIC_LIBS=ON \
-      -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-            -DCITRON_USE_PRECOMPILED_HEADERS=OFF \
-            -DDYNARMIC_USE_PRECOMPILED_HEADERS=OFF \
-      -DCMAKE_CXX_FLAGS="-march=x86-64-v2" \
-      -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ \
-      -DCMAKE_C_COMPILER=/usr/local/bin/gcc \
-      -DCMAKE_INSTALL_PREFIX="/usr" \
-      -DDISPLAY_VERSION=$1 \
-      -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=OFF \
-      -DENABLE_QT_TRANSLATION=OFF \
-      -DUSE_DISCORD_PRESENCE=ON \
-      -DCITRON_ENABLE_COMPATIBILITY_REPORTING=${ENABLE_COMPATIBILITY_REPORTING:-"OFF"} \
-      -DCITRON_USE_BUNDLED_FFMPEG=ON \
-      -DCITRON_ENABLE_LTO=OFF \
-      -DCITRON_CRASH_DUMPS=ON \
-      -DCITRON_USE_FASTER_LD=ON \
-      -DCITRON_USE_BUNDLED_VCPKG=ON \
-      -DCITRON_TESTS=OFF \
-      -DCITRON_USE_EXTERNAL_SDL2=OFF \
-      -DCITRON_USE_EXTERNAL_FFMEG=OFF \
-      -GNinja
-
-  ninja
-  ```
-  ```
-  -DCITRON_USE_BUNDLED_SDL2=OFF
-  ```
-  ```
-  -DCITRON_USE_BUNDLED_VCPKG=OFF
-  ```
-  ```
-  -DCITRON_USE_QT_WEB_ENGINE=ON
-  ```
-  ```
-  -DCMAKE_C_COMPILER=gcc-11 -DCMAKE_CXX_COMPILER=g++-11
-  ```
-  ```
-  -DCITRON_USE_EXTERNAL_VULKAN_SPIRV_TOOLS=OFF
-  ```
-</details>
-	
 To use the script, follow these steps:
 
 * Download the `update.sh` file;
