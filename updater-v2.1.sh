@@ -34,6 +34,17 @@ function filter_fetched() {
     jq -r ".[].assets[] | select(.browser_download_url | test(\"$TYPE\")) | .browser_download_url"
 }
 
+function fetch_citron() {
+    mapfile -t urls < <(curl -s -H "Accept: application/json" "https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases" | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+    
+    if [[ -z "${urls[0]}" ]]; then
+        notify_die 1 "Failed to fetch Citron download URL."
+    fi
+    
+    echo "${urls[0]}"
+}
+
 function check_modification_time() {
     local file_path="$1"
     local local_modification_time
@@ -60,6 +71,10 @@ function download_notify() {
     local TYPE
 
     case $APP_NAME in
+        Citron)
+            EXTENSION="AppImage"
+            url=$(fetch_citron)
+            ;;
         Ryujinx)
             EXTENSION="tar.gz"
             TYPE="linux_x64"
@@ -153,7 +168,7 @@ function download_notify() {
                 chmod +x "$APP_FOLDER/publish/Ryujinx" "$APP_FOLDER/publish/Ryujinx.sh" "$APP_FOLDER/publish/Ryujinx.SDL2.Common.dll.config" "$APP_FOLDER/publish/mime/Ryujinx.xml"
                 xdg-open https://free-git.org/Emulator-Archive/torzu/releases
                 ;;
-            Cemu | DolphinDev | RMG | mGBAdev | snes9x)
+            Cemu | DolphinDev | RMG | mGBAdev | snes9x | Citron)
                 chmod +x "$APP_FOLDER/$FETCHED_FILE"
                 ;;
             Panda3DS | melonDS | SkyEmu)
@@ -193,7 +208,7 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 # -------------------
 mkdir -p "$ROOT_APPS_FOLDER"
 pushd "$ROOT_APPS_FOLDER" || exit
-for APP in Ryujinx sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS Gearboy bsnes snes9x mandarine; do
+for APP in Ryujinx Citron sudachi Cemu Panda3DS DolphinDev RMG melonDS SkyEmu mGBAdev Lime3DS Gearboy bsnes snes9x mandarine; do
     download_notify "$APP"
 done
 popd || exit
