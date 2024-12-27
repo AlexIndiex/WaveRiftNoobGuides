@@ -258,6 +258,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 		cd sm64ex-alo
   		git config core.fileMode false
 		chmod -R 775 .
+   		cp $HOME/Downloads/baserom.us.z64 ./baserom.us.z64
 		make BETTERCAMERA=1 EXTERNAL_DATA=1 QOL_FIXES=1 QOL_FEATURES=1 TEXTURE_FIX=1 -j$(nproc)
 		make clean all
 		CC=clang make
