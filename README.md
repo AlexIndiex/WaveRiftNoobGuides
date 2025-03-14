@@ -319,14 +319,15 @@ You can now open EmuDeck again and start installing extra programs you might nee
   <summary>All the links below are the references to make the backup of the link above ⮧</summary>
 
 - https://github.com/qurious-pixel/dolphin/releases .
-- https://github.com/KeatonTheBot/Ryujinx/releases .
-- https://github.com/GreemDev/Ryujinx-Canary/releases .
+- https://github.com/KeatonTheBot/Kenji-NX/releases .
+- https://git.ryujinx.app/ryubing/ryujinx/releases .
 - https://github.com/ryujinx-mirror/ryujinx/releases .
 - https://github.com/Scandal-UK/ryujinx/releases.
 - https://free-git.org/Emulator-Archive/torzu/releases .
+- https://notabug.org/litucks/torzu/releases .
 - https://git.citron-emu.org/Citron/Citron/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
-- https://github.com/RyzenDew/Lime-3DS-Emulator/releases .
+- https://github.com/azahar-emu/azahar/releases .
 - https://github.com/mandarine3ds/mandarine/releases .
 - https://github.com/huhao1987/mGBA_Android/releases .
 - https://github.com/skylersaleh/SkyEmu/releases .
