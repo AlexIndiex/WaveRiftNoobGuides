@@ -325,6 +325,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://github.com/Scandal-UK/ryujinx/releases.
 - https://notabug.org/litucks/torzu/releases .
 - https://git.citron-emu.org/Citron/Citron/releases .
+- https://github.com/N3xoX1/nxemu/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
 - https://github.com/azahar-emu/azahar/releases .
 - https://github.com/mandarine3ds/mandarine/releases .
