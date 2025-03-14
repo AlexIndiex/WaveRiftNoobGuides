@@ -323,7 +323,6 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://git.ryujinx.app/ryubing/ryujinx/releases .
 - https://github.com/ryujinx-mirror/ryujinx/releases .
 - https://github.com/Scandal-UK/ryujinx/releases.
-- https://free-git.org/Emulator-Archive/torzu/releases .
 - https://notabug.org/litucks/torzu/releases .
 - https://git.citron-emu.org/Citron/Citron/releases .
 - https://github.com/cemu-project/cemu_graphic_packs/releases .
@@ -371,6 +370,7 @@ You can now open EmuDeck again and start installing extra programs you might nee
 - https://www.carpeludum.com/kega-fusion .
 - https://github.com/xemu-project/xemu/releases .
 - https://github.com/xenia-project/xenia .
+- https://github.com/pkgforge-dev/Anylinux-AppImages .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Windows .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Linux .
 - https://emulation.gametechwiki.com/index.php/Emulators_on_Android .
