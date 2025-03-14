@@ -18,10 +18,10 @@ download_notify() {
                 notify "Updating: $1"
                 case $1 in
                         Citron)
-                                curl -L -o ~/Applications/Citron.AppImage -z ~/Applications/Citron.AppImage "${urls[0]}" && chmod +x ~/Applications/Citron.AppImage
+                                curl -L -o ~/Applications/Citron.tar.gz -z ~/Applications/Citron.tar.gz "${urls[0]}" && tar xf Citron.tar.gz && chmod +x ~/Applications/Citron-Linux*/citron ~/Applications/Citron-Linux*/citron-room ~/Applications/Citron-Linux*/citron-cmd
                                 ;;
                         Ryujinx)
-                                curl -L -o ~/Applications/Ryujinx.tar.gz -z ~/Applications/Ryujinx.tar.gz "${urls[0]}" && tar xf Ryujinx.tar.gz && chmod +x ~/Applications/publish/Ryujinx ~/Applications/publish/Ryujinx.sh ~/Applications/publish/Ryujinx.SDL2.Common.dll.config ~/Applications/publish/mime/Ryujinx.xml && xdg-open https://free-git.org/Emulator-Archive/torzu/releases
+                                curl -L -o ~/Applications/Ryujinx.AppImage -z ~/Applications/Ryujinx.AppImage "${urls[0]}" && chmod +x ~/Applications/Ryujinx.AppImage
                                 ;;
                         Cemu)
                                 curl -L -o ~/Applications/Cemu.AppImage -z ~/Applications/Cemu.AppImage "${urls[0]}" && chmod +x ~/Applications/Cemu.AppImage
@@ -76,13 +76,13 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 #Citron
 #------------
 mapfile -t urls < <(curl -s -H "https://git.citron-emu.org/api/v1/repos" -G -d 'per_page=1' https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("AppImage")) | .browser_download_url')
+        jq -r '.[].assets[] | select(.browser_download_url | test("compatibility")) | .browser_download_url')
 download_notify Citron
 
 #Ryujinx
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/GreemDev/Ryujinx-Canary/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("linux_x64")) | .browser_download_url')
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Ryubing/Canary-Releases/releases | \
+        jq -r '.[].assets[] | select(.browser_download_url | test("x64.AppImage")) | .browser_download_url')
 download_notify Ryujinx
 
 #Cemu
