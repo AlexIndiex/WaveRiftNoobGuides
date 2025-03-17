@@ -75,8 +75,8 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 
 #Citron
 #------------
-mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G https://api.github.com/repos/Samueru-sama/Citron-AppImage-test/releases | \
-    jq -r '[.[] | select(.tag_name == "nightly")][].assets[] | select(.browser_download_url | test("anylinux-x86_64_v3.AppImage")) | .browser_download_url')
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Samueru-sama/Citron-AppImage-test/releases | \
+        jq -r '[.[] | select(.tag_name == "nightly")][].assets[] | select(.browser_download_url | test("anylinux-x86_64_v3.AppImage")) | .browser_download_url')
 download_notify Citron
 
 #Ryujinx
