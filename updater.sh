@@ -18,7 +18,7 @@ download_notify() {
                 notify "Updating: $1"
                 case $1 in
                         Citron)
-                                curl -L -o ~/Applications/Citron.tar.gz -z ~/Applications/Citron.tar.gz "${urls[0]}" && tar xf Citron.tar.gz && chmod +x ~/Applications/Citron-Linux*/citron ~/Applications/Citron-Linux*/citron-room ~/Applications/Citron-Linux*/citron-cmd
+                                curl -L -o ~/Applications/Citron.AppImage -z ~/Applications/Citron.AppImage "${urls[0]}" && chmod +x ~/Applications/Citron.AppImage
                                 ;;
                         Ryujinx)
                                 curl -L -o ~/Applications/Ryujinx.AppImage -z ~/Applications/Ryujinx.AppImage "${urls[0]}" && chmod +x ~/Applications/Ryujinx.AppImage
@@ -75,8 +75,8 @@ flatpak update -y --noninteractive | sed -e '/Info\:/d' -e '/^$/d'
 
 #Citron
 #------------
-mapfile -t urls < <(curl -s -H "https://git.citron-emu.org/api/v1/repos" -G -d 'per_page=1' https://git.citron-emu.org/api/v1/repos/Citron/Citron/releases | \
-        jq -r '.[].assets[] | select(.browser_download_url | test("compatibility")) | .browser_download_url')
+mapfile -t urls < <(curl -s -H "Accept: application/vnd.github+json" -G -d 'per_page=1' https://api.github.com/repos/Samueru-sama/Citron-AppImage-test/releases | \
+        jq -r '.[] | select(.tag_name | test("nightly")) | .assets[] | select(.browser_download_url | test("anylinux-x86_64_v3.AppImage")) | .browser_download_url')
 download_notify Citron
 
 #Ryujinx
